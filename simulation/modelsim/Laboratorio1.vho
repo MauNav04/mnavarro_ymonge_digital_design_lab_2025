@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "08/17/2025 15:06:47"
+-- DATE "08/18/2025 18:37:14"
 
 -- 
 -- Device: Altera 5CSEMA5F31C6 Package FBGA896
@@ -44,10 +44,10 @@ ENTITY 	Restador_4bits IS
 	B2 : IN std_logic;
 	B1 : IN std_logic;
 	B0 : IN std_logic;
-	C3 : OUT std_logic;
-	C2 : OUT std_logic;
-	C1 : OUT std_logic;
-	C0 : OUT std_logic
+	C3 : BUFFER std_logic;
+	C2 : BUFFER std_logic;
+	C1 : BUFFER std_logic;
+	C0 : BUFFER std_logic
 	);
 END Restador_4bits;
 

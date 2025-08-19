@@ -1,11 +1,11 @@
 vendor_name = ModelSim
-source_file = 1, C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1_TDD/restadorcompleto_module.sv
-source_file = 1, C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1_TDD/Restador_4bits.vhd
+source_file = 1, C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Restador_4bits.vhd
+source_file = 1, C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_Restador_4bits.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
 source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
-source_file = 1, C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1_TDD/db/Laboratorio1.cbx.xml
+source_file = 1, C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/db/Laboratorio1.cbx.xml
 design_name = Restador_4bits
 instance = comp, \C3~output\, C3~output, Restador_4bits, 1
 instance = comp, \C2~output\, C2~output, Restador_4bits, 1

@@ -1,0 +1,94 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/simulation/modelsim
+Erestador_4bits
+Z1 w1755464671
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Restador_4bits.vhd
+Z5 FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Restador_4bits.vhd
+l0
+L8 1
+V;@b`@lcRSF9NH2dkR<nXP3
+!s100 ^;EXKI3[jf`CZaff;7cd`3
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1755563561
+!i10b 1
+Z8 !s108 1755563561.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Restador_4bits.vhd|
+Z10 !s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Restador_4bits.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Agates
+R2
+R3
+Z13 DEx4 work 14 restador_4bits 0 22 ;@b`@lcRSF9NH2dkR<nXP3
+!i122 0
+l28
+L27 7
+V29XMh3k=Ze?HSL0K@<Bj40
+!s100 @M^OJODZ;oF8Yk3eo2KLZ0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etb_restador_4bits
+Z14 w1755563545
+R2
+R3
+!i122 1
+R0
+Z15 8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_Restador_4bits.vhd
+Z16 FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_Restador_4bits.vhd
+l0
+L5 1
+VAO3M2o^S`NFjo1Lb4E>IT1
+!s100 NkO<ddb<@>=Q`6lUM_adf2
+R6
+31
+R7
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_Restador_4bits.vhd|
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_Restador_4bits.vhd|
+!i113 1
+R11
+R12
+Ainstancia
+R13
+R2
+R3
+DEx4 work 17 tb_restador_4bits 0 22 AO3M2o^S`NFjo1Lb4E>IT1
+!i122 1
+l15
+L8 46
+VO9NFzekW[8QodP36=6]FX2
+!s100 eL`D@^DQZPSQX_9S?3h:K3
+R6
+31
+R7
+!i10b 1
+R8
+R17
+Z18 !s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_Restador_4bits.vhd|
+!i113 1
+R11
+R12
