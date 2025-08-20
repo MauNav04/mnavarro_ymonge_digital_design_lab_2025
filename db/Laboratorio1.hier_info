@@ -1,4 +1,22 @@
-|Restador_4bits
+|Top_Restador_BCD
+A3 => restador_4bits:U1.A3
+A2 => restador_4bits:U1.A2
+A1 => restador_4bits:U1.A1
+A0 => restador_4bits:U1.A0
+B3 => restador_4bits:U1.B3
+B2 => restador_4bits:U1.B2
+B1 => restador_4bits:U1.B1
+B0 => restador_4bits:U1.B0
+a <= bcd4b_vhdl:U2.a
+b <= bcd4b_vhdl:U2.b
+c <= bcd4b_vhdl:U2.c
+d <= bcd4b_vhdl:U2.d
+e <= bcd4b_vhdl:U2.e
+f <= bcd4b_vhdl:U2.f
+g <= bcd4b_vhdl:U2.g
+
+
+|Top_Restador_BCD|Restador_4bits:U1
 A3 => C3.IN0
 A2 => C2.IN0
 A1 => C1.IN0
@@ -7,9 +25,51 @@ B3 => C3.IN1
 B2 => C2.IN1
 B1 => C1.IN1
 B0 => C0.IN1
-C3 << C3.DB_MAX_OUTPUT_PORT_TYPE
-C2 << C2.DB_MAX_OUTPUT_PORT_TYPE
-C1 << C1.DB_MAX_OUTPUT_PORT_TYPE
-C0 << C0.DB_MAX_OUTPUT_PORT_TYPE
+C3 <= C3.DB_MAX_OUTPUT_PORT_TYPE
+C2 <= C2.DB_MAX_OUTPUT_PORT_TYPE
+C1 <= C1.DB_MAX_OUTPUT_PORT_TYPE
+C0 <= C0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top_Restador_BCD|BCD4b_VHDL:U2
+A3 => a.IN0
+A3 => a.IN0
+A3 => a.IN0
+A3 => a.IN0
+A2 => a.IN1
+A2 => a.IN1
+A2 => a.IN1
+A2 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => b.IN1
+A0 => b.IN1
+A0 => c.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => b.IN1
+a <= a.DB_MAX_OUTPUT_PORT_TYPE
+b <= b.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
 
 
