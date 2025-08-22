@@ -1,0 +1,25 @@
+module contador_top (
+    input  logic clk,           // Reloj del sistema  
+    input  logic btn_increment, // Botón para incrementar
+    input  logic switch_reset,  // Switch de reset
+    output logic [5:0] count    // Salida del contador
+);
+
+    logic btn_clean;
+    
+    // Debouncer del botón usando compuertas primitivas
+    button_debouncer_gates debouncer (
+        .clk(clk),
+        .btn_raw(btn_increment),
+        .reset(switch_reset),
+        .btn_pulse(btn_clean)
+    );
+    
+    // Contador de 6 bits usando compuertas primitivas
+    contador_6bit counter (
+        .btn_clk(btn_clean),
+        .reset(switch_reset),
+        .count(count)
+    );
+
+endmodule

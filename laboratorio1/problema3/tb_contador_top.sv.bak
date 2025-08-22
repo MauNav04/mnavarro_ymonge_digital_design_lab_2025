@@ -1,0 +1,157 @@
+`timescale 1ns / 1ps
+
+module tb_contador_top;
+
+    // Señales del testbench
+    logic clk;
+    logic btn_increment;
+    logic switch_reset;
+    logic [5:0] count;
+    
+    // Instanciar el módulo bajo prueba (DUT - Device Under Test)
+    contador_top dut (
+        .clk(clk),
+        .btn_increment(btn_increment),
+        .switch_reset(switch_reset),
+        .count(count)
+    );
+    
+    // Generación del reloj (50MHz -> periodo de 20ns)
+    always #10 clk = ~clk;
+    
+    // Variables para el testbench
+    integer i;
+    
+    // Secuencia de prueba
+    initial begin
+        // Configurar forma de onda para visualización
+        $dumpfile("contador_top.vcd");
+        $dumpvars(0, tb_contador_top);
+        
+        // Mostrar información inicial
+        $display("=== INICIO DEL TESTBENCH DEL CONTADOR 6-BIT ===");
+        $display("Tiempo: %0t", $time);
+        
+        // Inicializar señales
+        clk = 0;
+        btn_increment = 0;
+        switch_reset = 1;  // Comenzar en reset
+        
+        // Esperar algunos ciclos con reset activo
+        $display("\n--- FASE 1: VERIFICAR RESET ---");
+        #100;
+        $display("Tiempo: %0t - Reset activo, count debería ser 0: %d", $time, count);
+        
+        // Liberar reset
+        switch_reset = 0;
+        #100;
+        $display("Tiempo: %0t - Reset liberado, count: %d", $time, count);
+        
+        // Esperar estabilización del debouncer
+        #200;
+        
+        $display("\n--- FASE 2: PRUEBA DE INCREMENTOS ---");
+        
+        // Simular pulsaciones del botón para incrementar el contador
+        for (i = 1; i <= 70; i++) begin
+            // Pulso del botón (simular pulsación humana)
+            btn_increment = 1;
+            #50;  // Mantener presionado 50ns
+            btn_increment = 0;
+            #200; // Esperar entre pulsaciones (debouncer + estabilización)
+            
+            $display("Tiempo: %0t - Pulsación %2d, count: %d (binario: %b)", 
+                     $time, i, count, count);
+            
+            // Verificar overflow (cuando llega a 63 debe volver a 0)
+            if (i == 64) begin
+                if (count == 0) begin
+                    $display("✓ OVERFLOW CORRECTO: Contador volvió a 0 después de 63");
+                end else begin
+                    $display("✗ ERROR EN OVERFLOW: Esperaba 0, obtuvo %d", count);
+                end
+            end
+            
+            // Parar después del primer overflow para no hacer el test muy largo
+            if (i == 65) break;
+        end
+        
+        $display("\n--- FASE 3: PRUEBA DE RESET DURANTE OPERACIÓN ---");
+        
+        // Esperar que el contador tenga un valor > 0
+        #200;
+        $display("Tiempo: %0t - Antes del reset, count: %d", $time, count);
+        
+        // Aplicar reset
+        switch_reset = 1;
+        #100;
+        $display("Tiempo: %0t - Durante reset, count: %d", $time, count);
+        
+        // Liberar reset
+        switch_reset = 0;
+        #100;
+        $display("Tiempo: %0t - Después del reset, count: %d", $time, count);
+        
+        $display("\n--- FASE 4: PRUEBA DE PULSACIONES RÁPIDAS (DEBOUNCER) ---");
+        
+        // Simular rebotes del botón (pulsaciones muy rápidas)
+        $display("Simulando rebotes del botón...");
+        for (i = 0; i < 10; i++) begin
+            btn_increment = 1;
+            #5;  // Pulsos muy cortos (rebotes)
+            btn_increment = 0;
+            #5;
+        end
+        
+        #300; // Esperar estabilización
+        $display("Tiempo: %0t - Después de rebotes, count: %d (debería haber incrementado solo 1)", 
+                 $time, count);
+        
+        $display("\n--- FASE 5: CONTEO CONTINUO PARA VERIFICAR SECUENCIA ---");
+        
+        // Reset para empezar desde 0
+        switch_reset = 1;
+        #50;
+        switch_reset = 0;
+        #100;
+        
+        // Contar de 0 a 15 para verificar la secuencia
+        for (i = 0; i < 16; i++) begin
+            $display("Tiempo: %0t - count: %2d (hex: %2h, binario: %6b)", 
+                     $time, count, count, count);
+            
+            // Pulso del botón
+            btn_increment = 1;
+            #30;
+            btn_increment = 0;
+            #150;
+        end
+        
+        $display("\n=== TESTBENCH COMPLETADO ===");
+        $display("Tiempo total de simulación: %0t", $time);
+        
+        // Finalizar simulación
+        $finish;
+    end
+    
+    // Monitor para detectar cambios importantes
+    always @(posedge clk) begin
+        if (switch_reset) begin
+            if (count !== 6'b000000) begin
+                $display("WARNING: Reset no está funcionando correctamente en tiempo %0t", $time);
+            end
+        end
+    end
+    
+    // Monitor para detectar cambios en el contador
+    logic [5:0] count_prev;
+    always @(posedge clk) begin
+        if (!switch_reset) begin
+            count_prev <= count;
+            if (count !== count_prev && count_prev !== 6'bx) begin
+                $display("CAMBIO DETECTADO: %d -> %d en tiempo %0t", count_prev, count, $time);
+            end
+        end
+    end
+
+endmodule
