@@ -26,8 +26,8 @@ begin
     stim_proc: process
     begin
         -- Primer caso de prueba: 0000 - 0000
-        A3 <= '0'; A2 <= '0'; A1 <= '0'; A0 <= '0';
-        B3 <= '0'; B2 <= '0'; B1 <= '0'; B0 <= '0';
+        A3 <= '1'; A2 <= '0'; A1 <= '0'; A0 <= '1';
+        B3 <= '0'; B2 <= '1'; B1 <= '1'; B0 <= '1';
         wait for 10 ns;
 
         -- Segundo caso: 1010 - 0101
@@ -36,8 +36,8 @@ begin
         wait for 10 ns;
 
         -- Tercer caso: 1111 - 0001
-        A3 <= '1'; A2 <= '1'; A1 <= '1'; A0 <= '1';
-        B3 <= '0'; B2 <= '0'; B1 <= '0'; B0 <= '1';
+        A3 <= '1'; A2 <= '0'; A1 <= '1'; A0 <= '1';
+        B3 <= '0'; B2 <= '1'; B1 <= '0'; B0 <= '1';
         wait for 10 ns;
 		  
 		  -- Cuarto caso: 1111-1111
