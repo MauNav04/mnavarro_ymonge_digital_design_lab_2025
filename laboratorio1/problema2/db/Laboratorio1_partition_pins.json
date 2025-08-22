@@ -4,67 +4,63 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "HEX0[0]",
+					"name" : "a",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[1]",
+					"name" : "b",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[2]",
+					"name" : "c",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[3]",
+					"name" : "d",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[4]",
+					"name" : "e",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[5]",
+					"name" : "f",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[6]",
+					"name" : "g",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[0]",
+					"name" : "A3",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[1]",
+					"name" : "B3",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[2]",
+					"name" : "A0",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[3]",
+					"name" : "B0",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[4]",
+					"name" : "A2",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[6]",
+					"name" : "B2",
 					"strict" : false
 				},
 				{
-					"name" : "switch_reset",
+					"name" : "A1",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "btn_increment",
+					"name" : "B1",
 					"strict" : false
 				}
 			]

@@ -1,8 +1,7 @@
 module bin2gray_tb();
-  logic a,b,c,d;            // entrada binaria (a=MSB, d=LSB)
-  logic w,x,y,z;            // salida gray    (w=MSB, z=LSB)
+  logic a,b,c,d;            // bin
+  logic w,x,y,z;          //gray
 
-  // TU DUT (tu versión escalar)
   bin2gray dut(.a(a), .b(b), .c(c), .d(d), .w(w), .x(x), .y(y), .z(z));
 
   initial begin

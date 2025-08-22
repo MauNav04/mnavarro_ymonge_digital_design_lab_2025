@@ -1,7 +1,7 @@
 module top_bin2gray_dec7seg(
-  input  logic a,b,c,d,  // binary in (a=MSB)
-  output logic seg_a, seg_b, seg_c, seg_d, seg_e, seg_f, seg_g,      // tens
-  output logic seg2_a, seg2_b, seg2_c, seg2_d, seg2_e, seg2_f, seg2_g // ones
+  input  logic a,b,c,d, 
+  output logic seg_a, seg_b, seg_c, seg_d, seg_e, seg_f, seg_g,      // este es tens (d)
+  output logic seg2_a, seg2_b, seg2_c, seg2_d, seg2_e, seg2_f, seg2_g // uniddades (i)
 );
   // Bin -> Gray
   logic w,x,y,z;

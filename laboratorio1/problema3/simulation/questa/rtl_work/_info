@@ -1,0 +1,160 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/simulation/questa
+vbcd_4b
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1755882608
+!i10b 1
+!s100 SFTGThcD1IN4OEZoBDgK01
+I_:eLmzNNM2d@hRR;ag:=[2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 bcd_4b_sv_unit
+S1
+R0
+Z4 w1755872758
+8C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/bcd_4b.sv
+FC:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/bcd_4b.sv
+L0 1
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1755882608.000000
+!s107 C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/bcd_4b.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3|C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/bcd_4b.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3
+Z9 tCvgOpt 0
+vboton_incrementador
+R1
+R2
+!i10b 1
+!s100 BMz7bao<c9hA[T1F5=dAN1
+I<Yc?kog75YY[o:JkfgU>e0
+R3
+!s105 boton_incrementador_sv_unit
+S1
+R0
+R4
+8C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/boton_incrementador.sv
+FC:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/boton_incrementador.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/boton_incrementador.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3|C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/boton_incrementador.sv|
+!i113 1
+R7
+R8
+R9
+vcontador_6bit
+R1
+Z10 !s110 1755882606
+!i10b 1
+!s100 3Ih@[mn]JnBhVofjnWPHn1
+I[^Z33B5NLzVEHb1=R^LJK1
+R3
+!s105 contador_6bit_sv_unit
+S1
+R0
+R4
+8C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/contador_6bit.sv
+FC:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/contador_6bit.sv
+L0 1
+R5
+r1
+!s85 0
+31
+Z11 !s108 1755882606.000000
+!s107 C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/contador_6bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3|C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/contador_6bit.sv|
+!i113 1
+R7
+R8
+R9
+vcontador_top
+R1
+R2
+!i10b 1
+!s100 iU6i<T`EblJX39^1?Xc;;3
+IFaTLThk4hQRCoUAGhcK^O3
+R3
+!s105 contador_top_sv_unit
+S1
+R0
+w1755881988
+8C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/contador_top.sv
+FC:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/contador_top.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/contador_top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3|C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/contador_top.sv|
+!i113 1
+R7
+R8
+R9
+vflip_flop
+R1
+R10
+!i10b 1
+!s100 ^KiD;RYOD=o3_PCHCS_M31
+IQYR5nIRbImd8`>id>bIOz3
+R3
+!s105 flip_flop_sv_unit
+S1
+R0
+R4
+8C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/flip_flop.sv
+FC:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/flip_flop.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/flip_flop.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3|C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/flip_flop.sv|
+!i113 1
+R7
+R8
+R9
+vtb_contador_top
+R1
+!s110 1755882609
+!i10b 1
+!s100 9m`SGGc5P3nHL?FLz_=XA3
+IIX38ISDS2NHaOZLZMS1j82
+R3
+!s105 tb_contador_top_sv_unit
+S1
+R0
+w1755882578
+8C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/tb_contador_top.sv
+FC:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/tb_contador_top.sv
+L0 3
+R5
+r1
+!s85 0
+31
+!s108 1755882609.000000
+!s107 C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/tb_contador_top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3|C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema3/tb_contador_top.sv|
+!i113 1
+R7
+R8
+R9
