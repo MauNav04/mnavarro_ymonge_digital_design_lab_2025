@@ -1,53 +1,182 @@
-|Top_Restador_BCD
-A3 => restador_4bits:U1.A3
-A2 => restador_4bits:U1.A2
-A1 => restador_4bits:U1.A1
-A0 => restador_4bits:U1.A0
-B3 => restador_4bits:U1.B3
-B2 => restador_4bits:U1.B2
-B1 => restador_4bits:U1.B1
-B0 => restador_4bits:U1.B0
-a <= bcd4b_vhdl:U2.a
-b <= bcd4b_vhdl:U2.b
-c <= bcd4b_vhdl:U2.c
-d <= bcd4b_vhdl:U2.d
-e <= bcd4b_vhdl:U2.e
-f <= bcd4b_vhdl:U2.f
-g <= bcd4b_vhdl:U2.g
+|contador_top
+clk => clk.IN1
+btn_increment => btn_increment.IN1
+switch_reset => switch_reset.IN2
+HEX0[0] << bcd_4b:display_right.g
+HEX0[1] << bcd_4b:display_right.f
+HEX0[2] << bcd_4b:display_right.e
+HEX0[3] << bcd_4b:display_right.d
+HEX0[4] << bcd_4b:display_right.c
+HEX0[5] << bcd_4b:display_right.b
+HEX0[6] << bcd_4b:display_right.a
+HEX1[0] << bcd_4b:display_left.g
+HEX1[1] << bcd_4b:display_left.f
+HEX1[2] << bcd_4b:display_left.e
+HEX1[3] << bcd_4b:display_left.d
+HEX1[4] << bcd_4b:display_left.c
+HEX1[5] << bcd_4b:display_left.b
+HEX1[6] << bcd_4b:display_left.a
 
 
-|Top_Restador_BCD|Restador_4bits:U1
-A3 => C3.IN0
-A2 => C2.IN0
-A1 => C1.IN0
-A0 => C0.IN0
-B3 => C3.IN1
-B2 => C2.IN1
-B1 => C1.IN1
-B0 => C0.IN1
-C3 <= C3.DB_MAX_OUTPUT_PORT_TYPE
-C2 <= C2.DB_MAX_OUTPUT_PORT_TYPE
-C1 <= C1.DB_MAX_OUTPUT_PORT_TYPE
-C0 <= C0.DB_MAX_OUTPUT_PORT_TYPE
+|contador_top|boton_incrementador:debouncer
+clk => clk.IN3
+btn_raw => btn_raw.IN1
+reset => reset_n.IN3
+btn_pulse <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Top_Restador_BCD|BCD4b_VHDL:U2
-A3 => a.IN0
-A3 => a.IN0
-A3 => a.IN0
-A3 => a.IN0
-A2 => a.IN1
-A2 => a.IN1
-A2 => a.IN1
-A2 => a.IN1
-A1 => a.IN1
-A1 => a.IN1
-A1 => a.IN1
-A1 => a.IN1
-A1 => a.IN1
-A1 => a.IN1
-A1 => a.IN1
-A1 => a.IN1
+|contador_top|boton_incrementador:debouncer|flip_flop:ff0
+D => Sm.IN0
+D => Rm.IN0
+CLK => Ss.IN0
+CLK => Rs.IN1
+CLK => Sm.IN1
+CLK => Rm.IN1
+PRE => WideNand0.IN2
+PRE => WideNand2.IN2
+CLR => WideNand1.IN1
+CLR => WideNand3.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador_top|boton_incrementador:debouncer|flip_flop:ff1
+D => Sm.IN0
+D => Rm.IN0
+CLK => Ss.IN0
+CLK => Rs.IN1
+CLK => Sm.IN1
+CLK => Rm.IN1
+PRE => WideNand0.IN2
+PRE => WideNand2.IN2
+CLR => WideNand1.IN1
+CLR => WideNand3.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador_top|boton_incrementador:debouncer|flip_flop:ff2
+D => Sm.IN0
+D => Rm.IN0
+CLK => Ss.IN0
+CLK => Rs.IN1
+CLK => Sm.IN1
+CLK => Rm.IN1
+PRE => WideNand0.IN2
+PRE => WideNand2.IN2
+CLR => WideNand1.IN1
+CLR => WideNand3.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador_top|contador_6bit:counter
+btn_clk => btn_clk.IN6
+reset => _.IN1
+reset => _.IN1
+reset => _.IN1
+reset => _.IN1
+reset => _.IN1
+reset => _.IN1
+count[0] <= flip_flop:ff0.Q
+count[1] <= flip_flop:ff1.Q
+count[2] <= flip_flop:ff2.Q
+count[3] <= flip_flop:ff3.Q
+count[4] <= flip_flop:ff4.Q
+count[5] <= flip_flop:ff5.Q
+
+
+|contador_top|contador_6bit:counter|flip_flop:ff0
+D => Sm.IN0
+D => Rm.IN0
+CLK => Ss.IN0
+CLK => Rs.IN1
+CLK => Sm.IN1
+CLK => Rm.IN1
+PRE => WideNand0.IN2
+PRE => WideNand2.IN2
+CLR => WideNand1.IN1
+CLR => WideNand3.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador_top|contador_6bit:counter|flip_flop:ff1
+D => Sm.IN0
+D => Rm.IN0
+CLK => Ss.IN0
+CLK => Rs.IN1
+CLK => Sm.IN1
+CLK => Rm.IN1
+PRE => WideNand0.IN2
+PRE => WideNand2.IN2
+CLR => WideNand1.IN1
+CLR => WideNand3.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador_top|contador_6bit:counter|flip_flop:ff2
+D => Sm.IN0
+D => Rm.IN0
+CLK => Ss.IN0
+CLK => Rs.IN1
+CLK => Sm.IN1
+CLK => Rm.IN1
+PRE => WideNand0.IN2
+PRE => WideNand2.IN2
+CLR => WideNand1.IN1
+CLR => WideNand3.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador_top|contador_6bit:counter|flip_flop:ff3
+D => Sm.IN0
+D => Rm.IN0
+CLK => Ss.IN0
+CLK => Rs.IN1
+CLK => Sm.IN1
+CLK => Rm.IN1
+PRE => WideNand0.IN2
+PRE => WideNand2.IN2
+CLR => WideNand1.IN1
+CLR => WideNand3.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador_top|contador_6bit:counter|flip_flop:ff4
+D => Sm.IN0
+D => Rm.IN0
+CLK => Ss.IN0
+CLK => Rs.IN1
+CLK => Sm.IN1
+CLK => Rm.IN1
+PRE => WideNand0.IN2
+PRE => WideNand2.IN2
+CLR => WideNand1.IN1
+CLR => WideNand3.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador_top|contador_6bit:counter|flip_flop:ff5
+D => Sm.IN0
+D => Rm.IN0
+CLK => Ss.IN0
+CLK => Rs.IN1
+CLK => Sm.IN1
+CLK => Rm.IN1
+PRE => WideNand0.IN2
+PRE => WideNand2.IN2
+CLR => WideNand1.IN1
+CLR => WideNand3.IN1
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador_top|bcd_4b:display_right
 A0 => a.IN1
 A0 => a.IN1
 A0 => a.IN1
@@ -64,6 +193,64 @@ A0 => a.IN1
 A0 => a.IN1
 A0 => a.IN1
 A0 => b.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A2 => a.IN0
+A2 => a.IN0
+A2 => a.IN0
+A2 => a.IN0
+A3 => a.IN1
+A3 => a.IN1
+A3 => a.IN1
+A3 => a.IN1
+a <= a.DB_MAX_OUTPUT_PORT_TYPE
+b <= b.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+d <= d.DB_MAX_OUTPUT_PORT_TYPE
+e <= e.DB_MAX_OUTPUT_PORT_TYPE
+f <= f.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador_top|bcd_4b:display_left
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => b.IN1
+A0 => b.IN1
+A0 => c.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => a.IN1
+A0 => b.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A1 => a.IN1
+A2 => a.IN0
+A2 => a.IN0
+A2 => a.IN0
+A2 => a.IN0
+A3 => a.IN1
+A3 => a.IN1
+A3 => a.IN1
+A3 => a.IN1
 a <= a.DB_MAX_OUTPUT_PORT_TYPE
 b <= b.DB_MAX_OUTPUT_PORT_TYPE
 c <= c.DB_MAX_OUTPUT_PORT_TYPE

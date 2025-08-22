@@ -1,0 +1,71 @@
+module contador_6bit (
+    input  logic btn_clk,    // Botón para incrementar
+    input  logic reset,      // Reset asíncrono
+    output logic [5:0] count // Salida del contador de 6 bits
+);
+
+    logic [5:0] next_count;
+    logic [5:0] current_count;
+    
+    // Asignar la salida
+    assign count = current_count;
+    
+    // Lógica para calcular el siguiente valor es un incremento
+    assign next_count = current_count + 1'b1;
+    
+    // Instanciar 6 flip-flops para cada bit del contador
+    flip_flop ff0 (
+        .D(next_count[0]),
+        .CLK(btn_clk),
+        .PRE(1'b1),           // PRE inactivo (activo en bajo)
+        .CLR(~reset),         // CLR activo cuando reset está en alto
+        .Q(current_count[0]),
+        .nQ()                 // el nQ no se usa pero se debe colocar para evitar errores
+    );
+    
+    flip_flop ff1 (            
+        .D(next_count[1]),
+        .CLK(btn_clk),
+        .PRE(1'b1),
+        .CLR(~reset),
+        .Q(current_count[1]),
+        .nQ()
+    );
+    
+    flip_flop ff2 (
+        .D(next_count[2]),
+        .CLK(btn_clk),
+        .PRE(1'b1),
+        .CLR(~reset),
+        .Q(current_count[2]),
+        .nQ()
+    );
+    
+    flip_flop ff3 (
+        .D(next_count[3]),
+        .CLK(btn_clk),
+        .PRE(1'b1),
+        .CLR(~reset),
+        .Q(current_count[3]),
+        .nQ()
+    );
+    
+    flip_flop ff4 (
+        .D(next_count[4]),
+        .CLK(btn_clk),
+        .PRE(1'b1),
+        .CLR(~reset),
+        .Q(current_count[4]),
+        .nQ()
+    );
+    
+    flip_flop ff5 (
+        .D(next_count[5]),
+        .CLK(btn_clk),
+        .PRE(1'b1),
+        .CLR(~reset),
+        .Q(current_count[5]),
+        .nQ()
+    );
+
+endmodule

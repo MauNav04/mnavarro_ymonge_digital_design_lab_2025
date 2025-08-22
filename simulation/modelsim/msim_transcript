@@ -1,5 +1,5 @@
 # Reading pref.tcl
-# do Laboratorio1_run_msim_rtl_vhdl.do
+# do Laboratorio1_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
@@ -10,45 +10,262 @@
 # Copying C:/IntelFPGA/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Restador_4bits.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:32:41 on Aug 18,2025
-# vcom -reportprogress 300 -93 -work work C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Restador_4bits.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity Restador_4bits
-# -- Compiling architecture gates of Restador_4bits
-# End time: 18:32:41 on Aug 18,2025, Elapsed time: 0:00:00
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/flip_flop.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:10:32 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/flip_flop.sv 
+# -- Compiling module flip_flop
+# 
+# Top level modules:
+# 	flip_flop
+# End time: 01:10:32 on Aug 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/contador_6bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:10:32 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/contador_6bit.sv 
+# -- Compiling module contador_6bit
+# 
+# Top level modules:
+# 	contador_6bit
+# End time: 01:10:33 on Aug 22,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/contador_top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:10:33 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/contador_top.sv 
+# -- Compiling module contador_top
+# 
+# Top level modules:
+# 	contador_top
+# End time: 01:10:33 on Aug 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/boton_incrementador.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:10:33 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/boton_incrementador.sv 
+# -- Compiling module boton_incrementador
+# 
+# Top level modules:
+# 	boton_incrementador
+# End time: 01:10:33 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vcom -93 -work work {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_Restador_4bits.vhd}
-# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 18:32:41 on Aug 18,2025
-# vcom -reportprogress 300 -93 -work work C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_Restador_4bits.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity tb_Restador_4bits
-# -- Compiling architecture instancia of tb_Restador_4bits
-# -- Loading entity Restador_4bits
-# End time: 18:32:41 on Aug 18,2025, Elapsed time: 0:00:00
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_contador_top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:10:33 on Aug 22,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_contador_top.sv 
+# -- Compiling module tb_contador_top
+# 
+# Top level modules:
+# 	tb_contador_top
+# End time: 01:10:33 on Aug 22,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  tb_Restador_4bits
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" tb_Restador_4bits 
-# Start time: 18:32:41 on Aug 18,2025
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.tb_restador_4bits(instancia)
-# Loading work.restador_4bits(gates)
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_contador_top
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_contador_top 
+# Start time: 01:10:33 on Aug 22,2025
+# Loading sv_std.std
+# Loading work.tb_contador_top
+# Loading work.contador_top
+# Loading work.boton_incrementador
+# Loading work.flip_flop
+# Loading work.contador_6bit
 # 
 # add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Yonathan Monge  Hostname: DESKTOP-OQ609G7  ProcessID: 9388
+#           Attempting to use alternate WLF file "./wlfthgcgzg".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthgcgzg
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 18:34:22 on Aug 18,2025, Elapsed time: 0:01:41
-# Errors: 0, Warnings: 0
+# === INICIO DEL DEBUGGING ===
+# Tiempo: 5000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 1 | count:  0 (000000)
+# Tiempo: 15000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 1 | count:  0 (000000)
+# Tiempo: 25000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 1 | count:  0 (000000)
+# Tiempo: 35000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 1 | count:  0 (000000)
+# Tiempo: 45000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 1 | count:  0 (000000)
+# 
+# --- LIBERANDO RESET ---
+# Tiempo: 55000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  0 (000000)
+# Tiempo: 65000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  0 (000000)
+# Tiempo: 75000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  0 (000000)
+# Tiempo: 85000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  0 (000000)
+# Tiempo: 95000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  0 (000000)
+# Tiempo: 105000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  0 (000000)
+# Tiempo: 115000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  0 (000000)
+# Tiempo: 125000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  0 (000000)
+# Tiempo: 135000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  0 (000000)
+# Tiempo: 145000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  0 (000000)
+# 
+# --- PRIMERA PULSACIÓN ---
+# Tiempo: 155000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  0 (000000)
+# Tiempo: 165000 | clk: 1 | btn_raw: 1 | btn_clean: 1 | reset: 0 | count:  1 (000001)
+# Tiempo: 175000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 185000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 195000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 205000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 215000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 225000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 235000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 245000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 255000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 265000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 275000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 285000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 295000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 305000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 315000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 325000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 335000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 345000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 355000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 365000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 375000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 385000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 395000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 405000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 415000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 425000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 435000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 445000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# 
+# --- SEGUNDA PULSACIÓN ---
+# Tiempo: 455000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  1 (000001)
+# Tiempo: 465000 | clk: 1 | btn_raw: 1 | btn_clean: 1 | reset: 0 | count:  2 (000010)
+# Tiempo: 475000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 485000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 495000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 505000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 515000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 525000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 535000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 545000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 555000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 565000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 575000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 585000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 595000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 605000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 615000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 625000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 635000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 645000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 655000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 665000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 675000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 685000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 695000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 705000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 715000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 725000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 735000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 745000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# 
+# --- TERCERA PULSACIÓN ---
+# Tiempo: 755000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  2 (000010)
+# Tiempo: 765000 | clk: 1 | btn_raw: 1 | btn_clean: 1 | reset: 0 | count:  3 (000011)
+# Tiempo: 775000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 785000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 795000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 805000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 815000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 825000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 835000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 845000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 855000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 865000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 875000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 885000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 895000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 905000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 915000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 925000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 935000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 945000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 955000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 965000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 975000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 985000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 995000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 1005000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 1015000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 1025000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 1035000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 1045000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# 
+# --- CUARTA PULSACIÓN ---
+# Tiempo: 1055000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  3 (000011)
+# Tiempo: 1065000 | clk: 1 | btn_raw: 1 | btn_clean: 1 | reset: 0 | count:  4 (000100)
+# Tiempo: 1075000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1085000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1095000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1105000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1115000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1125000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1135000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1145000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1155000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1165000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1175000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1185000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1195000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1205000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1215000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1225000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1235000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1245000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1255000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1265000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1275000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1285000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1295000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1305000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1315000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1325000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1335000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1345000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# 
+# --- QUINTA PULSACIÓN ---
+# Tiempo: 1355000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  4 (000100)
+# Tiempo: 1365000 | clk: 1 | btn_raw: 1 | btn_clean: 1 | reset: 0 | count:  5 (000101)
+# Tiempo: 1375000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1385000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1395000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1405000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1415000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1425000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1435000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1445000 | clk: 1 | btn_raw: 1 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1455000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1465000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1475000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1485000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1495000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1505000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1515000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1525000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1535000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1545000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1555000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1565000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1575000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1585000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1595000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1605000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1615000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1625000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1635000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# Tiempo: 1645000 | clk: 1 | btn_raw: 0 | btn_clean: 0 | reset: 0 | count:  5 (000101)
+# 
+# === FIN DEL DEBUG ===
+# ** Note: $finish    : C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_contador_top.sv(84)
+#    Time: 1650 ns  Iteration: 0  Instance: /tb_contador_top
+# 1
+# Break in Module tb_contador_top at C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_contador_top.sv line 84
+# End time: 01:30:22 on Aug 22,2025, Elapsed time: 0:19:49
+# Errors: 0, Warnings: 2

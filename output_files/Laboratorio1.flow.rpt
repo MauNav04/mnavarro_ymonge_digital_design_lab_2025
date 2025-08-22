@@ -1,5 +1,5 @@
 Flow report for Laboratorio1
-Wed Aug 20 00:03:32 2025
+Fri Aug 22 02:02:05 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,24 +38,29 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Flow Summary                                                              ;
-+-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Wed Aug 20 00:03:32 2025       ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name               ; Laboratorio1                                ;
-; Top-level Entity Name       ; Top_Restador_BCD                            ;
-; Family                      ; Cyclone V                                   ;
-; Device                      ; 5CSEMA5F31C6                                ;
-; Timing Models               ; Final                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Fri Aug 22 02:02:05 2025       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; Laboratorio1                                ;
+; Top-level Entity Name           ; contador_top                                ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSEMA5F31C6                                ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 17 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 17 / 457 ( 4 % )                            ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
+; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -63,66 +68,82 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/20/2025 00:03:27 ;
+; Start date & time ; 08/22/2025 02:01:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Laboratorio1        ;
 +-------------------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                     ;
-+--------------------------------------+----------------------------------------+---------------+------------------+-----------------------------------+
-; Assignment Name                      ; Value                                  ; Default Value ; Entity Name      ; Section Id                        ;
-+--------------------------------------+----------------------------------------+---------------+------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 127913735101794.175566980609204        ; --            ; --               ; --                                ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --               ; tb_Restador_4bits                 ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --               ; eda_board_design_timing           ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --               ; eda_board_design_boundary_scan    ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --               ; eda_board_design_signal_integrity ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --               ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_Restador_4bits                      ; --            ; --               ; eda_simulation                    ;
-; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --               ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (VHDL)                 ; <None>        ; --               ; --                                ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --               ; eda_simulation                    ;
-; EDA_TEST_BENCH_FILE                  ; tb_Restador_4bits.vhd                  ; --            ; --               ; tb_Restador_4bits                 ;
-; EDA_TEST_BENCH_MODULE_NAME           ; tb_Restador_4bits                      ; --            ; --               ; tb_Restador_4bits                 ;
-; EDA_TEST_BENCH_NAME                  ; tb_Restador_4bits                      ; --            ; --               ; eda_simulation                    ;
-; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --               ; eda_simulation                    ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --               ; --                                ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --               ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; Top_Restador_BCD ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; Top_Restador_BCD ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; Top_Restador_BCD ; Top                               ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --               ; --                                ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --               ; --                                ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --               ; --                                ;
-; TOP_LEVEL_ENTITY                     ; Top_Restador_BCD                       ; Laboratorio1  ; --               ; --                                ;
-+--------------------------------------+----------------------------------------+---------------+------------------+-----------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                 ;
++--------------------------------------+----------------------------------------+---------------+--------------+-----------------------------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name  ; Section Id                        ;
++--------------------------------------+----------------------------------------+---------------+--------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID                ; 127913735101794.175584967223896        ; --            ; --           ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --           ; tb_Restador_4bits                 ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --           ; tb_contador_top                   ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --           ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --           ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --           ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --           ; eda_board_design_symbol           ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_contador_top                        ; --            ; --           ; eda_simulation                    ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --           ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --           ; --                                ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --           ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; tb_Restador_4bits.vhd                  ; --            ; --           ; tb_Restador_4bits                 ;
+; EDA_TEST_BENCH_FILE                  ; tb_contador_top.sv                     ; --            ; --           ; tb_contador_top                   ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_Restador_4bits                      ; --            ; --           ; tb_Restador_4bits                 ;
+; EDA_TEST_BENCH_MODULE_NAME           ; tb_contador_top                        ; --            ; --           ; tb_contador_top                   ;
+; EDA_TEST_BENCH_NAME                  ; tb_Restador_4bits                      ; --            ; --           ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; tb_contador_top                        ; --            ; --           ; eda_simulation                    ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --           ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --           ; --                                ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --           ; --                                ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; contador_top ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; contador_top ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; contador_top ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --           ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --           ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --           ; --                                ;
+; TOP_LEVEL_ENTITY                     ; contador_top                           ; Laboratorio1  ; --           ; --                                ;
++--------------------------------------+----------------------------------------+---------------+--------------+-----------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                          ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:06     ; 1.0                     ; 4835 MB             ; 00:00:14                           ;
-; Total                  ; 00:00:06     ; --                      ; --                  ; 00:00:14                           ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4869 MB             ; 00:00:16                           ;
+; Fitter               ; 00:00:34     ; 1.0                     ; 7800 MB             ; 00:03:19                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4840 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 5281 MB             ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4729 MB             ; 00:00:01                           ;
+; Total                ; 00:00:49     ; --                      ; --                  ; 00:03:43                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                      ;
-+------------------------+------------------+------------+------------+----------------+
-; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; DESKTOP-OQ609G7  ; Windows 10 ; 10.0       ; x86_64         ;
-+------------------------+------------------+------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-OQ609G7  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-OQ609G7  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-OQ609G7  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-OQ609G7  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-OQ609G7  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off Laboratorio1 -c Laboratorio1 --analysis_and_elaboration
+quartus_map --read_settings_files=on --write_settings_files=off Laboratorio1 -c Laboratorio1
+quartus_fit --read_settings_files=off --write_settings_files=off Laboratorio1 -c Laboratorio1
+quartus_asm --read_settings_files=off --write_settings_files=off Laboratorio1 -c Laboratorio1
+quartus_sta Laboratorio1 -c Laboratorio1
+quartus_eda --read_settings_files=off --write_settings_files=off Laboratorio1 -c Laboratorio1
 
 
 
