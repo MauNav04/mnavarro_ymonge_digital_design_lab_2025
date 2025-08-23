@@ -1,0 +1,17 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/Restador_4bits.vhd}
+
+vcom -93 -work work {C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/tb_Restador_4bits.vhd}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L cyclonev_hssi -L rtl_work -L work -voptargs="+acc"  tb_Restador_4bits
+
+add wave *
+view structure
+view signals
+run -all

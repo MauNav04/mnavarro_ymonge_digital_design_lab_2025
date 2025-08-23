@@ -28,7 +28,10 @@ module contador_top (
     
     // Separar los bits para los displays
     assign lower_4bits = count[3:0];           // 4 bits menos significativos
-    assign upper_2bits = {2'b00, count[5:4]}; // 2 bits más significativos extendidos a 4 bits
+	 //assign lower_4bits = count[1:0];           // 2 bits menos significativos
+	 //assign upper_2bits = {2'b00, count[4:4]}; // 2 bits más significativos extendidos a 4 bits
+	 assign upper_2bits = {2'b00, count[5:4]}; // 2 bits más significativos extendidos a 4 bits
+    //assign upper_2bits = 4'b0000; // 2 bits más significativos extendidos a 4 bits
     
     // Display derecho - 4 bits menos significativos (0-F)
     bcd_4b display_right (

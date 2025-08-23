@@ -1,23 +1,29 @@
-Analysis & Elaboration report for Laboratorio1
-Fri Aug 22 03:41:43 2025
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Analysis & Synthesis report for Laboratorio1
+Fri Aug 22 10:13:21 2025
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -34,47 +40,36 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Aug 22 03:41:43 2025       ;
-; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                 ; Laboratorio1                                ;
-; Top-level Entity Name         ; Restador_4bits                              ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Aug 22 10:13:21 2025          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; Laboratorio1                                   ;
+; Top-level Entity Name           ; Top_Restador_BCD                               ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 15                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; Restador_4bits     ; Laboratorio1       ;
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; Top_Restador_BCD   ; Laboratorio1       ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -155,45 +150,161 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; BCD4b_VHDL.vhd                   ; yes             ; User VHDL File  ; C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/BCD4b_VHDL.vhd       ;         ;
+; Restador_4bits.vhd               ; yes             ; User VHDL File  ; C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/Restador_4bits.vhd   ;         ;
+; Top_Restador_BCD.vhd             ; yes             ; User VHDL File  ; C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/Top_Restador_BCD.vhd ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                          ;
++---------------------------------------------+------------------------+
+; Resource                                    ; Usage                  ;
++---------------------------------------------+------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 6                      ;
+;                                             ;                        ;
+; Combinational ALUT usage for logic          ; 11                     ;
+;     -- 7 input functions                    ; 0                      ;
+;     -- 6 input functions                    ; 0                      ;
+;     -- 5 input functions                    ; 0                      ;
+;     -- 4 input functions                    ; 7                      ;
+;     -- <=3 input functions                  ; 4                      ;
+;                                             ;                        ;
+; Dedicated logic registers                   ; 0                      ;
+;                                             ;                        ;
+; I/O pins                                    ; 15                     ;
+;                                             ;                        ;
+; Total DSP Blocks                            ; 0                      ;
+;                                             ;                        ;
+; Maximum fan-out node                        ; Restador_4bits:U1|C3~0 ;
+; Maximum fan-out                             ; 7                      ;
+; Total fan-out                               ; 58                     ;
+; Average fan-out                             ; 1.41                   ;
++---------------------------------------------+------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Entity Name      ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+------------------+--------------+
+; |Top_Restador_BCD          ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 15   ; 0            ; |Top_Restador_BCD                   ; Top_Restador_BCD ; work         ;
+;    |BCD4b_VHDL:U2|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Restador_BCD|BCD4b_VHDL:U2     ; BCD4b_VHDL       ; work         ;
+;    |Restador_4bits:U1|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top_Restador_BCD|Restador_4bits:U1 ; Restador_4bits   ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 18                          ;
+;     normal            ; 18                          ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 4                           ;
+;         4 data inputs ; 7                           ;
+; boundary_port         ; 15                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 3.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Aug 22 03:41:37 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio1 -c Laboratorio1 --analysis_and_elaboration
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Fri Aug 22 10:13:14 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Laboratorio1 -c Laboratorio1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bcd4b_vhdl.vhd
-    Info (12022): Found design unit 1: BCD4b_VHDL-gates File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/BCD4b_VHDL.vhd Line: 23
-    Info (12023): Found entity 1: BCD4b_VHDL File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/BCD4b_VHDL.vhd Line: 6
+    Info (12022): Found design unit 1: BCD4b_VHDL-gates File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/BCD4b_VHDL.vhd Line: 23
+    Info (12023): Found entity 1: BCD4b_VHDL File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/BCD4b_VHDL.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file restador_4bits.vhd
-    Info (12022): Found design unit 1: Restador_4bits-gates File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Restador_4bits.vhd Line: 27
-    Info (12023): Found entity 1: Restador_4bits File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Restador_4bits.vhd Line: 8
+    Info (12022): Found design unit 1: Restador_4bits-gates File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/Restador_4bits.vhd Line: 27
+    Info (12023): Found entity 1: Restador_4bits File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/Restador_4bits.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file tb_restador_4bits.vhd
-    Info (12022): Found design unit 1: tb_Restador_4bits-instancia File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_Restador_4bits.vhd Line: 8
-    Info (12023): Found entity 1: tb_Restador_4bits File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_Restador_4bits.vhd Line: 5
+    Info (12022): Found design unit 1: tb_Restador_4bits-instancia File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/tb_Restador_4bits.vhd Line: 8
+    Info (12023): Found entity 1: tb_Restador_4bits File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/tb_Restador_4bits.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file top_restador_bcd.vhd
-    Info (12022): Found design unit 1: Top_Restador_BCD-gates File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Top_Restador_BCD.vhd Line: 16
-    Info (12023): Found entity 1: Top_Restador_BCD File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Top_Restador_BCD.vhd Line: 6
+    Info (12022): Found design unit 1: Top_Restador_BCD-gates File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/Top_Restador_BCD.vhd Line: 16
+    Info (12023): Found entity 1: Top_Restador_BCD File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/Top_Restador_BCD.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file flip_flop.sv
-    Info (12023): Found entity 1: flip_flop File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/flip_flop.sv Line: 1
+    Info (12023): Found entity 1: flip_flop File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/flip_flop.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file contador_6bit.sv
-    Info (12023): Found entity 1: contador_6bit File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/contador_6bit.sv Line: 1
+    Info (12023): Found entity 1: contador_6bit File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/contador_6bit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file contador_top.sv
-    Info (12023): Found entity 1: contador_top File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/contador_top.sv Line: 1
+    Info (12023): Found entity 1: contador_top File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/contador_top.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file boton_incrementador.sv
-    Info (12023): Found entity 1: boton_incrementador File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/boton_incrementador.sv Line: 1
+    Info (12023): Found entity 1: boton_incrementador File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/boton_incrementador.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tb_contador_top.sv
-    Info (12023): Found entity 1: tb_contador_top File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/tb_contador_top.sv Line: 3
+    Info (12023): Found entity 1: tb_contador_top File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/tb_contador_top.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file bcd_4b.sv
-    Info (12023): Found entity 1: bcd_4b File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/bcd_4b.sv Line: 1
-Info (12127): Elaborating entity "Restador_4bits" for the top level hierarchy
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Fri Aug 22 03:41:43 2025
-    Info: Elapsed time: 00:00:06
+    Info (12023): Found entity 1: bcd_4b File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/bcd_4b.sv Line: 1
+Info (12127): Elaborating entity "Top_Restador_BCD" for the top level hierarchy
+Info (12128): Elaborating entity "Restador_4bits" for hierarchy "Restador_4bits:U1" File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/Top_Restador_BCD.vhd Line: 24
+Info (12128): Elaborating entity "BCD4b_VHDL" for hierarchy "BCD4b_VHDL:U2" File: C:/Users/Mano-/Documents/Documentos/Quartus/Laboratorio1-Taller-Disen/laboratorio1/problema2/Top_Restador_BCD.vhd Line: 41
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 26 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 7 output pins
+    Info (21061): Implemented 11 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4931 megabytes
+    Info: Processing ended: Fri Aug 22 10:13:21 2025
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:15
 
 
