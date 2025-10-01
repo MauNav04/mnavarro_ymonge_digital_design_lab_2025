@@ -1,0 +1,87 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/simulation/questa
+valuDesign
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1757568771
+!i10b 1
+!s100 cVL:jVMk;YG9hIS`5cUVk3
+ICSjI`99<U9HOFN8NcgeK22
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 aluDesign_sv_unit
+S1
+R0
+w1757568224
+8C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/aluDesign.sv
+FC:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/aluDesign.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1757568771.000000
+!s107 C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/aluDesign.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td|C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/aluDesign.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td
+Z8 tCvgOpt 0
+nalu@design
+valuDesign_tb
+R1
+R2
+!i10b 1
+!s100 YKbI^Lalb[:moW7G`N<ab1
+IO6C5WzDhBdHjjYRfCWbEo0
+R3
+!s105 aluDesign_tb_sv_unit
+S1
+R0
+w1757568435
+8C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/aluDesign_tb.sv
+FC:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/aluDesign_tb.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/aluDesign_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td|C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/aluDesign_tb.sv|
+!i113 1
+R6
+R7
+R8
+nalu@design_tb
+vfull_adder
+R1
+R2
+!i10b 1
+!s100 XJG4?aC`l>a[`[i3Yz4c_3
+I]_C2H:2Ke<P5VN_U6D=GT1
+R3
+!s105 full_adder_sv_unit
+S1
+R0
+w1757568459
+8C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/full_adder.sv
+FC:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/full_adder.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/full_adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td|C:/Users/Mano-/Documents/Documentos/Quartus/lab2-e1-td/full_adder.sv|
+!i113 1
+R6
+R7
+R8
