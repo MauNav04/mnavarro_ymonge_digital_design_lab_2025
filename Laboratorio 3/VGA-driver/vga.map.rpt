@@ -1,0 +1,779 @@
+Analysis & Synthesis report for vga
+Wed Oct  1 09:56:32 2025
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Logic Cells Representing Combinational Loops
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |temporizador_15s
+ 11. Parameter Settings for User Entity Instance: divisor_1hz_50m:udiv
+ 12. Port Connectivity Checks: "contador_4bit:ucnt|flip_flop:ff3"
+ 13. Port Connectivity Checks: "contador_4bit:ucnt|flip_flop:ff2"
+ 14. Port Connectivity Checks: "contador_4bit:ucnt|flip_flop:ff1"
+ 15. Port Connectivity Checks: "contador_4bit:ucnt|flip_flop:ff0"
+ 16. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff25"
+ 17. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff24"
+ 18. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff23"
+ 19. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff22"
+ 20. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff21"
+ 21. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff20"
+ 22. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff19"
+ 23. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff18"
+ 24. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff17"
+ 25. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff16"
+ 26. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff15"
+ 27. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff14"
+ 28. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff13"
+ 29. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff12"
+ 30. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff11"
+ 31. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff10"
+ 32. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff9"
+ 33. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff8"
+ 34. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff7"
+ 35. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff6"
+ 36. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff5"
+ 37. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff4"
+ 38. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff3"
+ 39. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff2"
+ 40. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff1"
+ 41. Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff0"
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Oct  1 09:56:32 2025          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; vga                                            ;
+; Top-level Entity Name           ; temporizador_15s                               ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 0                                              ;
+; Total pins                      ; 16                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; temporizador_15s   ; vga                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 10          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                                                     ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; temporizador_15s.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/temporizador_15s.sv ;         ;
+; flip_flop.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/flip_flop.sv        ;         ;
+; divisor_1hz_50m.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv  ;         ;
+; contador_4bit.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/contador_4bit.sv    ;         ;
+; bcd_contador_R.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/bcd_contador_R.sv   ;         ;
+; bcd_contador_L.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/bcd_contador_L.sv   ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 60          ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 91          ;
+;     -- 7 input functions                    ; 7           ;
+;     -- 6 input functions                    ; 21          ;
+;     -- 5 input functions                    ; 13          ;
+;     -- 4 input functions                    ; 46          ;
+;     -- <=3 input functions                  ; 4           ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 16          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; reset~input ;
+; Maximum fan-out                             ; 60          ;
+; Total fan-out                               ; 462         ;
+; Average fan-out                             ; 3.76        ;
++---------------------------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name      ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------+------------------+--------------+
+; |temporizador_15s          ; 91 (0)              ; 0 (0)                     ; 0                 ; 0          ; 16   ; 0            ; |temporizador_15s                                     ; temporizador_15s ; work         ;
+;    |bcd_contador_L:uL|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|bcd_contador_L:uL                   ; bcd_contador_L   ; work         ;
+;    |bcd_contador_R:uR|     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|bcd_contador_R:uR                   ; bcd_contador_R   ; work         ;
+;    |contador_4bit:ucnt|    ; 9 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|contador_4bit:ucnt                  ; contador_4bit    ; work         ;
+;       |flip_flop:ff0|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|contador_4bit:ucnt|flip_flop:ff0    ; flip_flop        ; work         ;
+;       |flip_flop:ff1|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|contador_4bit:ucnt|flip_flop:ff1    ; flip_flop        ; work         ;
+;       |flip_flop:ff2|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|contador_4bit:ucnt|flip_flop:ff2    ; flip_flop        ; work         ;
+;       |flip_flop:ff3|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|contador_4bit:ucnt|flip_flop:ff3    ; flip_flop        ; work         ;
+;    |divisor_1hz_50m:udiv|  ; 74 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv                ; divisor_1hz_50m  ; work         ;
+;       |flip_flop:ff0|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff0  ; flip_flop        ; work         ;
+;       |flip_flop:ff10|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff10 ; flip_flop        ; work         ;
+;       |flip_flop:ff11|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff11 ; flip_flop        ; work         ;
+;       |flip_flop:ff12|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff12 ; flip_flop        ; work         ;
+;       |flip_flop:ff13|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff13 ; flip_flop        ; work         ;
+;       |flip_flop:ff14|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff14 ; flip_flop        ; work         ;
+;       |flip_flop:ff15|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff15 ; flip_flop        ; work         ;
+;       |flip_flop:ff16|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff16 ; flip_flop        ; work         ;
+;       |flip_flop:ff17|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff17 ; flip_flop        ; work         ;
+;       |flip_flop:ff18|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff18 ; flip_flop        ; work         ;
+;       |flip_flop:ff19|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff19 ; flip_flop        ; work         ;
+;       |flip_flop:ff1|      ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff1  ; flip_flop        ; work         ;
+;       |flip_flop:ff20|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff20 ; flip_flop        ; work         ;
+;       |flip_flop:ff21|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff21 ; flip_flop        ; work         ;
+;       |flip_flop:ff22|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff22 ; flip_flop        ; work         ;
+;       |flip_flop:ff23|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff23 ; flip_flop        ; work         ;
+;       |flip_flop:ff24|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff24 ; flip_flop        ; work         ;
+;       |flip_flop:ff25|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff25 ; flip_flop        ; work         ;
+;       |flip_flop:ff2|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff2  ; flip_flop        ; work         ;
+;       |flip_flop:ff3|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff3  ; flip_flop        ; work         ;
+;       |flip_flop:ff4|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff4  ; flip_flop        ; work         ;
+;       |flip_flop:ff5|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff5  ; flip_flop        ; work         ;
+;       |flip_flop:ff6|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff6  ; flip_flop        ; work         ;
+;       |flip_flop:ff7|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff7  ; flip_flop        ; work         ;
+;       |flip_flop:ff8|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff8  ; flip_flop        ; work         ;
+;       |flip_flop:ff9|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |temporizador_15s|divisor_1hz_50m:udiv|flip_flop:ff9  ; flip_flop        ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                ;
++--------------------------------------------------------+----+
+; Logic Cell Name                                        ;    ;
++--------------------------------------------------------+----+
+; contador_4bit:ucnt|flip_flop:ff3|Q~0                   ;    ;
+; contador_4bit:ucnt|flip_flop:ff1|Q~0                   ;    ;
+; contador_4bit:ucnt|flip_flop:ff2|Q~0                   ;    ;
+; contador_4bit:ucnt|flip_flop:ff0|Q~0                   ;    ;
+; contador_4bit:ucnt|flip_flop:ff3|WideNand1~0           ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff0|Q~0                 ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff1|Q~0                 ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff2|Q~0                 ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff3|Q~0                 ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff4|Q~0                 ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff5|Q~0                 ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff6|Q~0                 ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff7|Q~0                 ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff8|Q~0                 ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff9|Q~0                 ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff10|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff11|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff12|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff13|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff14|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff15|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff16|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff17|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff18|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff19|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff20|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff21|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff22|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff23|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff24|Q~0                ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff25|Q~0                ;    ;
+; contador_4bit:ucnt|flip_flop:ff1|WideNand1~0           ;    ;
+; contador_4bit:ucnt|flip_flop:ff2|WideNand1~0           ;    ;
+; contador_4bit:ucnt|flip_flop:ff0|WideNand1~0           ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff0|WideNand1~0         ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff1|WideNand1~0         ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff2|WideNand1~0         ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff3|WideNand1~0         ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff4|WideNand1~0         ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff5|WideNand1~0         ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff6|WideNand1~0         ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff7|WideNand1~0         ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff8|WideNand1~0         ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff9|WideNand1~0         ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff10|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff11|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff12|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff13|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff14|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff15|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff16|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff17|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff18|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff19|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff20|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff21|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff22|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff23|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff24|WideNand1~0        ;    ;
+; divisor_1hz_50m:udiv|flip_flop:ff25|WideNand1~0        ;    ;
+; Number of logic cells representing combinational loops ; 60 ;
++--------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |temporizador_15s ;
++----------------+----------------------------+------------------------------------+
+; Parameter Name ; Value                      ; Type                               ;
++----------------+----------------------------+------------------------------------+
+; DIV_TARGET     ; 10111110101111000001111111 ; Unsigned Binary                    ;
++----------------+----------------------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divisor_1hz_50m:udiv ;
++----------------+----------------------------+---------------------+
+; Parameter Name ; Value                      ; Type                ;
++----------------+----------------------------+---------------------+
+; TARGET         ; 10111110101111000001111111 ; Unsigned Binary     ;
++----------------+----------------------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "contador_4bit:ucnt|flip_flop:ff3" ;
++------+--------+----------+-----------------------------------+
+; Port ; Type   ; Severity ; Details                           ;
++------+--------+----------+-----------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                      ;
+; nQ   ; Output ; Info     ; Explicitly unconnected            ;
++------+--------+----------+-----------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "contador_4bit:ucnt|flip_flop:ff2" ;
++------+--------+----------+-----------------------------------+
+; Port ; Type   ; Severity ; Details                           ;
++------+--------+----------+-----------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                      ;
+; nQ   ; Output ; Info     ; Explicitly unconnected            ;
++------+--------+----------+-----------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "contador_4bit:ucnt|flip_flop:ff1" ;
++------+--------+----------+-----------------------------------+
+; Port ; Type   ; Severity ; Details                           ;
++------+--------+----------+-----------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                      ;
+; nQ   ; Output ; Info     ; Explicitly unconnected            ;
++------+--------+----------+-----------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "contador_4bit:ucnt|flip_flop:ff0" ;
++------+--------+----------+-----------------------------------+
+; Port ; Type   ; Severity ; Details                           ;
++------+--------+----------+-----------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                      ;
+; nQ   ; Output ; Info     ; Explicitly unconnected            ;
++------+--------+----------+-----------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff25" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff24" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff23" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff22" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff21" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff20" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff19" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff18" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff17" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff16" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff15" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff14" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff13" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff12" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff11" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff10" ;
++------+--------+----------+--------------------------------------+
+; Port ; Type   ; Severity ; Details                              ;
++------+--------+----------+--------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                         ;
+; nQ   ; Output ; Info     ; Explicitly unconnected               ;
++------+--------+----------+--------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff9" ;
++------+--------+----------+-------------------------------------+
+; Port ; Type   ; Severity ; Details                             ;
++------+--------+----------+-------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected              ;
++------+--------+----------+-------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff8" ;
++------+--------+----------+-------------------------------------+
+; Port ; Type   ; Severity ; Details                             ;
++------+--------+----------+-------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected              ;
++------+--------+----------+-------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff7" ;
++------+--------+----------+-------------------------------------+
+; Port ; Type   ; Severity ; Details                             ;
++------+--------+----------+-------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected              ;
++------+--------+----------+-------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff6" ;
++------+--------+----------+-------------------------------------+
+; Port ; Type   ; Severity ; Details                             ;
++------+--------+----------+-------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected              ;
++------+--------+----------+-------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff5" ;
++------+--------+----------+-------------------------------------+
+; Port ; Type   ; Severity ; Details                             ;
++------+--------+----------+-------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected              ;
++------+--------+----------+-------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff4" ;
++------+--------+----------+-------------------------------------+
+; Port ; Type   ; Severity ; Details                             ;
++------+--------+----------+-------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected              ;
++------+--------+----------+-------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff3" ;
++------+--------+----------+-------------------------------------+
+; Port ; Type   ; Severity ; Details                             ;
++------+--------+----------+-------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected              ;
++------+--------+----------+-------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff2" ;
++------+--------+----------+-------------------------------------+
+; Port ; Type   ; Severity ; Details                             ;
++------+--------+----------+-------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected              ;
++------+--------+----------+-------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff1" ;
++------+--------+----------+-------------------------------------+
+; Port ; Type   ; Severity ; Details                             ;
++------+--------+----------+-------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected              ;
++------+--------+----------+-------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_1hz_50m:udiv|flip_flop:ff0" ;
++------+--------+----------+-------------------------------------+
+; Port ; Type   ; Severity ; Details                             ;
++------+--------+----------+-------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected              ;
++------+--------+----------+-------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 100                         ;
+;     extend            ; 7                           ;
+;         7 data inputs ; 7                           ;
+;     normal            ; 93                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 46                          ;
+;         5 data inputs ; 13                          ;
+;         6 data inputs ; 21                          ;
+; boundary_port         ; 16                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.88                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Wed Oct  1 09:56:22 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (12021): Found 3 design units, including 3 entities, in source file vga.sv
+    Info (12023): Found entity 1: vga File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/vga.sv Line: 5
+    Info (12023): Found entity 2: vgaController File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/vga.sv Line: 43
+    Info (12023): Found entity 3: videoGen File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/vga.sv Line: 96
+Info (12021): Found 1 design units, including 1 entities, in source file temporizador_15s.sv
+    Info (12023): Found entity 1: temporizador_15s File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file tb_fsm_cartas.sv
+    Info (12023): Found entity 1: tb_fsm_cartas File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/tb_fsm_cartas.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file fsm_cartas.sv
+    Info (12023): Found entity 1: fsm_cartas File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/fsm_cartas.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file flip_flop.sv
+    Info (12023): Found entity 1: flip_flop File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/flip_flop.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file divisor_1hz_50m.sv
+    Info (12023): Found entity 1: divisor_1hz_50m File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file contador_4bit.sv
+    Info (12023): Found entity 1: contador_4bit File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/contador_4bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file card.sv
+    Info (12023): Found entity 1: card File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/card.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file bcd_contador_r.sv
+    Info (12023): Found entity 1: bcd_contador_R File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/bcd_contador_R.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file bcd_contador_l.sv
+    Info (12023): Found entity 1: bcd_contador_L File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/bcd_contador_L.sv Line: 4
+Info (12127): Elaborating entity "temporizador_15s" for the top level hierarchy
+Info (12128): Elaborating entity "divisor_1hz_50m" for hierarchy "divisor_1hz_50m:udiv" File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 16
+Info (12128): Elaborating entity "flip_flop" for hierarchy "divisor_1hz_50m:udiv|flip_flop:ff0" File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv Line: 117
+Info (12128): Elaborating entity "contador_4bit" for hierarchy "contador_4bit:ucnt" File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 24
+Info (12128): Elaborating entity "bcd_contador_L" for hierarchy "bcd_contador_L:uL" File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 36
+Info (12128): Elaborating entity "bcd_contador_R" for hierarchy "bcd_contador_R:uR" File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 41
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "bL" is stuck at GND File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 7
+    Warning (13410): Pin "cL" is stuck at GND File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 7
+    Warning (13410): Pin "gL" is stuck at VCC File: C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Repo/mnavarro_ymonge_digital_design_lab_2025/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 7
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 107 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 91 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Wed Oct  1 09:56:32 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
+
+

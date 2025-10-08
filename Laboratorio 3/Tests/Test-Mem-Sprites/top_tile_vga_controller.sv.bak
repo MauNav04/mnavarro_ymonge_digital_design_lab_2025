@@ -1,0 +1,48 @@
+// Top module: Integra todo el sistema de tiles con VGA
+module top_tile_vga_controller (
+    input  logic clk,           // Reloj de la FPGA (50MHz)
+    input  logic reset,         // Reset global
+    // Salidas VGA
+    output logic        vgaclk,     // 25 MHz VGA pixel clock
+    output logic        hsync,      // Sincronización horizontal
+    output logic        vsync,      // Sincronización vertical
+    output logic        sync_b,     // keep 0 for modern monitors
+    output logic        blank_b,    // high during active video
+    output logic [7:0]  vga_r,      // Canal rojo
+    output logic [7:0]  vga_g,      // Canal verde  
+    output logic [7:0]  vga_b       // Canal azul
+);
+
+    // Dividir 50 MHz por 2 -> ~25 MHz pixel clock
+    always_ff @(posedge clk or posedge reset) begin
+        if (reset) vgaclk <= 1'b0;
+        else       vgaclk <= ~vgaclk;
+    end
+
+    // Señales internas
+    logic [9:0] x, y;
+
+    // Instancia del controlador VGA
+    vgaController vgaCont (
+        .vgaclk (vgaclk),
+        .reset  (reset),
+        .hsync  (hsync),
+        .vsync  (vsync),
+        .sync_b (sync_b),
+        .blank_b(blank_b),
+        .hcnt   (x),
+        .vcnt   (y)
+    );
+    
+    // Instancia del renderizador de tiles
+    tile_renderer renderer (
+        .clk(vgaclk),
+        .reset(reset),
+        .x_pos(x),
+        .y_pos(y),
+        .vga_red(vga_r),
+        .vga_green(vga_g),
+        .vga_blue(vga_b)
+    );
+
+endmodule

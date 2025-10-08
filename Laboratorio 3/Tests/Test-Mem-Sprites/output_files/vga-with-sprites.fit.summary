@@ -1,0 +1,20 @@
+Fitter Status : Successful - Wed Oct  8 16:36:06 2025
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : vga-with-sprites
+Top-level Entity Name : top_tile_vga_controller
+Family : Cyclone V
+Device : 5CSXFC6D6F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 22 / 41,910 ( < 1 % )
+Total registers : 54
+Total pins : 31 / 499 ( 6 % )
+Total virtual pins : 0
+Total block memory bits : 24,576 / 5,662,720 ( < 1 % )
+Total RAM Blocks : 3 / 553 ( < 1 % )
+Total DSP Blocks : 0 / 112 ( 0 % )
+Total HSSI RX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
+Total HSSI TX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 9 ( 0 % )
+Total PLLs : 0 / 15 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

@@ -1,0 +1,55 @@
+module top_vga_controller (
+    input  logic clk,           // Reloj de la FPGA (ej. 50MHz)
+    input  logic reset,         // Reset global
+    input  logic switch_input,  // Entrada del switch
+    // Salidas VGA
+    output logic vga_hsync,     // Sincronización horizontal
+    output logic vga_vsync,     // Sincronización vertical
+    output logic [7:0] vga_r,   // Canal rojo
+    output logic [7:0] vga_g,   // Canal verde  
+    output logic [7:0] vga_b    // Canal azul
+);
+
+    // Señales internas
+    logic [9:0] pixel_x, pixel_y;
+    logic color_control_signal;
+    logic [7:0] red_signal, green_signal, blue_signal;
+    
+    // Instancia del controlador FSM
+    fsm_controller fsm_inst (
+        .clk(clk),
+        .reset(reset),
+        .switch_input(switch_input),
+        .color_control(color_control_signal)
+    );
+    
+    // Instancia del controlador de color VGA
+    vga_color_controller color_inst (
+        .clk(clk),
+        .reset(reset),
+        .x_pos(pixel_x),
+        .y_pos(pixel_y),
+        .color_signal(color_control_signal),
+        .vga_red(red_signal),
+        .vga_green(green_signal),
+        .vga_blue(blue_signal)
+    );
+    
+    // Instancia de tu módulo VGA existente
+    // (Asumiendo que tienes un módulo vga_sync que genera las señales de sync y coordenadas)
+    vga_sync vga_sync_inst (
+        .clk(clk),
+        .reset(reset),
+        .hsync(vga_hsync),
+        .vsync(vga_vsync),
+        .pixel_x(pixel_x),
+        .pixel_y(pixel_y),
+        .red_in(red_signal),
+        .green_in(green_signal),
+        .blue_in(blue_signal),
+        .red_out(vga_r),
+        .green_out(vga_g),
+        .blue_out(vga_b)
+    );
+
+endmodule

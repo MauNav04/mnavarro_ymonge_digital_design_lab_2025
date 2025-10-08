@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -2.930
+TNS   : -2.930
+
+Type  : Slow 1100mV 85C Model Setup 'vgaclk~reg0'
+Slack : -2.563
+TNS   : -192.258
+
+Type  : Slow 1100mV 85C Model Hold 'vgaclk~reg0'
+Slack : 0.751
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 1.018
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'vgaclk~reg0'
+Slack : -2.174
+TNS   : -140.828
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.409
+TNS   : -0.803
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -2.747
+TNS   : -2.747
+
+Type  : Slow 1100mV 0C Model Setup 'vgaclk~reg0'
+Slack : -2.665
+TNS   : -186.857
+
+Type  : Slow 1100mV 0C Model Hold 'vgaclk~reg0'
+Slack : 0.736
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.950
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'vgaclk~reg0'
+Slack : -2.174
+TNS   : -139.814
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.449
+TNS   : -0.843
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -2.390
+TNS   : -2.390
+
+Type  : Fast 1100mV 85C Model Setup 'vgaclk~reg0'
+Slack : -1.435
+TNS   : -98.400
+
+Type  : Fast 1100mV 85C Model Hold 'vgaclk~reg0'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 1.139
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'vgaclk~reg0'
+Slack : -2.174
+TNS   : -111.654
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.463
+TNS   : -0.577
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -1.975
+TNS   : -1.975
+
+Type  : Fast 1100mV 0C Model Setup 'vgaclk~reg0'
+Slack : -1.286
+TNS   : -85.422
+
+Type  : Fast 1100mV 0C Model Hold 'vgaclk~reg0'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.840
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'vgaclk~reg0'
+Slack : -2.174
+TNS   : -111.315
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.476
+TNS   : -0.611
+
+------------------------------------------------------------

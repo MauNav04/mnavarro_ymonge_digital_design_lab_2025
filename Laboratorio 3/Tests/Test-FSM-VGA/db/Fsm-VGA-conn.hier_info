@@ -1,0 +1,7 @@
+|fsm_controller
+clk => current_state.CLK
+reset => current_state.ACLR
+switch_input => current_state.DATAIN
+color_control << current_state.DB_MAX_OUTPUT_PORT_TYPE
+
+
