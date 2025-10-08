@@ -1,2 +1,34 @@
 
+# Quartus build locks
 db/Laboratorio1.quiproj.26976.rdr.flock
+
+# Quartus build artifacts
+**/db/
+**/incremental_db/
+**/output_files/
+
+# Generated programming files
+**/*.sof
+**/*.pof
+**/*.jic
+
+# ModelSim/NativeLink working data
+**/simulation/modelsim/rtl_work/
+**/simulation/modelsim/work/
+**/simulation/modelsim/modelsim.ini
+**/simulation/modelsim/msim_transcript
+**/simulation/modelsim/transcript
+**/simulation/modelsim/vsim.wlf
+**/simulation/modelsim/waveform.vwf
+**/*.wlf
+
+# Auto-generated netlists and dumps
+**/*.vo
+**/*.sft
+**/*.smsg
+
+# Quartus/EDA backup or log files
+**/*.bak
+**/*.bak[0-9]*
+**/*.rpt~
+**/*.log

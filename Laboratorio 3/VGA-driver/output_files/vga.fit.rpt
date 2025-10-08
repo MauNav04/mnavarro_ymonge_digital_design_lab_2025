@@ -1,6 +1,6 @@
 Fitter report for vga
-Tue Sep 30 00:36:14 2025
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Wed Oct 08 12:01:29 2025
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -44,7 +44,7 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -61,30 +61,30 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Fitter Summary                                                                   ;
-+---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Tue Sep 30 00:36:14 2025          ;
-; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name                   ; vga                                            ;
-; Top-level Entity Name           ; vga                                            ;
-; Family                          ; Cyclone V                                      ;
-; Device                          ; 5CSXFC6D6F31C6                                 ;
-; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 185 / 41,910 ( < 1 % )                         ;
-; Total registers                 ; 30                                             ;
-; Total pins                      ; 31 / 499 ( 6 % )                               ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                          ;
-; Total RAM Blocks                ; 0 / 553 ( 0 % )                                ;
-; Total DSP Blocks                ; 1 / 112 ( < 1 % )                              ;
-; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                                  ;
-; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                                  ;
-; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                                  ;
-; Total HSSI PMA TX Serializers   ; 0 / 9 ( 0 % )                                  ;
-; Total PLLs                      ; 0 / 15 ( 0 % )                                 ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
-+---------------------------------+------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Fitter Summary                                                                ;
++---------------------------------+---------------------------------------------+
+; Fitter Status                   ; Successful - Wed Oct 08 12:01:29 2025       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; vga                                         ;
+; Top-level Entity Name           ; vga                                         ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSXFC6D6F31C6                              ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 185 / 41,910 ( < 1 % )                      ;
+; Total registers                 ; 26                                          ;
+; Total pins                      ; 31 / 499 ( 6 % )                            ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
+; Total RAM Blocks                ; 0 / 553 ( 0 % )                             ;
+; Total DSP Blocks                ; 1 / 112 ( < 1 % )                           ;
+; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                               ;
+; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                               ;
+; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                               ;
+; Total HSSI PMA TX Serializers   ; 0 / 9 ( 0 % )                               ;
+; Total PLLs                      ; 0 / 15 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -151,23 +151,29 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 10          ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.02        ;
-; Maximum used               ; 10          ;
+; Average used               ; 1.04        ;
+; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
-;     Processor 5            ;   0.2%      ;
-;     Processor 6            ;   0.2%      ;
-;     Processor 7            ;   0.2%      ;
-;     Processor 8            ;   0.2%      ;
-;     Processor 9            ;   0.2%      ;
-;     Processor 10           ;   0.2%      ;
+;     Processor 2            ;   0.3%      ;
+;     Processor 3            ;   0.3%      ;
+;     Processor 4            ;   0.3%      ;
+;     Processor 5            ;   0.3%      ;
+;     Processor 6            ;   0.3%      ;
+;     Processor 7            ;   0.3%      ;
+;     Processor 8            ;   0.3%      ;
+;     Processor 9            ;   0.3%      ;
+;     Processor 10           ;   0.3%      ;
+;     Processor 11           ;   0.3%      ;
+;     Processor 12           ;   0.3%      ;
+;     Processor 13           ;   0.3%      ;
+;     Processor 14           ;   0.3%      ;
+;     Processor 15           ;   0.3%      ;
+;     Processor 16           ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -176,15 +182,11 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+------------+---------------------------------------------------+--------------------------+-----------+----------------+-----------------------------------------+------------------+-----------------------+
 ; Node                          ; Action     ; Operation                                         ; Reason                   ; Node Port ; Node Port Name ; Destination Node                        ; Destination Port ; Destination Port Name ;
 +-------------------------------+------------+---------------------------------------------------+--------------------------+-----------+----------------+-----------------------------------------+------------------+-----------------------+
-; vgaController:vgaCont|hcnt[0] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|hcnt[0]~DUPLICATE ;                  ;                       ;
-; vgaController:vgaCont|hcnt[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|hcnt[2]~DUPLICATE ;                  ;                       ;
-; vgaController:vgaCont|vcnt[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|vcnt[1]~DUPLICATE ;                  ;                       ;
+; vgaController:vgaCont|hcnt[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|hcnt[1]~DUPLICATE ;                  ;                       ;
+; vgaController:vgaCont|hcnt[4] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|hcnt[4]~DUPLICATE ;                  ;                       ;
+; vgaController:vgaCont|hcnt[8] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|hcnt[8]~DUPLICATE ;                  ;                       ;
+; vgaController:vgaCont|vcnt[0] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|vcnt[0]~DUPLICATE ;                  ;                       ;
 ; vgaController:vgaCont|vcnt[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|vcnt[2]~DUPLICATE ;                  ;                       ;
-; vgaController:vgaCont|vcnt[3] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|vcnt[3]~DUPLICATE ;                  ;                       ;
-; vgaController:vgaCont|vcnt[4] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|vcnt[4]~DUPLICATE ;                  ;                       ;
-; vgaController:vgaCont|vcnt[5] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|vcnt[5]~DUPLICATE ;                  ;                       ;
-; vgaController:vgaCont|vcnt[7] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|vcnt[7]~DUPLICATE ;                  ;                       ;
-; vgaController:vgaCont|vcnt[9] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization ;           ;                ; vgaController:vgaCont|vcnt[9]~DUPLICATE ;                  ;                       ;
 +-------------------------------+------------+---------------------------------------------------+--------------------------+-----------+----------------+-----------------------------------------+------------------+-----------------------+
 
 
@@ -226,7 +228,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Laboratorios/Laboratorio-3/VGA-try-3/output_files/vga.pin.
+The pin-out file can be found in C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/output_files/vga.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -236,12 +238,12 @@ The pin-out file can be found in C:/Users/Mano-/Documents/Documentos/TEC/Semestr
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 185 / 41,910       ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 185                ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 193 / 41,910       ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 6                  ;       ;
-;         [b] ALMs used for LUT logic                         ; 182                ;       ;
-;         [c] ALMs used for registers                         ; 5                  ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 189 / 41,910       ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 7                  ;       ;
+;         [b] ALMs used for LUT logic                         ; 178                ;       ;
+;         [c] ALMs used for registers                         ; 4                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 8 / 41,910         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 4 / 41,910         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41,910         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -250,8 +252,8 @@ The pin-out file can be found in C:/Users/Mano-/Documents/Documentos/TEC/Semestr
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 26 / 4,191         ; < 1 % ;
-;     -- Logic LABs                                           ; 26                 ;       ;
+; Total LABs:  partially or completely used                   ; 25 / 4,191         ; < 1 % ;
+;     -- Logic LABs                                           ; 25                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Combinational ALUT usage for logic                          ; 319                ;       ;
@@ -262,13 +264,13 @@ The pin-out file can be found in C:/Users/Mano-/Documents/Documentos/TEC/Semestr
 ;     -- <=3 input functions                                  ; 123                ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 30                 ;       ;
+; Dedicated logic registers                                   ; 26                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 21 / 83,820        ; < 1 % ;
-;         -- Secondary logic registers                        ; 9 / 83,820         ; < 1 % ;
+;         -- Secondary logic registers                        ; 5 / 83,820         ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 21                 ;       ;
-;         -- Routing optimization registers                   ; 9                  ;       ;
+;         -- Routing optimization registers                   ; 5                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 31 / 499           ; 6 %   ;
@@ -330,11 +332,11 @@ The pin-out file can be found in C:/Users/Mano-/Documents/Documentos/TEC/Semestr
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 4.2% / 4.6% / 2.8% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 3.9% / 4.3% / 2.8% ;       ;
 ; Maximum fan-out                                             ; 55                 ;       ;
 ; Highest non-global fan-out                                  ; 55                 ;       ;
-; Total fan-out                                               ; 1482               ;       ;
-; Average fan-out                                             ; 3.60               ;       ;
+; Total fan-out                                               ; 1461               ;       ;
+; Average fan-out                                             ; 3.58               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -345,12 +347,12 @@ The pin-out file can be found in C:/Users/Mano-/Documents/Documentos/TEC/Semestr
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 185 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 185                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 193 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 6                     ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 182                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 5                     ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 189 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 7                     ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 178                   ; 0                              ;
+;         [c] ALMs used for registers                         ; 4                     ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 8 / 41910 ( < 1 % )   ; 0 / 41910 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 4 / 41910 ( < 1 % )   ; 0 / 41910 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41910 ( 0 % )     ; 0 / 41910 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -359,8 +361,8 @@ The pin-out file can be found in C:/Users/Mano-/Documents/Documentos/TEC/Semestr
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 26 / 4191 ( < 1 % )   ; 0 / 4191 ( 0 % )               ;
-;     -- Logic LABs                                           ; 26                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 25 / 4191 ( < 1 % )   ; 0 / 4191 ( 0 % )               ;
+;     -- Logic LABs                                           ; 25                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Combinational ALUT usage for logic                          ; 319                   ; 0                              ;
@@ -377,10 +379,10 @@ The pin-out file can be found in C:/Users/Mano-/Documents/Documentos/TEC/Semestr
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
 ;         -- Primary logic registers                          ; 21 / 83820 ( < 1 % )  ; 0 / 83820 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 9 / 83820 ( < 1 % )   ; 0 / 83820 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 5 / 83820 ( < 1 % )   ; 0 / 83820 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
 ;         -- Design implementation registers                  ; 21                    ; 0                              ;
-;         -- Routing optimization registers                   ; 9                     ; 0                              ;
+;         -- Routing optimization registers                   ; 5                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -397,8 +399,8 @@ The pin-out file can be found in C:/Users/Mano-/Documents/Documentos/TEC/Semestr
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 1510                  ; 0                              ;
-;     -- Registered Connections                               ; 225                   ; 0                              ;
+;     -- Total Connections                                    ; 1489                  ; 0                              ;
+;     -- Registered Connections                               ; 221                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -431,7 +433,7 @@ The pin-out file can be found in C:/Users/Mano-/Documents/Documentos/TEC/Semestr
 ; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; clk   ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; reset ; AB30  ; 5B       ; 89           ; 21           ; 3            ; 30                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; reset ; AB30  ; 5B       ; 89           ; 21           ; 3            ; 26                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -1444,9 +1446,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name   ; Library Name ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------+---------------+--------------+
-; |vga                       ; 184.5 (0.5)          ; 192.5 (1.1)                      ; 8.0 (0.6)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 319 (2)             ; 30 (1)                    ; 0 (0)         ; 0                 ; 0     ; 1          ; 31   ; 0            ; |vga                       ; vga           ; work         ;
-;    |vgaController:vgaCont| ; 21.2 (21.2)          ; 21.3 (21.3)                      ; 0.1 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 28 (28)             ; 29 (29)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |vga|vgaController:vgaCont ; vgaController ; work         ;
-;    |videoGen:videoGen_i|   ; 162.8 (162.8)        ; 170.2 (170.2)                    ; 7.3 (7.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 289 (289)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 1          ; 0    ; 0            ; |vga|videoGen:videoGen_i   ; videoGen      ; work         ;
+; |vga                       ; 184.5 (0.5)          ; 188.5 (0.8)                      ; 4.0 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 319 (2)             ; 26 (1)                    ; 0 (0)         ; 0                 ; 0     ; 1          ; 31   ; 0            ; |vga                       ; vga           ; work         ;
+;    |vgaController:vgaCont| ; 21.0 (21.0)          ; 21.8 (21.8)                      ; 0.8 (0.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 28 (28)             ; 25 (25)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |vga|vgaController:vgaCont ; vgaController ; work         ;
+;    |videoGen:videoGen_i|   ; 163.0 (163.0)        ; 165.8 (165.8)                    ; 2.8 (2.8)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 289 (289)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 1          ; 0    ; 0            ; |vga|videoGen:videoGen_i   ; videoGen      ; work         ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1519,29 +1521,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - vgaController:vgaCont|vcnt[9]           ; 1                 ; 0       ;
 ;      - vgaController:vgaCont|vcnt[6]           ; 1                 ; 0       ;
 ;      - vgaController:vgaCont|vcnt[0]           ; 1                 ; 0       ;
-;      - vgaController:vgaCont|vcnt[1]~DUPLICATE ; 1                 ; 0       ;
+;      - vgaController:vgaCont|hcnt[8]~DUPLICATE ; 1                 ; 0       ;
+;      - vgaController:vgaCont|hcnt[4]~DUPLICATE ; 1                 ; 0       ;
 ;      - vgaController:vgaCont|vcnt[2]~DUPLICATE ; 1                 ; 0       ;
-;      - vgaController:vgaCont|vcnt[9]~DUPLICATE ; 1                 ; 0       ;
-;      - vgaController:vgaCont|vcnt[3]~DUPLICATE ; 1                 ; 0       ;
-;      - vgaController:vgaCont|vcnt[4]~DUPLICATE ; 1                 ; 0       ;
-;      - vgaController:vgaCont|vcnt[7]~DUPLICATE ; 1                 ; 0       ;
-;      - vgaController:vgaCont|vcnt[5]~DUPLICATE ; 1                 ; 0       ;
-;      - vgaController:vgaCont|hcnt[2]~DUPLICATE ; 1                 ; 0       ;
-;      - vgaController:vgaCont|hcnt[0]~DUPLICATE ; 1                 ; 0       ;
+;      - vgaController:vgaCont|hcnt[1]~DUPLICATE ; 1                 ; 0       ;
+;      - vgaController:vgaCont|vcnt[0]~DUPLICATE ; 1                 ; 0       ;
 +------------------------------------------------+-------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                          ;
-+--------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; Name                           ; Location           ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; clk                            ; PIN_AF14           ; 1       ; Clock                     ; no     ; --                   ; --               ; --                        ;
-; reset                          ; PIN_AB30           ; 30      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
-; vgaController:vgaCont|Equal0~0 ; LABCELL_X62_Y2_N39 ; 29      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; vgaController:vgaCont|Equal1~1 ; LABCELL_X63_Y3_N9  ; 17      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; vgaclk~reg0                    ; FF_X62_Y2_N59      ; 31      ; Clock                     ; no     ; --                   ; --               ; --                        ;
-+--------------------------------+--------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                           ;
++--------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
+; Name                           ; Location            ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
+; clk                            ; PIN_AF14            ; 1       ; Clock                     ; no     ; --                   ; --               ; --                        ;
+; reset                          ; PIN_AB30            ; 26      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
+; vgaController:vgaCont|Equal0~0 ; MLABCELL_X59_Y1_N51 ; 25      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; vgaController:vgaCont|Equal1~1 ; LABCELL_X57_Y1_N42  ; 12      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; vgaclk~reg0                    ; FF_X59_Y1_N50       ; 27      ; Clock                     ; no     ; --                   ; --               ; --                        ;
++--------------------------------+---------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------+
@@ -1570,14 +1568,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 555 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 2 / 13,420 ( < 1 % )    ;
-; C2 interconnects                            ; 135 / 119,108 ( < 1 % ) ;
-; C4 interconnects                            ; 50 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 549 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 4 / 13,420 ( < 1 % )    ;
+; C2 interconnects                            ; 154 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 54 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 98 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 54 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 0 / 16 ( 0 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1633,12 +1631,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 95 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 92 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
 ; R14 interconnects                           ; 16 / 12,676 ( < 1 % )   ;
-; R14/C12 interconnect drivers                ; 17 / 20,720 ( < 1 % )   ;
-; R3 interconnects                            ; 215 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 246 / 266,960 ( < 1 % ) ;
+; R14/C12 interconnect drivers                ; 19 / 20,720 ( < 1 % )   ;
+; R3 interconnects                            ; 206 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 259 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 0 / 360 ( 0 % )         ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1785,8 +1783,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; vgaclk~reg0     ; vgaclk~reg0          ; 7.8               ;
-; clk             ; clk                  ; 5.5               ;
+; vgaclk~reg0     ; vgaclk~reg0          ; 7.9               ;
+; clk             ; clk                  ; 5.4               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1797,27 +1795,27 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------+-------------------------------+-------------------+
 ; Source Register               ; Destination Register          ; Delay Added in ns ;
 +-------------------------------+-------------------------------+-------------------+
-; vgaclk~reg0                   ; vgaclk~reg0                   ; 5.520             ;
-; vgaController:vgaCont|hcnt[3] ; vgaController:vgaCont|vcnt[1] ; 0.927             ;
-; vgaController:vgaCont|hcnt[4] ; vgaController:vgaCont|vcnt[1] ; 0.925             ;
-; vgaController:vgaCont|hcnt[7] ; vgaController:vgaCont|vcnt[1] ; 0.867             ;
-; vgaController:vgaCont|hcnt[8] ; vgaController:vgaCont|vcnt[1] ; 0.867             ;
-; vgaController:vgaCont|vcnt[3] ; vgaController:vgaCont|vcnt[1] ; 0.733             ;
-; vgaController:vgaCont|hcnt[2] ; vgaController:vgaCont|vcnt[1] ; 0.653             ;
-; vgaController:vgaCont|vcnt[6] ; vgaController:vgaCont|vcnt[1] ; 0.649             ;
-; vgaController:vgaCont|vcnt[5] ; vgaController:vgaCont|vcnt[1] ; 0.645             ;
-; vgaController:vgaCont|vcnt[8] ; vgaController:vgaCont|vcnt[1] ; 0.638             ;
-; vgaController:vgaCont|hcnt[6] ; vgaController:vgaCont|vcnt[1] ; 0.617             ;
-; vgaController:vgaCont|hcnt[9] ; vgaController:vgaCont|vcnt[1] ; 0.614             ;
-; vgaController:vgaCont|hcnt[5] ; vgaController:vgaCont|vcnt[1] ; 0.578             ;
-; vgaController:vgaCont|hcnt[0] ; vgaController:vgaCont|vcnt[1] ; 0.578             ;
-; vgaController:vgaCont|hcnt[1] ; vgaController:vgaCont|vcnt[1] ; 0.546             ;
-; vgaController:vgaCont|vcnt[4] ; vgaController:vgaCont|vcnt[1] ; 0.543             ;
-; vgaController:vgaCont|vcnt[9] ; vgaController:vgaCont|vcnt[1] ; 0.475             ;
-; vgaController:vgaCont|vcnt[7] ; vgaController:vgaCont|vcnt[1] ; 0.434             ;
-; vgaController:vgaCont|vcnt[2] ; vgaController:vgaCont|vcnt[1] ; 0.421             ;
-; vgaController:vgaCont|vcnt[1] ; vgaController:vgaCont|vcnt[1] ; 0.415             ;
-; vgaController:vgaCont|vcnt[0] ; vgaController:vgaCont|vcnt[1] ; 0.371             ;
+; vgaclk~reg0                   ; vgaclk~reg0                   ; 5.414             ;
+; vgaController:vgaCont|hcnt[3] ; vgaController:vgaCont|hcnt[7] ; 0.794             ;
+; vgaController:vgaCont|hcnt[4] ; vgaController:vgaCont|hcnt[7] ; 0.770             ;
+; vgaController:vgaCont|hcnt[8] ; vgaController:vgaCont|hcnt[7] ; 0.723             ;
+; vgaController:vgaCont|hcnt[7] ; vgaController:vgaCont|hcnt[7] ; 0.710             ;
+; vgaController:vgaCont|vcnt[6] ; vgaController:vgaCont|vcnt[1] ; 0.671             ;
+; vgaController:vgaCont|hcnt[1] ; vgaController:vgaCont|hcnt[7] ; 0.654             ;
+; vgaController:vgaCont|hcnt[2] ; vgaController:vgaCont|hcnt[7] ; 0.486             ;
+; vgaController:vgaCont|hcnt[9] ; vgaController:vgaCont|hcnt[7] ; 0.471             ;
+; vgaController:vgaCont|vcnt[2] ; vgaController:vgaCont|vcnt[1] ; 0.468             ;
+; vgaController:vgaCont|hcnt[0] ; vgaController:vgaCont|hcnt[7] ; 0.463             ;
+; vgaController:vgaCont|vcnt[8] ; vgaController:vgaCont|vcnt[1] ; 0.461             ;
+; vgaController:vgaCont|hcnt[5] ; vgaController:vgaCont|hcnt[7] ; 0.451             ;
+; vgaController:vgaCont|vcnt[1] ; vgaController:vgaCont|vcnt[1] ; 0.431             ;
+; vgaController:vgaCont|hcnt[6] ; vgaController:vgaCont|hcnt[7] ; 0.429             ;
+; vgaController:vgaCont|vcnt[0] ; vgaController:vgaCont|vcnt[1] ; 0.351             ;
+; vgaController:vgaCont|vcnt[7] ; vgaController:vgaCont|vcnt[7] ; 0.316             ;
+; vgaController:vgaCont|vcnt[3] ; vgaController:vgaCont|vcnt[3] ; 0.316             ;
+; vgaController:vgaCont|vcnt[9] ; vgaController:vgaCont|vcnt[1] ; 0.308             ;
+; vgaController:vgaCont|vcnt[4] ; vgaController:vgaCont|vcnt[1] ; 0.266             ;
+; vgaController:vgaCont|vcnt[5] ; vgaController:vgaCont|vcnt[5] ; 0.240             ;
 +-------------------------------+-------------------------------+-------------------+
 Note: This table only shows the top 21 path(s) that have the largest delay added for hold.
 
@@ -1826,7 +1824,7 @@ Note: This table only shows the top 21 path(s) that have the largest delay added
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (119006): Selected device 5CSXFC6D6F31C6 for design "vga"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1843,10 +1841,10 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:24
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:11
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
@@ -1855,24 +1853,24 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X56_Y0 to location X66_Y10
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.66 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
-Info (144001): Generated suppressed messages file C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Laboratorios/Laboratorio-3/VGA-try-3/output_files/vga.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/output_files/vga.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 7169 megabytes
-    Info: Processing ended: Tue Sep 30 00:36:14 2025
-    Info: Elapsed time: 00:01:14
-    Info: Total CPU time (on all processors): 00:05:07
+    Info: Peak virtual memory: 7888 megabytes
+    Info: Processing ended: Wed Oct 08 12:01:29 2025
+    Info: Elapsed time: 00:00:53
+    Info: Total CPU time (on all processors): 00:04:31
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Mano-/Documents/Documentos/TEC/Semestre-2-2025/Diseno_Digital/Laboratorios/Laboratorio-3/VGA-try-3/output_files/vga.fit.smsg.
+The suppressed messages can be found in C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/output_files/vga.fit.smsg.
 
 

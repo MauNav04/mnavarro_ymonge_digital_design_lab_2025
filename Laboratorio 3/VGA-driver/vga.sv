@@ -1,5 +1,4 @@
-`timescale 1ns/1ps
-`default_nettype none
+
 
 // Top-level
 module vga (
@@ -39,7 +38,7 @@ module vga (
 endmodule
 
 
-// 640x480@60 timing (25.175 MHz nominal; works with 25.000 on most monitors)
+// 640x480@60 timing (25.175 MHz nominal; funciona con 25.000 en la mayoría)
 module vgaController #(
     parameter int unsigned HBP     = 10'd48,   // back porch
     parameter int unsigned HACTIVE = 10'd640,  // visible
@@ -47,7 +46,7 @@ module vgaController #(
     parameter int unsigned HSYN    = 10'd96,   // hsync
     parameter int unsigned HMAX    = HBP + HACTIVE + HFP + HSYN, // 800 total
 
-    parameter int unsigned VBP     = 10'd33,   // back porch (33 works well)
+    parameter int unsigned VBP     = 10'd33,   // back porch
     parameter int unsigned VACTIVE = 10'd480,  // visible
     parameter int unsigned VFP     = 10'd10,   // front porch
     parameter int unsigned VSYN    = 10'd2,    // vsync
@@ -79,15 +78,16 @@ module vgaController #(
         end
     end
 
-    // syncs are active low in VGA
+    // syncs activos en bajo en VGA
     assign hsync  = ~((hcnt >= (HACTIVE + HFP))  && (hcnt < (HACTIVE + HFP + HSYN)));
     assign vsync  = ~((vcnt >= (VACTIVE + VFP)) && (vcnt < (VACTIVE + VFP + VSYN)));
-    assign sync_b = 1'b0; // keep low for modern monitors
+    assign sync_b = 1'b0; // mantener en bajo para monitores modernos
 
-    // active video region
+    // región visible
     logic visible;
     assign visible = (hcnt < HACTIVE) && (vcnt < VACTIVE);
 
+    // alto durante video activo (el TB escribe cuando blank_b=1)
     assign blank_b = visible;
 
 endmodule
@@ -110,7 +110,7 @@ module videoGen (
 
     // Señales para detectar en qué carta estamos
     logic [7:0] in_card;
-    logic [9:0] card_x, card_y;  // coordenadas relativas dentro de la carta
+    logic [9:0] card_x, card_y;  // coords relativas dentro de la carta
     logic [2:0] card_num;
     
     // Señales de diseño
@@ -158,86 +158,59 @@ module videoGen (
         end
     end
     
-    // Detector de borde (marco de 3 píxeles)
+    // Borde (marco de 3 px)
     assign is_border = (card_x < 3) || (card_x >= CARD_WIDTH-3) || 
                        (card_y < 3) || (card_y >= CARD_HEIGHT-3);
     
-    // Detector de esquinas (10x10 píxeles en las esquinas)
-    assign is_corner = ((card_x < 10 && card_y < 10) ||                          // superior izq
-                        (card_x >= CARD_WIDTH-10 && card_y < 10) ||              // superior der
-                        (card_x < 10 && card_y >= CARD_HEIGHT-10) ||             // inferior izq
-                        (card_x >= CARD_WIDTH-10 && card_y >= CARD_HEIGHT-10));  // inferior der
+    // Esquinas (10x10)
+    assign is_corner = ((card_x < 10 && card_y < 10) ||                          
+                        (card_x >= CARD_WIDTH-10 && card_y < 10) ||              
+                        (card_x < 10 && card_y >= CARD_HEIGHT-10) ||             
+                        (card_x >= CARD_WIDTH-10 && card_y >= CARD_HEIGHT-10));  
     
-    // Generador de patrones según el número de carta
+    // Patrones por carta
     always_comb begin
         is_pattern = 1'b0;
-        
         case (card_num)
-            3'd0: begin // Líneas horizontales
-                is_pattern = (card_y[3:0] < 4'd2);
-            end
-            
-            3'd1: begin // Líneas verticales
-                is_pattern = (card_x[3:0] < 4'd2);
-            end
-            
-            3'd2: begin // Tablero de ajedrez
-                is_pattern = (card_x[3] ^ card_y[3]);
-            end
-            
-            3'd3: begin // Diagonal principal
-                is_pattern = (card_x >= card_y - 2) && (card_x <= card_y + 2);
-            end
-            
-            3'd4: begin // Cruz central
-                is_pattern = ((card_x >= CARD_WIDTH/2 - 3) && (card_x <= CARD_WIDTH/2 + 3)) ||
-                            ((card_y >= CARD_HEIGHT/2 - 3) && (card_y <= CARD_HEIGHT/2 + 3));
-            end
-            
-            3'd5: begin // Círculo (aproximado)
+            3'd0: is_pattern = (card_y[3:0] < 4'd2);                     // líneas H
+            3'd1: is_pattern = (card_x[3:0] < 4'd2);                     // líneas V
+            3'd2: is_pattern = (card_x[3] ^ card_y[3]);                  // ajedrez
+            3'd3: is_pattern = (card_x >= card_y - 2) && (card_x <= card_y + 2);
+            3'd4: is_pattern = ((card_x >= CARD_WIDTH/2 - 3) && (card_x <= CARD_WIDTH/2 + 3)) ||
+                               ((card_y >= CARD_HEIGHT/2 - 3) && (card_y <= CARD_HEIGHT/2 + 3));
+            3'd5: begin                                                  // círculo aprox
                 logic [9:0] dx, dy;
                 dx = (card_x > CARD_WIDTH/2) ? (card_x - CARD_WIDTH/2) : (CARD_WIDTH/2 - card_x);
                 dy = (card_y > CARD_HEIGHT/2) ? (card_y - CARD_HEIGHT/2) : (CARD_HEIGHT/2 - card_y);
                 is_pattern = ((dx*dx + dy*dy) > 10'd400) && ((dx*dx + dy*dy) < 10'd625);
             end
-            
-            3'd6: begin // Diagonales cruzadas
-                is_pattern = ((card_x >= card_y - 2) && (card_x <= card_y + 2)) ||
-                            ((card_x >= (CARD_HEIGHT - card_y) - 2) && (card_x <= (CARD_HEIGHT - card_y) + 2));
-            end
-            
-            3'd7: begin // Puntos en patrón
-                is_pattern = ((card_x[4:0] < 5'd3) && (card_y[4:0] < 5'd3));
-            end
+            3'd6: is_pattern = ((card_x >= card_y - 2) && (card_x <= card_y + 2)) ||
+                               ((card_x >= (CARD_HEIGHT - card_y) - 2) && (card_x <= (CARD_HEIGHT - card_y) + 2));
+            3'd7: is_pattern = ((card_x[4:0] < 5'd3) && (card_y[4:0] < 5'd3));   // puntos
         endcase
     end
     
-    // Asignación de colores
+    // Colores
     always_comb begin
         if (|in_card) begin
-            // Fondo blanco de la carta
-            r = 8'hF0;
-            g = 8'hF0;
-            b = 8'hF0;
-            
+            // Fondo blanco
+            r = 8'hF0; g = 8'hF0; b = 8'hF0;
             // Borde negro
             if (is_border) begin
-                r = 8'h00;
-                g = 8'h00;
-                b = 8'h00;
+                r = 8'h00; g = 8'h00; b = 8'h00;
             end
-            // Esquinas de color según la carta
+            // Esquinas color según carta
             else if (is_corner) begin
-                case (card_num[1:0])
+                unique case (card_num[1:0])
                     2'd0: begin r = 8'hFF; g = 8'h00; b = 8'h00; end // Rojo
                     2'd1: begin r = 8'h00; g = 8'hFF; b = 8'h00; end // Verde
                     2'd2: begin r = 8'h00; g = 8'h00; b = 8'hFF; end // Azul
                     2'd3: begin r = 8'hFF; g = 8'hFF; b = 8'h00; end // Amarillo
                 endcase
             end
-            // Patrón de la carta
+            // Patrón
             else if (is_pattern) begin
-                case (card_num[2:1])
+                unique case (card_num[2:1])
                     2'd0: begin r = 8'h80; g = 8'h00; b = 8'h80; end // Púrpura
                     2'd1: begin r = 8'h00; g = 8'h80; b = 8'h80; end // Cian
                     2'd2: begin r = 8'hFF; g = 8'h80; b = 8'h00; end // Naranja
@@ -246,12 +219,8 @@ module videoGen (
             end
         end else begin
             // Fondo gris oscuro
-            r = 8'h20;
-            g = 8'h20;
-            b = 8'h30;
+            r = 8'h20; g = 8'h20; b = 8'h30;
         end
     end
 
 endmodule
-
-`default_nettype wire
