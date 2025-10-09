@@ -565,13 +565,12 @@ state_dbg[3] <= state_dbg.DB_MAX_OUTPUT_PORT_TYPE
 
 |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer
 clk_50m => clk_50m.IN1
-reset => reset_or_clear.IN0
-reset => count_up[0].ACLR
-reset => count_up[1].ACLR
-reset => count_up[2].ACLR
-reset => count_up[3].ACLR
+reset => reset.IN1
 start => ~NO_FANOUT~
-clear => reset_or_clear.IN1
+clear => count_up.OUTPUTSELECT
+clear => count_up.OUTPUTSELECT
+clear => count_up.OUTPUTSELECT
+clear => count_up.OUTPUTSELECT
 timeout <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 pulso_1hz <= divisor_1hz_50m:udiv.tick_1Hz
 aL <= bcd_contador_L:uL.a

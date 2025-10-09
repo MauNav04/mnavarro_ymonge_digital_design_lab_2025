@@ -11,32 +11,32 @@ module temporizador_15s #(
     output logic aR,bR,cR,dR,eR,fR,gR
 );
     // 1) Divisor de frecuencia 50MHz -> 1Hz (genera pulso de 1 ciclo cada segundo)
-    //    Se resetea con reset O clear para sincronización perfecta
+    //    SOLO se resetea con reset global (NO con clear)
+    //    El divisor debe correr libremente para generar ticks regulares
     logic tick_1Hz;
-    logic reset_or_clear;
-    assign reset_or_clear = reset || clear;
     
     divisor_1hz_50m #(.TARGET(DIV_TARGET)) udiv (
         .clk_50m (clk_50m),
-        .reset   (reset_or_clear),  // ← Resetear divisor con reset O clear
+        .reset   (reset),  // ← SOLO reset global, NO clear
         .tick_1Hz(tick_1Hz)
     );
     assign pulso_1hz = tick_1Hz;
 
-    // 2) Contador 0..15 sincrónico (SIMPLIFICADO PARA DEBUG)
-    //    Ignora clear temporalmente para ver si tick_1Hz funciona
+    // 2) Contador 0..15 sincrónico
+    //    clear mantiene el contador en 0 (display muestra 15)
     logic [3:0] count_up;
     
     always_ff @(posedge clk_50m or posedge reset) begin
         if (reset) begin
             count_up <= 4'd0;
+        end else if (clear) begin
+            count_up <= 4'd0;  // Mantener en 0 mientras clear=1 (display muestra 15)
         end else if (tick_1Hz) begin
-            // Incrementar SIEMPRE que haya tick (ignora clear)
+            // Incrementar cuando hay tick de 1Hz y clear=0
             if (count_up < 4'd15) begin
                 count_up <= count_up + 4'd1;
-            end else begin
-                count_up <= 4'd0;  // Vuelve a 0 cuando llega a 15
             end
+            // Si llega a 15, se mantiene hasta que clear=1
         end
     end
 
