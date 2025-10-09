@@ -4,6 +4,118 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "vgaclk",
+					"strict" : false
+				},
+				{
+					"name" : "hsync",
+					"strict" : false
+				},
+				{
+					"name" : "vsync",
+					"strict" : false
+				},
+				{
+					"name" : "blank_b",
+					"strict" : false
+				},
+				{
+					"name" : "r[0]",
+					"strict" : false
+				},
+				{
+					"name" : "r[1]",
+					"strict" : false
+				},
+				{
+					"name" : "r[2]",
+					"strict" : false
+				},
+				{
+					"name" : "r[3]",
+					"strict" : false
+				},
+				{
+					"name" : "r[4]",
+					"strict" : false
+				},
+				{
+					"name" : "r[5]",
+					"strict" : false
+				},
+				{
+					"name" : "r[6]",
+					"strict" : false
+				},
+				{
+					"name" : "r[7]",
+					"strict" : false
+				},
+				{
+					"name" : "g[0]",
+					"strict" : false
+				},
+				{
+					"name" : "g[1]",
+					"strict" : false
+				},
+				{
+					"name" : "g[2]",
+					"strict" : false
+				},
+				{
+					"name" : "g[3]",
+					"strict" : false
+				},
+				{
+					"name" : "g[4]",
+					"strict" : false
+				},
+				{
+					"name" : "g[5]",
+					"strict" : false
+				},
+				{
+					"name" : "g[6]",
+					"strict" : false
+				},
+				{
+					"name" : "g[7]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[4]",
+					"strict" : false
+				},
+				{
+					"name" : "b[5]",
+					"strict" : false
+				},
+				{
+					"name" : "b[6]",
+					"strict" : false
+				},
+				{
+					"name" : "b[7]",
+					"strict" : false
+				},
+				{
 					"name" : "aL",
 					"strict" : false
 				},
@@ -104,251 +216,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "cursor_fila[0]",
-					"strict" : false
-				},
-				{
-					"name" : "cursor_fila[1]",
-					"strict" : false
-				},
-				{
-					"name" : "cursor_columna[0]",
-					"strict" : false
-				},
-				{
-					"name" : "cursor_columna[1]",
-					"strict" : false
-				},
-				{
-					"name" : "cursor_indice[0]",
-					"strict" : false
-				},
-				{
-					"name" : "cursor_indice[1]",
-					"strict" : false
-				},
-				{
-					"name" : "cursor_indice[2]",
-					"strict" : false
-				},
-				{
-					"name" : "cursor_indice[3]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[0]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[1]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[2]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[3]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[4]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[5]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[6]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[7]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[8]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[9]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[10]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[11]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[12]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[13]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[14]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_reveladas[15]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[0]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[1]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[2]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[3]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[4]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[5]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[6]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[7]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[8]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[9]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[10]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[11]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[12]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[13]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[14]",
-					"strict" : false
-				},
-				{
-					"name" : "cartas_bloqueadas[15]",
-					"strict" : false
-				},
-				{
-					"name" : "carta_cursor_id[0]",
-					"strict" : false
-				},
-				{
-					"name" : "carta_cursor_id[1]",
-					"strict" : false
-				},
-				{
-					"name" : "carta_cursor_id[2]",
-					"strict" : false
-				},
-				{
-					"name" : "carta_sel1_id[0]",
-					"strict" : false
-				},
-				{
-					"name" : "carta_sel1_id[1]",
-					"strict" : false
-				},
-				{
-					"name" : "carta_sel1_id[2]",
-					"strict" : false
-				},
-				{
-					"name" : "carta_sel2_id[0]",
-					"strict" : false
-				},
-				{
-					"name" : "carta_sel2_id[1]",
-					"strict" : false
-				},
-				{
-					"name" : "carta_sel2_id[2]",
-					"strict" : false
-				},
-				{
-					"name" : "jugador_actual",
-					"strict" : false
-				},
-				{
-					"name" : "puntaje_j1[0]",
-					"strict" : false
-				},
-				{
-					"name" : "puntaje_j1[1]",
-					"strict" : false
-				},
-				{
-					"name" : "puntaje_j1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "puntaje_j1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "puntaje_j2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "puntaje_j2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "puntaje_j2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "puntaje_j2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "timeout",
-					"strict" : false
-				},
-				{
-					"name" : "carta_random_start",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
 					"name" : "reset",
-					"strict" : false
-				},
-				{
-					"name" : "clk_50m",
 					"strict" : false
 				},
 				{

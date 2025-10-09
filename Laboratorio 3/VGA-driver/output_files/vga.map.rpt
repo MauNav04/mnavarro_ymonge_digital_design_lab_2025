@@ -1,5 +1,5 @@
-Analysis & Elaboration report for vga
-Thu Oct 09 00:45:08 2025
+Analysis & Synthesis report for vga
+Thu Oct 09 02:15:04 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,45 +7,65 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: Top-level Entity: |juego_memoria
-  5. Parameter Settings for User Entity Instance: temporizador_15s:u_timer
-  6. Parameter Settings for User Entity Instance: temporizador_15s:u_timer|divisor_1hz_50m:udiv
-  7. Analysis & Elaboration Settings
-  8. Port Connectivity Checks: "temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff3"
-  9. Port Connectivity Checks: "temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff2"
- 10. Port Connectivity Checks: "temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff1"
- 11. Port Connectivity Checks: "temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff0"
- 12. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff25"
- 13. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff24"
- 14. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff23"
- 15. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff22"
- 16. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff21"
- 17. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff20"
- 18. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff19"
- 19. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff18"
- 20. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff17"
- 21. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff16"
- 22. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff15"
- 23. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff14"
- 24. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff13"
- 25. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff12"
- 26. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff11"
- 27. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff10"
- 28. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff9"
- 29. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff8"
- 30. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff7"
- 31. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff6"
- 32. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff5"
- 33. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff4"
- 34. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff3"
- 35. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff2"
- 36. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff1"
- 37. Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0"
- 38. Port Connectivity Checks: "temporizador_15s:u_timer"
- 39. Port Connectivity Checks: "fsm_cartas:u_fsm"
- 40. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |vga_integrado|juego_memoria:u_juego|fsm_cartas:u_fsm|ps
+ 10. Logic Cells Representing Combinational Loops
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for User Entity Instance: vgaController:vgaCont
+ 17. Parameter Settings for User Entity Instance: juego_memoria:u_juego
+ 18. Parameter Settings for User Entity Instance: juego_memoria:u_juego|temporizador_15s:u_timer
+ 19. Parameter Settings for User Entity Instance: juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv
+ 20. Parameter Settings for Inferred Entity Instance: juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod1
+ 21. Parameter Settings for Inferred Entity Instance: juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod0
+ 22. Port Connectivity Checks: "juego_vga_renderer:renderer|cursor_overlay:gen_cursor"
+ 23. Port Connectivity Checks: "juego_vga_renderer:renderer|carta_oculta:gen_reverso"
+ 24. Port Connectivity Checks: "juego_vga_renderer:renderer|generador_cartas:gen_carta"
+ 25. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff3"
+ 26. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff2"
+ 27. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff1"
+ 28. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff0"
+ 29. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff25"
+ 30. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff24"
+ 31. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff23"
+ 32. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff22"
+ 33. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff21"
+ 34. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff20"
+ 35. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff19"
+ 36. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff18"
+ 37. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff17"
+ 38. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff16"
+ 39. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff15"
+ 40. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff14"
+ 41. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff13"
+ 42. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff12"
+ 43. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff11"
+ 44. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff10"
+ 45. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff9"
+ 46. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff8"
+ 47. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff7"
+ 48. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff6"
+ 49. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff5"
+ 50. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff4"
+ 51. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff3"
+ 52. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff2"
+ 53. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff1"
+ 54. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0"
+ 55. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer"
+ 56. Port Connectivity Checks: "juego_memoria:u_juego|fsm_cartas:u_fsm"
+ 57. Port Connectivity Checks: "juego_memoria:u_juego"
+ 58. Post-Synthesis Netlist Statistics for Top Partition
+ 59. Elapsed Time Per Partition
+ 60. Analysis & Synthesis Messages
 
 
 
@@ -69,77 +89,36 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Oct 09 00:45:08 2025       ;
-; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                 ; vga                                         ;
-; Top-level Entity Name         ; juego_memoria                               ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
 +-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |juego_memoria ;
-+------------------+----------------------------+-------------------------------+
-; Parameter Name   ; Value                      ; Type                          ;
-+------------------+----------------------------+-------------------------------+
-; TIMER_DIV_TARGET ; 10111110101111000001111111 ; Unsigned Binary               ;
-+------------------+----------------------------+-------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: temporizador_15s:u_timer ;
-+----------------+----------------------------+-------------------------+
-; Parameter Name ; Value                      ; Type                    ;
-+----------------+----------------------------+-------------------------+
-; DIV_TARGET     ; 10111110101111000001111111 ; Unsigned Binary         ;
-+----------------+----------------------------+-------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: temporizador_15s:u_timer|divisor_1hz_50m:udiv ;
-+----------------+----------------------------+----------------------------------------------+
-; Parameter Name ; Value                      ; Type                                         ;
-+----------------+----------------------------+----------------------------------------------+
-; TARGET         ; 10111110101111000001111111 ; Unsigned Binary                              ;
-+----------------+----------------------------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Oct 09 02:15:04 2025       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; vga                                         ;
+; Top-level Entity Name           ; vga_integrado                               ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 118                                         ;
+; Total pins                      ; 63                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 1                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; juego_memoria      ; vga                ;
+; Top-level entity name                                                           ; vga_integrado      ; vga                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -220,308 +199,795 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff3" ;
-+------+--------+----------+------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                    ;
-+------+--------+----------+------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                               ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                     ;
-+------+--------+----------+------------------------------------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
++----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff2" ;
-+------+--------+----------+------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                    ;
-+------+--------+----------+------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                               ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                     ;
-+------+--------+----------+------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                     ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
+; vga_integrado.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv           ;         ;
+; juego_vga_renderer.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv      ;         ;
+; generador_cartas.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/generador_cartas.sv        ;         ;
+; cursor_overlay.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/cursor_overlay.sv          ;         ;
+; carta_oculta.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv            ;         ;
+; generador_carta_random.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/generador_carta_random.sv  ;         ;
+; registro_seleccion.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/registro_seleccion.sv      ;         ;
+; puntaje_jugadores.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_jugadores.sv       ;         ;
+; puntaje_display.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_display.sv         ;         ;
+; juego_memoria.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv           ;         ;
+; estado_cartas.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/estado_cartas.sv           ;         ;
+; control_cursor.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/control_cursor.sv          ;         ;
+; temporizador_15s.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv        ;         ;
+; fsm_cartas.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/fsm_cartas.sv              ;         ;
+; flip_flop.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/flip_flop.sv               ;         ;
+; divisor_1hz_50m.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv         ;         ;
+; contador_4bit.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/contador_4bit.sv           ;         ;
+; bcd_contador_R.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_R.sv          ;         ;
+; bcd_contador_L.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_L.sv          ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                            ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc                                                           ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                       ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                                            ;         ;
+; db/lpm_divide_i3m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/db/lpm_divide_i3m.tdf      ;         ;
+; db/sign_div_unsign_llh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/db/sign_div_unsign_llh.tdf ;         ;
+; db/alt_u_div_gve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/db/alt_u_div_gve.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff1" ;
-+------+--------+----------+------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                    ;
-+------+--------+----------+------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                               ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                     ;
-+------+--------+----------+------------------------------------------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 599         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 929         ;
+;     -- 7 input functions                    ; 9           ;
+;     -- 6 input functions                    ; 257         ;
+;     -- 5 input functions                    ; 138         ;
+;     -- 4 input functions                    ; 215         ;
+;     -- <=3 input functions                  ; 310         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 118         ;
+;                                             ;             ;
+; I/O pins                                    ; 63          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 1           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; reset~input ;
+; Maximum fan-out                             ; 179         ;
+; Total fan-out                               ; 4486        ;
+; Average fan-out                             ; 3.82        ;
++---------------------------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff0" ;
-+------+--------+----------+------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                    ;
-+------+--------+----------+------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                               ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                     ;
-+------+--------+----------+------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                 ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                 ; Entity Name            ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; |vga_integrado                               ; 929 (1)             ; 118 (1)                   ; 0                 ; 1          ; 63   ; 0            ; |vga_integrado                                                                                                                                                      ; vga_integrado          ; work         ;
+;    |juego_memoria:u_juego|                   ; 363 (6)             ; 97 (6)                    ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego                                                                                                                                ; juego_memoria          ; work         ;
+;       |control_cursor:u_cursor|              ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor                                                                                                        ; control_cursor         ; work         ;
+;       |estado_cartas:u_estado|               ; 124 (124)           ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|estado_cartas:u_estado                                                                                                         ; estado_cartas          ; work         ;
+;       |fsm_cartas:u_fsm|                     ; 18 (18)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|fsm_cartas:u_fsm                                                                                                               ; fsm_cartas             ; work         ;
+;       |generador_carta_random:u_rng|         ; 68 (68)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng                                                                                                   ; generador_carta_random ; work         ;
+;       |puntaje_display:u_puntajes_seg|       ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|puntaje_display:u_puntajes_seg                                                                                                 ; puntaje_display        ; work         ;
+;          |bcd_contador_R:disp_j1|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|puntaje_display:u_puntajes_seg|bcd_contador_R:disp_j1                                                                          ; bcd_contador_R         ; work         ;
+;          |bcd_contador_R:disp_j2|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|puntaje_display:u_puntajes_seg|bcd_contador_R:disp_j2                                                                          ; bcd_contador_R         ; work         ;
+;       |puntaje_jugadores:u_puntaje|          ; 11 (11)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|puntaje_jugadores:u_puntaje                                                                                                    ; puntaje_jugadores      ; work         ;
+;       |registro_seleccion:u_latch1|          ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch1                                                                                                    ; registro_seleccion     ; work         ;
+;       |registro_seleccion:u_latch2|          ; 1 (1)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch2                                                                                                    ; registro_seleccion     ; work         ;
+;       |temporizador_15s:u_timer|             ; 110 (1)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer                                                                                                       ; temporizador_15s       ; work         ;
+;          |bcd_contador_L:uL|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_L:uL                                                                                     ; bcd_contador_L         ; work         ;
+;          |bcd_contador_R:uR|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_R:uR                                                                                     ; bcd_contador_R         ; work         ;
+;          |contador_4bit:ucnt|                ; 11 (3)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt                                                                                    ; contador_4bit          ; work         ;
+;             |flip_flop:ff0|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff0                                                                      ; flip_flop              ; work         ;
+;             |flip_flop:ff1|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff1                                                                      ; flip_flop              ; work         ;
+;             |flip_flop:ff2|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff2                                                                      ; flip_flop              ; work         ;
+;             |flip_flop:ff3|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff3                                                                      ; flip_flop              ; work         ;
+;          |divisor_1hz_50m:udiv|              ; 90 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv                                                                                  ; divisor_1hz_50m        ; work         ;
+;             |flip_flop:ff0|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0                                                                    ; flip_flop              ; work         ;
+;             |flip_flop:ff10|                 ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff10                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff11|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff11                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff12|                 ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff12                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff13|                 ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff13                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff14|                 ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff14                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff15|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff15                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff16|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff16                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff17|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff17                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff18|                 ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff18                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff19|                 ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff19                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff1|                  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff1                                                                    ; flip_flop              ; work         ;
+;             |flip_flop:ff20|                 ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff20                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff21|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff21                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff22|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff22                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff23|                 ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff23                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff24|                 ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff24                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff25|                 ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff25                                                                   ; flip_flop              ; work         ;
+;             |flip_flop:ff2|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff2                                                                    ; flip_flop              ; work         ;
+;             |flip_flop:ff3|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff3                                                                    ; flip_flop              ; work         ;
+;             |flip_flop:ff4|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff4                                                                    ; flip_flop              ; work         ;
+;             |flip_flop:ff5|                  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff5                                                                    ; flip_flop              ; work         ;
+;             |flip_flop:ff6|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff6                                                                    ; flip_flop              ; work         ;
+;             |flip_flop:ff7|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff7                                                                    ; flip_flop              ; work         ;
+;             |flip_flop:ff8|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff8                                                                    ; flip_flop              ; work         ;
+;             |flip_flop:ff9|                  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff9                                                                    ; flip_flop              ; work         ;
+;    |juego_vga_renderer:renderer|             ; 537 (197)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer                                                                                                                          ; juego_vga_renderer     ; work         ;
+;       |carta_oculta:gen_reverso|             ; 181 (26)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso                                                                                                 ; carta_oculta           ; work         ;
+;          |lpm_divide:Mod0|                   ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod0                                                                                 ; lpm_divide             ; work         ;
+;             |lpm_divide_i3m:auto_generated|  ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod0|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m         ; work         ;
+;                |sign_div_unsign_llh:divider| ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod0|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh    ; work         ;
+;                   |alt_u_div_gve:divider|    ; 76 (76)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod0|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve          ; work         ;
+;          |lpm_divide:Mod1|                   ; 79 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod1                                                                                 ; lpm_divide             ; work         ;
+;             |lpm_divide_i3m:auto_generated|  ; 79 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod1|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m         ; work         ;
+;                |sign_div_unsign_llh:divider| ; 79 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod1|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh    ; work         ;
+;                   |alt_u_div_gve:divider|    ; 79 (79)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod1|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve          ; work         ;
+;       |cursor_overlay:gen_cursor|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|cursor_overlay:gen_cursor                                                                                                ; cursor_overlay         ; work         ;
+;       |generador_cartas:gen_carta|           ; 152 (152)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|generador_cartas:gen_carta                                                                                               ; generador_cartas       ; work         ;
+;    |vgaController:vgaCont|                   ; 28 (28)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|vgaController:vgaCont                                                                                                                                ; vgaController          ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff25" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Sum of two 18x18                ; 1           ;
+; Total number of DSP blocks      ; 1           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 2           ;
++---------------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff24" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |vga_integrado|juego_memoria:u_juego|fsm_cartas:u_fsm|ps                                                                                                        ;
++-----------------+-----------------+---------------+---------------+-------------+---------------+----------------+---------------+----------------+--------------+--------------+
+; Name            ; ps.S9_fin_juego ; ps.S8_random2 ; ps.S7_random1 ; ps.S6_check ; ps.S5_revela2 ; ps.S4_guardar2 ; ps.S3_revela1 ; ps.S2_guardar1 ; ps.S1_espera ; ps.S0_inicio ;
++-----------------+-----------------+---------------+---------------+-------------+---------------+----------------+---------------+----------------+--------------+--------------+
+; ps.S0_inicio    ; 0               ; 0             ; 0             ; 0           ; 0             ; 0              ; 0             ; 0              ; 0            ; 0            ;
+; ps.S1_espera    ; 0               ; 0             ; 0             ; 0           ; 0             ; 0              ; 0             ; 0              ; 1            ; 1            ;
+; ps.S2_guardar1  ; 0               ; 0             ; 0             ; 0           ; 0             ; 0              ; 0             ; 1              ; 0            ; 1            ;
+; ps.S3_revela1   ; 0               ; 0             ; 0             ; 0           ; 0             ; 0              ; 1             ; 0              ; 0            ; 1            ;
+; ps.S4_guardar2  ; 0               ; 0             ; 0             ; 0           ; 0             ; 1              ; 0             ; 0              ; 0            ; 1            ;
+; ps.S5_revela2   ; 0               ; 0             ; 0             ; 0           ; 1             ; 0              ; 0             ; 0              ; 0            ; 1            ;
+; ps.S6_check     ; 0               ; 0             ; 0             ; 1           ; 0             ; 0              ; 0             ; 0              ; 0            ; 1            ;
+; ps.S7_random1   ; 0               ; 0             ; 1             ; 0           ; 0             ; 0              ; 0             ; 0              ; 0            ; 1            ;
+; ps.S8_random2   ; 0               ; 1             ; 0             ; 0           ; 0             ; 0              ; 0             ; 0              ; 0            ; 1            ;
+; ps.S9_fin_juego ; 1               ; 0             ; 0             ; 0           ; 0             ; 0              ; 0             ; 0              ; 0            ; 1            ;
++-----------------+-----------------+---------------+---------------+-------------+---------------+----------------+---------------+----------------+--------------+--------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff23" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                                                        ;
++------------------------------------------------------------------------------------------------+----+
+; Logic Cell Name                                                                                ;    ;
++------------------------------------------------------------------------------------------------+----+
+; juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff3|Q~0            ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff1|Q~0            ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff2|Q~0            ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff0|Q~0            ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff3|WideNand1~0    ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0|Q~0          ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff1|Q~0          ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff2|Q~0          ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff3|Q~0          ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff4|Q~0          ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff5|Q~0          ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff6|Q~0          ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff7|Q~0          ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff8|Q~0          ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff9|Q~0          ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff10|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff11|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff12|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff13|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff14|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff15|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff16|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff17|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff18|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff19|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff20|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff21|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff22|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff23|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff24|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff25|Q~0         ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff1|WideNand1~0    ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff2|WideNand1~0    ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff0|WideNand1~0    ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0|WideNand1~0  ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff1|WideNand1~0  ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff2|WideNand1~0  ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff3|WideNand1~0  ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff4|WideNand1~0  ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff5|WideNand1~0  ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff6|WideNand1~0  ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff7|WideNand1~0  ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff8|WideNand1~0  ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff9|WideNand1~0  ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff10|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff11|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff12|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff13|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff14|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff15|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff16|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff17|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff18|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff19|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff20|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff21|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff22|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff23|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff24|WideNand1~0 ;    ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff25|WideNand1~0 ;    ;
+; Number of logic cells representing combinational loops                                         ; 60 ;
++------------------------------------------------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff22" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                          ;
++--------------------------------------------------------+--------------------+
+; Register name                                          ; Reason for Removal ;
++--------------------------------------------------------+--------------------+
+; juego_memoria:u_juego|fsm_cartas:u_fsm|ps~2            ; Lost fanout        ;
+; juego_memoria:u_juego|fsm_cartas:u_fsm|ps~3            ; Lost fanout        ;
+; juego_memoria:u_juego|fsm_cartas:u_fsm|ps~4            ; Lost fanout        ;
+; juego_memoria:u_juego|fsm_cartas:u_fsm|ps~5            ; Lost fanout        ;
+; juego_memoria:u_juego|fsm_cartas:u_fsm|ps.S9_fin_juego ; Lost fanout        ;
+; Total Number of Removed Registers = 5                  ;                    ;
++--------------------------------------------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff21" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                               ;
++---------------------------------------------+--------------------+--------------------------------------------------------+
+; Register name                               ; Reason for Removal ; Registers Removed due to This Register                 ;
++---------------------------------------------+--------------------+--------------------------------------------------------+
+; juego_memoria:u_juego|fsm_cartas:u_fsm|ps~2 ; Lost Fanouts       ; juego_memoria:u_juego|fsm_cartas:u_fsm|ps.S9_fin_juego ;
++---------------------------------------------+--------------------+--------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff20" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 118   ;
+; Number of registers using Synchronous Clear  ; 26    ;
+; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Asynchronous Clear ; 109   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 35    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff19" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Inverted Register Statistics                                                ;
++-------------------------------------------------------------------+---------+
+; Inverted Register                                                 ; Fan out ;
++-------------------------------------------------------------------+---------+
+; juego_memoria:u_juego|estado_cartas:u_estado|pares_restantes_r[3] ; 3       ;
+; juego_memoria:u_juego|generador_carta_random:u_rng|lfsr[3]        ; 4       ;
+; juego_memoria:u_juego|generador_carta_random:u_rng|lfsr[1]        ; 3       ;
+; juego_memoria:u_juego|generador_carta_random:u_rng|lfsr[4]        ; 3       ;
+; juego_memoria:u_juego|generador_carta_random:u_rng|lfsr[6]        ; 2       ;
+; Total number of inverted registers = 5                            ;         ;
++-------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff18" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch1|indice_out[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch2|indice_out[1] ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|intentos[1]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|candidato[3] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor|fila_r[0]         ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor|columna_r[0]      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|g[3]                                ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|card_rel_y[5]                       ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|Mux0                                ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_memoria:u_juego|estado_cartas:u_estado|Mux0               ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|r[4]                                ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|g[5]                                ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|r[7]                                ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|current_card_idx[3]                 ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; No         ; |vga_integrado|juego_vga_renderer:renderer|card_rel_x[5]                       ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|Add11                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff17" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vgaController:vgaCont  ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; HBP            ; 00000000000000000000000000110000 ; Unsigned Binary ;
+; HACTIVE        ; 00000000000000000000001010000000 ; Unsigned Binary ;
+; HFP            ; 00000000000000000000000000010000 ; Unsigned Binary ;
+; HSYN           ; 00000000000000000000000001100000 ; Unsigned Binary ;
+; HMAX           ; 00000000000000000000001100100000 ; Unsigned Binary ;
+; VBP            ; 00000000000000000000000000100001 ; Unsigned Binary ;
+; VACTIVE        ; 00000000000000000000000111100000 ; Unsigned Binary ;
+; VFP            ; 00000000000000000000000000001010 ; Unsigned Binary ;
+; VSYN           ; 00000000000000000000000000000010 ; Unsigned Binary ;
+; VMAX           ; 00000000000000000000001000001101 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff16" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: juego_memoria:u_juego ;
++------------------+----------------------------+--------------------+
+; Parameter Name   ; Value                      ; Type               ;
++------------------+----------------------------+--------------------+
+; TIMER_DIV_TARGET ; 10111110101111000001111111 ; Unsigned Binary    ;
++------------------+----------------------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff15" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: juego_memoria:u_juego|temporizador_15s:u_timer ;
++----------------+----------------------------+-----------------------------------------------+
+; Parameter Name ; Value                      ; Type                                          ;
++----------------+----------------------------+-----------------------------------------------+
+; DIV_TARGET     ; 10111110101111000001111111 ; Unsigned Binary                               ;
++----------------+----------------------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff14" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv ;
++----------------+----------------------------+--------------------------------------------------------------------+
+; Parameter Name ; Value                      ; Type                                                               ;
++----------------+----------------------------+--------------------------------------------------------------------+
+; TARGET         ; 10111110101111000001111111 ; Unsigned Binary                                                    ;
++----------------+----------------------------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff13" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod1 ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                                     ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                              ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff12" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                                     ;
+; LPM_WIDTHD             ; 5              ; Untyped                                                                     ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                     ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                     ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                     ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                     ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                     ;
+; CBXI_PARAMETER         ; lpm_divide_i3m ; Untyped                                                                     ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                     ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                     ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                              ;
++------------------------+----------------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff11" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_vga_renderer:renderer|cursor_overlay:gen_cursor"                                                                                                                                          ;
++-------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                                                                                                                             ;
++-------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; card_width        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; card_width[3..2]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; card_width[9..8]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_width[6..4]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_width[1..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_width[7]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; card_height       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; card_height[6..5] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; card_height[9..7] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_height[4..3] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_height[1..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_height[2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++-------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff10" ;
-+------+--------+----------+---------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                       ;
-+------+--------+----------+---------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                  ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                        ;
-+------+--------+----------+---------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_vga_renderer:renderer|carta_oculta:gen_reverso"                                                                                                                                            ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                                                                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; card_width        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; card_width[3..2]  ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; card_width[9..8]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_width[6..4]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_width[1..0]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_width[7]     ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; card_height       ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; card_height[6..5] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; card_height[9..7] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_height[4..3] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_height[1..0] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_height[2]    ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; is_pattern        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff9" ;
-+------+--------+----------+--------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                      ;
-+------+--------+----------+--------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                 ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                       ;
-+------+--------+----------+--------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_vga_renderer:renderer|generador_cartas:gen_carta"                                                                                                                                         ;
++-------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                                                                                                                             ;
++-------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; card_width        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; card_width[3..2]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; card_width[9..8]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_width[6..4]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_width[1..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_width[7]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; card_height       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (10 bits) it drives.  The 22 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; card_height[6..5] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
+; card_height[9..7] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_height[4..3] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_height[1..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; card_height[2]    ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
++-------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff8" ;
-+------+--------+----------+--------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                      ;
-+------+--------+----------+--------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                 ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                       ;
-+------+--------+----------+--------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff3" ;
++------+--------+----------+----------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                     ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                           ;
++------+--------+----------+----------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff7" ;
-+------+--------+----------+--------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                      ;
-+------+--------+----------+--------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                 ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                       ;
-+------+--------+----------+--------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff2" ;
++------+--------+----------+----------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                     ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                           ;
++------+--------+----------+----------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff6" ;
-+------+--------+----------+--------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                      ;
-+------+--------+----------+--------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                 ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                       ;
-+------+--------+----------+--------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff1" ;
++------+--------+----------+----------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                     ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                           ;
++------+--------+----------+----------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff5" ;
-+------+--------+----------+--------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                      ;
-+------+--------+----------+--------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                 ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                       ;
-+------+--------+----------+--------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff0" ;
++------+--------+----------+----------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                     ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                           ;
++------+--------+----------+----------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff4" ;
-+------+--------+----------+--------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                      ;
-+------+--------+----------+--------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                 ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                       ;
-+------+--------+----------+--------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff25" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff3" ;
-+------+--------+----------+--------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                      ;
-+------+--------+----------+--------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                 ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                       ;
-+------+--------+----------+--------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff24" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff2" ;
-+------+--------+----------+--------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                      ;
-+------+--------+----------+--------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                 ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                       ;
-+------+--------+----------+--------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff23" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff1" ;
-+------+--------+----------+--------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                      ;
-+------+--------+----------+--------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                 ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                       ;
-+------+--------+----------+--------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff22" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0" ;
-+------+--------+----------+--------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                      ;
-+------+--------+----------+--------------------------------------------------------------+
-; PRE  ; Input  ; Info     ; Stuck at VCC                                                 ;
-; nQ   ; Output ; Info     ; Explicitly unconnected                                       ;
-+------+--------+----------+--------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff21" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff20" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff19" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff18" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff17" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff16" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff15" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff14" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff13" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff12" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff11" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff10" ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                              ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff9" ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                       ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                             ;
++------+--------+----------+------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff8" ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                       ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                             ;
++------+--------+----------+------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff7" ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                       ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                             ;
++------+--------+----------+------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff6" ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                       ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                             ;
++------+--------+----------+------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff5" ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                       ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                             ;
++------+--------+----------+------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff4" ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                       ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                             ;
++------+--------+----------+------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff3" ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                       ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                             ;
++------+--------+----------+------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff2" ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                       ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                             ;
++------+--------+----------+------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff1" ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                       ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                             ;
++------+--------+----------+------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0" ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                            ;
++------+--------+----------+------------------------------------------------------------------------------------+
+; PRE  ; Input  ; Info     ; Stuck at VCC                                                                       ;
+; nQ   ; Output ; Info     ; Explicitly unconnected                                                             ;
++------+--------+----------+------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "temporizador_15s:u_timer"                                                                ;
+; Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer"                                          ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port      ; Type   ; Severity ; Details                                                                             ;
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -529,27 +995,102 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------+
-; Port Connectivity Checks: "fsm_cartas:u_fsm"           ;
-+-----------+--------+----------+------------------------+
-; Port      ; Type   ; Severity ; Details                ;
-+-----------+--------+----------+------------------------+
-; state_dbg ; Output ; Info     ; Explicitly unconnected ;
-+-----------+--------+----------+------------------------+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego|fsm_cartas:u_fsm" ;
++-----------+--------+----------+------------------------------------+
+; Port      ; Type   ; Severity ; Details                            ;
++-----------+--------+----------+------------------------------------+
+; state_dbg ; Output ; Info     ; Explicitly unconnected             ;
++-----------+--------+----------+------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "juego_memoria:u_juego"                                                                            ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; cursor_indice      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; carta_sel1_id      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; carta_sel2_id      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; jugador_actual     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; puntaje_j1         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; puntaje_j2         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; timeout            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; carta_random_start ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 118                         ;
+;     CLR               ; 64                          ;
+;     CLR SCLR          ; 10                          ;
+;     ENA CLR           ; 23                          ;
+;     ENA CLR SCLR      ; 10                          ;
+;     ENA CLR SLD       ; 2                           ;
+;     SCLR              ; 6                           ;
+;     plain             ; 3                           ;
+; arriav_lcell_comb     ; 952                         ;
+;     arith             ; 235                         ;
+;         0 data inputs ; 28                          ;
+;         1 data inputs ; 63                          ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 30                          ;
+;         4 data inputs ; 89                          ;
+;         5 data inputs ; 5                           ;
+;     extend            ; 9                           ;
+;         7 data inputs ; 9                           ;
+;     normal            ; 708                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 31                          ;
+;         2 data inputs ; 86                          ;
+;         3 data inputs ; 73                          ;
+;         4 data inputs ; 126                         ;
+;         5 data inputs ; 133                         ;
+;         6 data inputs ; 257                         ;
+; arriav_mac            ; 1                           ;
+; boundary_port         ; 63                          ;
+;                       ;                             ;
+; Max LUT depth         ; 20.40                       ;
+; Average LUT depth     ; 9.64                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 09 00:45:02 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga --analysis_and_elaboration
+    Info: Processing started: Thu Oct 09 02:14:55 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file vga_integrado.sv
+    Info (12023): Found entity 1: vga_integrado File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 6
+    Info (12023): Found entity 2: vgaController File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 119
+Info (12021): Found 1 design units, including 1 entities, in source file juego_vga_renderer.sv
+    Info (12023): Found entity 1: juego_vga_renderer File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file generador_cartas.sv
+    Info (12023): Found entity 1: generador_cartas File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/generador_cartas.sv Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file cursor_overlay.sv
+    Info (12023): Found entity 1: cursor_overlay File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/cursor_overlay.sv Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file carta_oculta.sv
+    Info (12023): Found entity 1: carta_oculta File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file tb_juego_memoria.sv
-    Info (12023): Found entity 1: tb_juego_memoria_clean File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/tb_juego_memoria.sv Line: 9
+    Info (12023): Found entity 1: tb_juego_memoria File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/tb_juego_memoria.sv Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file generador_carta_random.sv
     Info (12023): Found entity 1: generador_carta_random File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/generador_carta_random.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file registro_seleccion.sv
@@ -580,32 +1121,79 @@ Info (12021): Found 1 design units, including 1 entities, in source file bcd_con
     Info (12023): Found entity 1: bcd_contador_R File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_R.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file bcd_contador_l.sv
     Info (12023): Found entity 1: bcd_contador_L File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_L.sv Line: 4
-Info (12021): Found 3 design units, including 3 entities, in source file vga.sv
-    Info (12023): Found entity 1: vga File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga.sv Line: 4
-    Info (12023): Found entity 2: vgaController File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga.sv Line: 42
-    Info (12023): Found entity 3: videoGen File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga.sv Line: 96
 Info (12021): Found 1 design units, including 1 entities, in source file tb_vga_to_ppm.sv
     Info (12023): Found entity 1: tb_vga_to_ppm File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/tb_vga_to_ppm.sv Line: 4
-Info (12127): Elaborating entity "juego_memoria" for the top level hierarchy
-Info (12128): Elaborating entity "control_cursor" for hierarchy "control_cursor:u_cursor" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 77
+Info (12127): Elaborating entity "vga_integrado" for the top level hierarchy
+Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 54
+Info (12128): Elaborating entity "juego_memoria" for hierarchy "juego_memoria:u_juego" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 95
+Info (12128): Elaborating entity "control_cursor" for hierarchy "juego_memoria:u_juego|control_cursor:u_cursor" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 77
 Info (10264): Verilog HDL Case Statement information at control_cursor.sv(26): all case item expressions in this case statement are onehot File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/control_cursor.sv Line: 26
 Info (10264): Verilog HDL Case Statement information at control_cursor.sv(39): all case item expressions in this case statement are onehot File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/control_cursor.sv Line: 39
-Info (12128): Elaborating entity "fsm_cartas" for hierarchy "fsm_cartas:u_fsm" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 101
-Info (12128): Elaborating entity "temporizador_15s" for hierarchy "temporizador_15s:u_timer" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 116
-Info (12128): Elaborating entity "divisor_1hz_50m" for hierarchy "temporizador_15s:u_timer|divisor_1hz_50m:udiv" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 18
-Info (12128): Elaborating entity "flip_flop" for hierarchy "temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv Line: 117
-Info (12128): Elaborating entity "contador_4bit" for hierarchy "temporizador_15s:u_timer|contador_4bit:ucnt" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 29
-Info (12128): Elaborating entity "bcd_contador_L" for hierarchy "temporizador_15s:u_timer|bcd_contador_L:uL" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 40
-Info (12128): Elaborating entity "bcd_contador_R" for hierarchy "temporizador_15s:u_timer|bcd_contador_R:uR" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 45
-Info (12128): Elaborating entity "registro_seleccion" for hierarchy "registro_seleccion:u_latch1" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 167
-Info (12128): Elaborating entity "estado_cartas" for hierarchy "estado_cartas:u_estado" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 201
-Info (12128): Elaborating entity "generador_carta_random" for hierarchy "generador_carta_random:u_rng" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 211
-Info (12128): Elaborating entity "puntaje_jugadores" for hierarchy "puntaje_jugadores:u_puntaje" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 224
-Info (12128): Elaborating entity "puntaje_display" for hierarchy "puntaje_display:u_puntajes_seg" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 234
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4778 megabytes
-    Info: Processing ended: Thu Oct 09 00:45:08 2025
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:15
+Info (12128): Elaborating entity "fsm_cartas" for hierarchy "juego_memoria:u_juego|fsm_cartas:u_fsm" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 101
+Info (12128): Elaborating entity "temporizador_15s" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 116
+Info (12128): Elaborating entity "divisor_1hz_50m" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 18
+Info (12128): Elaborating entity "flip_flop" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv Line: 117
+Info (12128): Elaborating entity "contador_4bit" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 29
+Info (12128): Elaborating entity "bcd_contador_L" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_L:uL" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 40
+Info (12128): Elaborating entity "bcd_contador_R" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_R:uR" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 45
+Info (12128): Elaborating entity "registro_seleccion" for hierarchy "juego_memoria:u_juego|registro_seleccion:u_latch1" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 167
+Info (12128): Elaborating entity "estado_cartas" for hierarchy "juego_memoria:u_juego|estado_cartas:u_estado" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 201
+Info (12128): Elaborating entity "generador_carta_random" for hierarchy "juego_memoria:u_juego|generador_carta_random:u_rng" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 211
+Info (12128): Elaborating entity "puntaje_jugadores" for hierarchy "juego_memoria:u_juego|puntaje_jugadores:u_puntaje" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 224
+Info (12128): Elaborating entity "puntaje_display" for hierarchy "juego_memoria:u_juego|puntaje_display:u_puntajes_seg" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 234
+Info (12128): Elaborating entity "juego_vga_renderer" for hierarchy "juego_vga_renderer:renderer" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 111
+Warning (10036): Verilog HDL or VHDL warning at juego_vga_renderer.sv(192): object "is_oculta" assigned a value but never read File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 192
+Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(69): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 69
+Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(70): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 70
+Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(71): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 71
+Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(72): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 72
+Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(74): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 74
+Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(75): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(76): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 76
+Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(77): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 77
+Info (12128): Elaborating entity "generador_cartas" for hierarchy "juego_vga_renderer:renderer|generador_cartas:gen_carta" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 221
+Warning (10230): Verilog HDL assignment warning at generador_cartas.sv(76): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/generador_cartas.sv Line: 76
+Warning (10230): Verilog HDL assignment warning at generador_cartas.sv(77): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/generador_cartas.sv Line: 77
+Info (12128): Elaborating entity "carta_oculta" for hierarchy "juego_vga_renderer:renderer|carta_oculta:gen_reverso" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 236
+Warning (10230): Verilog HDL assignment warning at carta_oculta.sv(25): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at carta_oculta.sv(26): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 26
+Warning (10230): Verilog HDL assignment warning at carta_oculta.sv(29): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 29
+Warning (10230): Verilog HDL assignment warning at carta_oculta.sv(30): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 30
+Info (12128): Elaborating entity "cursor_overlay" for hierarchy "juego_vga_renderer:renderer|cursor_overlay:gen_cursor" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 247
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "juego_vga_renderer:renderer|carta_oculta:gen_reverso|Mod1" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 26
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "juego_vga_renderer:renderer|carta_oculta:gen_reverso|Mod0" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 25
+Info (12130): Elaborated megafunction instantiation "juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod1" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 26
+Info (12133): Instantiated megafunction "juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod1" with the following parameter: File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 26
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_i3m.tdf
+    Info (12023): Found entity 1: lpm_divide_i3m File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/db/lpm_divide_i3m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_llh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_llh File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/db/sign_div_unsign_llh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_gve.tdf
+    Info (12023): Found entity 1: alt_u_div_gve File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/db/alt_u_div_gve.tdf Line: 23
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sync_b" is stuck at GND File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 21
+    Warning (13410): Pin "bL" is stuck at GND File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 26
+    Warning (13410): Pin "cL" is stuck at GND File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 26
+    Warning (13410): Pin "gL" is stuck at VCC File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 26
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1012 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 57 output pins
+    Info (21061): Implemented 948 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4918 megabytes
+    Info: Processing ended: Thu Oct 09 02:15:04 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
 
 
