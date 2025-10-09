@@ -318,7 +318,7 @@ module juego_vga_renderer (
                     b = pattern_b;
                 end
             end
-            // Prioridad 5: Carta oculta - Mostrar reverso
+            // Prioridad 5: Carta oculta - Mostrar reverso (sin esquinas de color)
             else begin
                 r = back_r;
                 g = back_g;

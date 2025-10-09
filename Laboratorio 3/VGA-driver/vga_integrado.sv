@@ -6,7 +6,7 @@
 module vga_integrado (
     // Entradas del sistema
     input  logic        clk,           // 50 MHz board clock
-    input  logic        reset,         // async active-high
+    input  logic        reset_n,       // Botón de reset (activo en bajo)
     
     // Controles del juego
     input  logic        mover_adelante,
@@ -28,6 +28,36 @@ module vga_integrado (
     output logic        aJ1, bJ1, cJ1, dJ1, eJ1, fJ1, gJ1,  // Puntaje J1
     output logic        aJ2, bJ2, cJ2, dJ2, eJ2, fJ2, gJ2   // Puntaje J2
 );
+
+    // Invertir el reset (botón activo en bajo → señal activa en alto)
+    logic reset;
+    assign reset = ~reset_n;
+
+    // ========================================================================
+    // Debounce de botones (elimina rebotes mecánicos)
+    // ========================================================================
+    logic mover_adelante_db, mover_atras_db, seleccionar_db;
+    
+    debouncer #(.DELAY_CYCLES(12_500_000)) db_adelante (  // 250ms
+        .clk       (clk),
+        .reset     (reset),
+        .btn_in    (mover_adelante),
+        .btn_pulse (mover_adelante_db)
+    );
+    
+    debouncer #(.DELAY_CYCLES(12_500_000)) db_atras (
+        .clk       (clk),
+        .reset     (reset),
+        .btn_in    (mover_atras),
+        .btn_pulse (mover_atras_db)
+    );
+    
+    debouncer #(.DELAY_CYCLES(12_500_000)) db_seleccionar (
+        .clk       (clk),
+        .reset     (reset),
+        .btn_in    (seleccionar),
+        .btn_pulse (seleccionar_db)
+    );
 
     // ========================================================================
     // Generación del reloj VGA (25 MHz)
@@ -67,10 +97,10 @@ module vga_integrado (
     juego_memoria u_juego (
         .clk_50m            (clk),
         .reset              (reset),
-        .mover_adelante     (mover_adelante),
-        .mover_atras        (mover_atras),
+        .mover_adelante     (mover_adelante_db),    // Con debounce
+        .mover_atras        (mover_atras_db),       // Con debounce
         .modo_vertical      (modo_vertical),
-        .seleccionar        (seleccionar),
+        .seleccionar        (seleccionar_db),       // Con debounce
         
         // Salidas de 7 segmentos
         .aL(aL), .bL(bL), .cL(cL), .dL(dL), .eL(eL), .fL(fL), .gL(gL),

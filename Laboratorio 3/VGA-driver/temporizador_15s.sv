@@ -2,22 +2,24 @@ module temporizador_15s #(
     parameter [25:0] DIV_TARGET = 26'd49_999_999 // 50 MHz -> 1 Hz real
 ) (
     input  logic clk_50m,
-    input  logic reset,        // activo alto
+    input  logic reset,        // activo alto - reset global
     input  logic start,        // habilita el conteo
     input  logic clear,        // reinicia el conteo a 15 s
-    output logic timeout,      // se alcanz� el l�mite inferior
-    output logic pulso_1hz,    // pulso de 1 Hz disponible para otros m�dulos
+    output logic timeout,      // se alcanzó el límite inferior
+    output logic pulso_1hz,    // pulso de 1 Hz disponible para otros módulos
     output logic aL,bL,cL,dL,eL,fL,gL,
     output logic aR,bR,cR,dR,eR,fR,gR
 );
+    // Divisor de frecuencia (solo se resetea con reset global)
     logic tick_1Hz;
     divisor_1hz_50m #(.TARGET(DIV_TARGET)) udiv (
         .clk_50m (clk_50m),
-        .reset   (reset | clear),
+        .reset   (reset),
         .tick_1Hz(tick_1Hz)
     );
     assign pulso_1hz = tick_1Hz;
 
+    // Solo cuenta cuando start está activo
     logic tick_habilitado;
     assign tick_habilitado = tick_1Hz & start;
 	 

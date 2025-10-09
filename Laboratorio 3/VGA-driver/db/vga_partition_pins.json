@@ -220,7 +220,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "reset_n",
 					"strict" : false
 				},
 				{
