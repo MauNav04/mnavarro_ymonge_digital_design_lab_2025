@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga
-Thu Oct 09 04:02:25 2025
+Thu Oct 09 04:29:20 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -90,7 +90,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 09 04:02:25 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct 09 04:29:20 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; vga                                         ;
 ; Top-level Entity Name           ; vga_integrado                               ;
@@ -216,7 +216,8 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
-;     Processors 8-16        ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -265,8 +266,8 @@ https://fpgasoftware.intel.com/eula.
 ;     -- 7 input functions                    ; 11    ;
 ;     -- 6 input functions                    ; 224   ;
 ;     -- 5 input functions                    ; 166   ;
-;     -- 4 input functions                    ; 237   ;
-;     -- <=3 input functions                  ; 392   ;
+;     -- 4 input functions                    ; 238   ;
+;     -- <=3 input functions                  ; 391   ;
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 206   ;
 ;                                             ;       ;
@@ -276,7 +277,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;       ;
 ; Maximum fan-out node                        ; reset ;
 ; Maximum fan-out                             ; 255   ;
-; Total fan-out                               ; 5106  ;
+; Total fan-out                               ; 5108  ;
 ; Average fan-out                             ; 3.75  ;
 +---------------------------------------------+-------+
 
@@ -474,12 +475,16 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +-------------------------------------------------------------------+---------+
 ; Inverted Register                                                 ; Fan out ;
 +-------------------------------------------------------------------+---------+
+; juego_memoria:u_juego|temporizador_15s:u_timer|count_down[3]      ; 12      ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|count_down[2]      ; 12      ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|count_down[1]      ; 13      ;
+; juego_memoria:u_juego|temporizador_15s:u_timer|count_down[0]      ; 13      ;
 ; juego_memoria:u_juego|estado_cartas:u_estado|pares_restantes_r[3] ; 3       ;
 ; juego_memoria:u_juego|generador_carta_random:u_rng|lfsr[3]        ; 4       ;
 ; juego_memoria:u_juego|generador_carta_random:u_rng|lfsr[1]        ; 3       ;
 ; juego_memoria:u_juego|generador_carta_random:u_rng|lfsr[4]        ; 3       ;
 ; juego_memoria:u_juego|generador_carta_random:u_rng|lfsr[6]        ; 2       ;
-; Total number of inverted registers = 5                            ;         ;
+; Total number of inverted registers = 9                            ;         ;
 +-------------------------------------------------------------------+---------+
 
 
@@ -488,18 +493,18 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch1|indice_out[3] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch2|indice_out[3] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|count_up[3]      ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_seleccionar|counter[7]                             ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_adelante|counter[2]                                ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_atras|counter[12]                                  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch1|indice_out[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch2|indice_out[0] ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_seleccionar|counter[21]                            ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_adelante|counter[22]                               ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_atras|counter[19]                                  ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|intentos[0]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|candidato[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|candidato[1] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vga_integrado|reset_counter[2]                                                ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vga_integrado|reset_counter[1]                                                ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor|fila_r[0]         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vga_integrado|reset_counter[3]                                                ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor|fila_r[1]         ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor|columna_r[0]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|count_down[2]    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|g[0]                                ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|card_rel_y[7]                       ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|Mux0                                ;
@@ -1019,16 +1024,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     normal            ; 735                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 31                          ;
-;         2 data inputs ; 87                          ;
+;         2 data inputs ; 86                          ;
 ;         3 data inputs ; 82                          ;
-;         4 data inputs ; 148                         ;
+;         4 data inputs ; 149                         ;
 ;         5 data inputs ; 161                         ;
 ;         6 data inputs ; 224                         ;
 ; arriav_mac            ; 1                           ;
 ; boundary_port         ; 63                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 20.40                       ;
-; Average LUT depth     ; 8.52                        ;
+; Average LUT depth     ; 8.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1047,7 +1052,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 09 04:02:16 2025
+    Info: Processing started: Thu Oct 09 04:29:12 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1111,8 +1116,8 @@ Info (12128): Elaborating entity "fsm_cartas" for hierarchy "juego_memoria:u_jue
 Info (12128): Elaborating entity "temporizador_15s" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 116
 Info (12128): Elaborating entity "divisor_1hz_50m" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 19
 Info (12128): Elaborating entity "flip_flop" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv Line: 117
-Info (12128): Elaborating entity "bcd_contador_L" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_L:uL" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 47
-Info (12128): Elaborating entity "bcd_contador_R" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_R:uR" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 52
+Info (12128): Elaborating entity "bcd_contador_L" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_L:uL" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 51
+Info (12128): Elaborating entity "bcd_contador_R" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_R:uR" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 56
 Info (12128): Elaborating entity "registro_seleccion" for hierarchy "juego_memoria:u_juego|registro_seleccion:u_latch1" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 167
 Info (12128): Elaborating entity "estado_cartas" for hierarchy "juego_memoria:u_juego|estado_cartas:u_estado" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 201
 Info (12128): Elaborating entity "generador_carta_random" for hierarchy "juego_memoria:u_juego|generador_carta_random:u_rng" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 211
@@ -1168,9 +1173,9 @@ Info (21057): Implemented 1115 device resources after synthesis - the final reso
     Info (21061): Implemented 1051 logic cells
     Info (21062): Implemented 1 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4919 megabytes
-    Info: Processing ended: Thu Oct 09 04:02:25 2025
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 4921 megabytes
+    Info: Processing ended: Thu Oct 09 04:29:20 2025
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:18
 
 

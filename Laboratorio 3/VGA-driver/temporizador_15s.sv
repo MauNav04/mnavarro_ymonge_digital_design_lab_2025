@@ -19,27 +19,31 @@ module temporizador_15s #(
     );
     assign pulso_1hz = tick_1Hz;
 
-    // Contador sincrónico (0-15) controlado por el reloj principal
-    logic [3:0] count_up;
+    // Contador sincrónico (15→0) cuenta hacia abajo
+    logic [3:0] count_down;
     
     always_ff @(posedge clk_50m or posedge reset) begin
         if (reset) begin
-            count_up <= 4'd0;
+            count_down <= 4'd15;  // Iniciar en 15
         end else if (clear) begin
-            count_up <= 4'd0;  // Reiniciar contador
-        end else if (start && tick_1Hz) begin
-            // Solo incrementar cuando start=1 Y hay un tick de 1Hz
-            if (count_up < 4'd15) begin
-                count_up <= count_up + 4'd1;
+            count_down <= 4'd15;  // Reiniciar a 15 segundos
+        end else begin
+            // Decrementar SIEMPRE que haya un tick, independiente de start
+            // start solo controla si el timer está "activo" para timeout
+            if (tick_1Hz && count_down > 4'd0) begin
+                count_down <= count_down - 4'd1;  // 15→14→13→...→0
             end
         end
     end
-    assign timeout = (count_up == 4'd15);
+    
+    // timeout solo es válido si start=1 y llegamos a 0
+    assign timeout = (count_down == 4'd0) && start;
 
-    wire A0 = ~count_up[0];
-    wire A1 = ~count_up[1];
-    wire A2 = ~count_up[2];
-    wire A3 = ~count_up[3];
+    // Mostrar directamente el valor (sin invertir)
+    wire A0 = count_down[0];
+    wire A1 = count_down[1];
+    wire A2 = count_down[2];
+    wire A3 = count_down[3];
 
     bcd_contador_L uL (
         .A0(A0), .A1(A1), .A2(A2), .A3(A3),
