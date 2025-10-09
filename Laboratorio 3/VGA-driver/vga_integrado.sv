@@ -30,8 +30,24 @@ module vga_integrado (
 );
 
     // Invertir el reset (botón activo en bajo → señal activa en alto)
+    logic reset_raw;
+    assign reset_raw = ~reset_n;
+    
+    // Sincronizar y extender el reset (mínimo 10 ciclos)
+    logic [3:0] reset_counter;
     logic reset;
-    assign reset = ~reset_n;
+    
+    always_ff @(posedge clk) begin
+        if (reset_raw) begin
+            reset_counter <= 4'd10;
+            reset <= 1'b1;
+        end else if (reset_counter != 4'd0) begin
+            reset_counter <= reset_counter - 4'd1;
+            reset <= 1'b1;
+        end else begin
+            reset <= 1'b0;
+        end
+    end
 
     // ========================================================================
     // Debounce de botones (elimina rebotes mecánicos)

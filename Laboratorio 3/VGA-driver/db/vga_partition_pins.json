@@ -220,11 +220,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset_n",
+					"name" : "modo_vertical",
 					"strict" : false
 				},
 				{
-					"name" : "modo_vertical",
+					"name" : "reset_n",
 					"strict" : false
 				},
 				{

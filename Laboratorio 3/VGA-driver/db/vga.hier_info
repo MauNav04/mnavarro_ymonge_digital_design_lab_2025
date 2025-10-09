@@ -1,67 +1,71 @@
 |vga_integrado
 clk => clk.IN4
-reset_n => reset.IN5
+reset_n => reset_counter.OUTPUTSELECT
+reset_n => reset_counter.OUTPUTSELECT
+reset_n => reset_counter.OUTPUTSELECT
+reset_n => reset_counter.OUTPUTSELECT
+reset_n => reset.OUTPUTSELECT
 mover_adelante => mover_adelante.IN1
 mover_atras => mover_atras.IN1
 modo_vertical => modo_vertical.IN1
 seleccionar => seleccionar.IN1
-vgaclk <= vgaclk.DB_MAX_OUTPUT_PORT_TYPE
-hsync <= vgaController:vgaCont.hsync
-vsync <= vgaController:vgaCont.vsync
-sync_b <= vgaController:vgaCont.sync_b
-blank_b <= vgaController:vgaCont.blank_b
-r[0] <= juego_vga_renderer:renderer.r
-r[1] <= juego_vga_renderer:renderer.r
-r[2] <= juego_vga_renderer:renderer.r
-r[3] <= juego_vga_renderer:renderer.r
-r[4] <= juego_vga_renderer:renderer.r
-r[5] <= juego_vga_renderer:renderer.r
-r[6] <= juego_vga_renderer:renderer.r
-r[7] <= juego_vga_renderer:renderer.r
-g[0] <= juego_vga_renderer:renderer.g
-g[1] <= juego_vga_renderer:renderer.g
-g[2] <= juego_vga_renderer:renderer.g
-g[3] <= juego_vga_renderer:renderer.g
-g[4] <= juego_vga_renderer:renderer.g
-g[5] <= juego_vga_renderer:renderer.g
-g[6] <= juego_vga_renderer:renderer.g
-g[7] <= juego_vga_renderer:renderer.g
-b[0] <= juego_vga_renderer:renderer.b
-b[1] <= juego_vga_renderer:renderer.b
-b[2] <= juego_vga_renderer:renderer.b
-b[3] <= juego_vga_renderer:renderer.b
-b[4] <= juego_vga_renderer:renderer.b
-b[5] <= juego_vga_renderer:renderer.b
-b[6] <= juego_vga_renderer:renderer.b
-b[7] <= juego_vga_renderer:renderer.b
-aL <= juego_memoria:u_juego.aL
-bL <= juego_memoria:u_juego.bL
-cL <= juego_memoria:u_juego.cL
-dL <= juego_memoria:u_juego.dL
-eL <= juego_memoria:u_juego.eL
-fL <= juego_memoria:u_juego.fL
-gL <= juego_memoria:u_juego.gL
-aR <= juego_memoria:u_juego.aR
-bR <= juego_memoria:u_juego.bR
-cR <= juego_memoria:u_juego.cR
-dR <= juego_memoria:u_juego.dR
-eR <= juego_memoria:u_juego.eR
-fR <= juego_memoria:u_juego.fR
-gR <= juego_memoria:u_juego.gR
-aJ1 <= juego_memoria:u_juego.aJ1
-bJ1 <= juego_memoria:u_juego.bJ1
-cJ1 <= juego_memoria:u_juego.cJ1
-dJ1 <= juego_memoria:u_juego.dJ1
-eJ1 <= juego_memoria:u_juego.eJ1
-fJ1 <= juego_memoria:u_juego.fJ1
-gJ1 <= juego_memoria:u_juego.gJ1
-aJ2 <= juego_memoria:u_juego.aJ2
-bJ2 <= juego_memoria:u_juego.bJ2
-cJ2 <= juego_memoria:u_juego.cJ2
-dJ2 <= juego_memoria:u_juego.dJ2
-eJ2 <= juego_memoria:u_juego.eJ2
-fJ2 <= juego_memoria:u_juego.fJ2
-gJ2 <= juego_memoria:u_juego.gJ2
+vgaclk << vgaclk.DB_MAX_OUTPUT_PORT_TYPE
+hsync << vgaController:vgaCont.hsync
+vsync << vgaController:vgaCont.vsync
+sync_b << vgaController:vgaCont.sync_b
+blank_b << vgaController:vgaCont.blank_b
+r[0] << juego_vga_renderer:renderer.r
+r[1] << juego_vga_renderer:renderer.r
+r[2] << juego_vga_renderer:renderer.r
+r[3] << juego_vga_renderer:renderer.r
+r[4] << juego_vga_renderer:renderer.r
+r[5] << juego_vga_renderer:renderer.r
+r[6] << juego_vga_renderer:renderer.r
+r[7] << juego_vga_renderer:renderer.r
+g[0] << juego_vga_renderer:renderer.g
+g[1] << juego_vga_renderer:renderer.g
+g[2] << juego_vga_renderer:renderer.g
+g[3] << juego_vga_renderer:renderer.g
+g[4] << juego_vga_renderer:renderer.g
+g[5] << juego_vga_renderer:renderer.g
+g[6] << juego_vga_renderer:renderer.g
+g[7] << juego_vga_renderer:renderer.g
+b[0] << juego_vga_renderer:renderer.b
+b[1] << juego_vga_renderer:renderer.b
+b[2] << juego_vga_renderer:renderer.b
+b[3] << juego_vga_renderer:renderer.b
+b[4] << juego_vga_renderer:renderer.b
+b[5] << juego_vga_renderer:renderer.b
+b[6] << juego_vga_renderer:renderer.b
+b[7] << juego_vga_renderer:renderer.b
+aL << juego_memoria:u_juego.aL
+bL << juego_memoria:u_juego.bL
+cL << juego_memoria:u_juego.cL
+dL << juego_memoria:u_juego.dL
+eL << juego_memoria:u_juego.eL
+fL << juego_memoria:u_juego.fL
+gL << juego_memoria:u_juego.gL
+aR << juego_memoria:u_juego.aR
+bR << juego_memoria:u_juego.bR
+cR << juego_memoria:u_juego.cR
+dR << juego_memoria:u_juego.dR
+eR << juego_memoria:u_juego.eR
+fR << juego_memoria:u_juego.fR
+gR << juego_memoria:u_juego.gR
+aJ1 << juego_memoria:u_juego.aJ1
+bJ1 << juego_memoria:u_juego.bJ1
+cJ1 << juego_memoria:u_juego.cJ1
+dJ1 << juego_memoria:u_juego.dJ1
+eJ1 << juego_memoria:u_juego.eJ1
+fJ1 << juego_memoria:u_juego.fJ1
+gJ1 << juego_memoria:u_juego.gJ1
+aJ2 << juego_memoria:u_juego.aJ2
+bJ2 << juego_memoria:u_juego.bJ2
+cJ2 << juego_memoria:u_juego.cJ2
+dJ2 << juego_memoria:u_juego.dJ2
+eJ2 << juego_memoria:u_juego.eJ2
+fJ2 << juego_memoria:u_juego.fJ2
+gJ2 << juego_memoria:u_juego.gJ2
 
 
 |vga_integrado|debouncer:db_adelante
@@ -562,8 +566,11 @@ state_dbg[3] <= state_dbg.DB_MAX_OUTPUT_PORT_TYPE
 |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer
 clk_50m => clk_50m.IN1
 reset => reset.IN1
-start => tick_habilitado.IN1
-clear => comb.IN0
+start => always0.IN1
+clear => count_up.OUTPUTSELECT
+clear => count_up.OUTPUTSELECT
+clear => count_up.OUTPUTSELECT
+clear => count_up.OUTPUTSELECT
 timeout <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 pulso_1hz <= divisor_1hz_50m:udiv.tick_1Hz
 aL <= bcd_contador_L:uL.a
@@ -989,78 +996,6 @@ nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff25
-D => Sm.IN0
-D => Rm.IN0
-CLK => Ss.IN0
-CLK => Rs.IN1
-CLK => Sm.IN1
-CLK => Rm.IN1
-PRE => WideNand0.IN2
-PRE => WideNand2.IN2
-CLR => WideNand1.IN1
-CLR => WideNand3.IN1
-Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
-nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt
-btn_clk => btn_clk.IN4
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-count[0] <= flip_flop:ff0.Q
-count[1] <= flip_flop:ff1.Q
-count[2] <= flip_flop:ff2.Q
-count[3] <= flip_flop:ff3.Q
-
-
-|vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff0
-D => Sm.IN0
-D => Rm.IN0
-CLK => Ss.IN0
-CLK => Rs.IN1
-CLK => Sm.IN1
-CLK => Rm.IN1
-PRE => WideNand0.IN2
-PRE => WideNand2.IN2
-CLR => WideNand1.IN1
-CLR => WideNand3.IN1
-Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
-nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff1
-D => Sm.IN0
-D => Rm.IN0
-CLK => Ss.IN0
-CLK => Rs.IN1
-CLK => Sm.IN1
-CLK => Rm.IN1
-PRE => WideNand0.IN2
-PRE => WideNand2.IN2
-CLR => WideNand1.IN1
-CLR => WideNand3.IN1
-Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
-nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff2
-D => Sm.IN0
-D => Rm.IN0
-CLK => Ss.IN0
-CLK => Rs.IN1
-CLK => Sm.IN1
-CLK => Rm.IN1
-PRE => WideNand0.IN2
-PRE => WideNand2.IN2
-CLR => WideNand1.IN1
-CLR => WideNand3.IN1
-Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
-nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff3
 D => Sm.IN0
 D => Rm.IN0
 CLK => Ss.IN0

@@ -19,16 +19,21 @@ module temporizador_15s #(
     );
     assign pulso_1hz = tick_1Hz;
 
-    // Solo cuenta cuando start está activo
-    logic tick_habilitado;
-    assign tick_habilitado = tick_1Hz & start;
-	 
+    // Contador sincrónico (0-15) controlado por el reloj principal
     logic [3:0] count_up;
-    contador_4bit ucnt (
-        .btn_clk(tick_habilitado),
-        .reset  (reset | clear),
-        .count  (count_up)
-    );
+    
+    always_ff @(posedge clk_50m or posedge reset) begin
+        if (reset) begin
+            count_up <= 4'd0;
+        end else if (clear) begin
+            count_up <= 4'd0;  // Reiniciar contador
+        end else if (start && tick_1Hz) begin
+            // Solo incrementar cuando start=1 Y hay un tick de 1Hz
+            if (count_up < 4'd15) begin
+                count_up <= count_up + 4'd1;
+            end
+        end
+    end
     assign timeout = (count_up == 4'd15);
 
     wire A0 = ~count_up[0];
