@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Oct 09 04:29:20 2025
+Analysis & Synthesis Status : Successful - Thu Oct 09 04:49:17 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : vga
 Top-level Entity Name : vga_integrado
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 206
+Total registers : 202
 Total pins : 63
 Total virtual pins : 0
 Total block memory bits : 0

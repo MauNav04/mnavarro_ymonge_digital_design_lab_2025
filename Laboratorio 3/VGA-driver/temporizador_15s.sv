@@ -3,14 +3,14 @@ module temporizador_15s #(
 ) (
     input  logic clk_50m,
     input  logic reset,        // activo alto - reset global
-    input  logic start,        // habilita el conteo
-    input  logic clear,        // reinicia el conteo a 15 s
-    output logic timeout,      // se alcanzó el límite inferior
+    input  logic start,        // NO USADO - mantenido para compatibilidad con juego_memoria
+    input  logic clear,        // mantiene el contador en 0 mientras esté en 1 (como el diseño original)
+    output logic timeout,      // se alcanzó el límite (count_up == 15, display muestra 0)
     output logic pulso_1hz,    // pulso de 1 Hz disponible para otros módulos
     output logic aL,bL,cL,dL,eL,fL,gL,
     output logic aR,bR,cR,dR,eR,fR,gR
 );
-    // Divisor de frecuencia (solo se resetea con reset global)
+    // 1) Divisor de frecuencia 50MHz -> 1Hz (genera pulso de 1 ciclo cada segundo)
     logic tick_1Hz;
     divisor_1hz_50m #(.TARGET(DIV_TARGET)) udiv (
         .clk_50m (clk_50m),
@@ -19,31 +19,29 @@ module temporizador_15s #(
     );
     assign pulso_1hz = tick_1Hz;
 
-    // Contador sincrónico (15→0) cuenta hacia abajo
-    logic [3:0] count_down;
+    // 2) Contador 0..15 (igual que diseño original)
+    //    Usa clear como reset continuo: mientras clear=1, el contador se mantiene en 0
+    logic [3:0] count_up;
+    logic reset_or_clear;
     
-    always_ff @(posedge clk_50m or posedge reset) begin
-        if (reset) begin
-            count_down <= 4'd15;  // Iniciar en 15
-        end else if (clear) begin
-            count_down <= 4'd15;  // Reiniciar a 15 segundos
-        end else begin
-            // Decrementar SIEMPRE que haya un tick, independiente de start
-            // start solo controla si el timer está "activo" para timeout
-            if (tick_1Hz && count_down > 4'd0) begin
-                count_down <= count_down - 4'd1;  // 15→14→13→...→0
-            end
-        end
-    end
+    // El contador se resetea con reset global O mientras clear=1
+    // Esto replica el comportamiento original donde mantenías el switch presionado
+    assign reset_or_clear = reset || clear;
     
-    // timeout solo es válido si start=1 y llegamos a 0
-    assign timeout = (count_down == 4'd0) && start;
+    contador_4bit ucnt (
+        .btn_clk(tick_1Hz),           // Cuenta con cada pulso de 1Hz
+        .reset  (reset_or_clear),     // Reset cuando reset=1 O clear=1
+        .count  (count_up)
+    );
 
-    // Mostrar directamente el valor (sin invertir)
-    wire A0 = count_down[0];
-    wire A1 = count_down[1];
-    wire A2 = count_down[2];
-    wire A3 = count_down[3];
+    // 3) Mostrar 15→0 invertir los 4 bits (igual que diseño original)
+    wire A0 = ~count_up[0];
+    wire A1 = ~count_up[1];
+    wire A2 = ~count_up[2];
+    wire A3 = ~count_up[3];
+    
+    // 4) timeout cuando el contador llega a 15 (display muestra 0)
+    assign timeout = (count_up == 4'd15);
 
     bcd_contador_L uL (
         .A0(A0), .A1(A1), .A2(A2), .A3(A3),
