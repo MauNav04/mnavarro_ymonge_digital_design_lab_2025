@@ -188,7 +188,7 @@ module juego_memoria #(
         .indice_cursor   (cursor_indice),
         .indice_sel1     (indice_sel1),
         .indice_sel2     (indice_sel2),
-        .indice_reveal2  (indice_sel2),      // ← CORRECCIÓN: usar indice_sel2 en vez de indice_para_latch
+        .indice_reveal2  (indice_para_latch),  // ← ROLLBACK: volver a indice_para_latch
         .valido          (valido),
         .posicion_igual  (posicion_igual),
         .match           (match),

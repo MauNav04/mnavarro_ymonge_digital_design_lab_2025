@@ -546,7 +546,7 @@ carta_random => Selector1.IN3
 carta_random => Selector3.IN3
 carta_random => Selector4.IN1
 carta_random => Selector5.IN1
-start_15s <= start_15s.DB_MAX_OUTPUT_PORT_TYPE
+start_15s <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 clear_15s <= clear_15s.DB_MAX_OUTPUT_PORT_TYPE
 latch1 <= latch1.DB_MAX_OUTPUT_PORT_TYPE
 latch2 <= latch2.DB_MAX_OUTPUT_PORT_TYPE
@@ -557,9 +557,9 @@ lock_par <= lock_par.DB_MAX_OUTPUT_PORT_TYPE
 incrementar_punto <= incrementar_punto.DB_MAX_OUTPUT_PORT_TYPE
 cambiar_turno <= cambiar_turno.DB_MAX_OUTPUT_PORT_TYPE
 carta_random_start <= carta_random_start.DB_MAX_OUTPUT_PORT_TYPE
-state_dbg[0] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
-state_dbg[1] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
-state_dbg[2] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+state_dbg[0] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+state_dbg[1] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+state_dbg[2] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
 state_dbg[3] <= state_dbg.DB_MAX_OUTPUT_PORT_TYPE
 
 
