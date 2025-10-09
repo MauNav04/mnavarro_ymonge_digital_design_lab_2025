@@ -565,11 +565,15 @@ state_dbg[3] <= state_dbg.DB_MAX_OUTPUT_PORT_TYPE
 
 |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer
 clk_50m => clk_50m.IN1
-reset => reset.IN1
+reset => reset_or_clear.IN0
+reset => count_up[0].ACLR
+reset => count_up[1].ACLR
+reset => count_up[2].ACLR
+reset => count_up[3].ACLR
 start => ~NO_FANOUT~
-clear => reset_or_clear.IN0
+clear => reset_or_clear.IN1
 timeout <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-pulso_1hz <= tick_1Hz.DB_MAX_OUTPUT_PORT_TYPE
+pulso_1hz <= divisor_1hz_50m:udiv.tick_1Hz
 aL <= bcd_contador_L:uL.a
 bL <= bcd_contador_L:uL.b
 cL <= bcd_contador_L:uL.c
@@ -993,78 +997,6 @@ nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff25
-D => Sm.IN0
-D => Rm.IN0
-CLK => Ss.IN0
-CLK => Rs.IN1
-CLK => Sm.IN1
-CLK => Rm.IN1
-PRE => WideNand0.IN2
-PRE => WideNand2.IN2
-CLR => WideNand1.IN1
-CLR => WideNand3.IN1
-Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
-nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt
-btn_clk => btn_clk.IN4
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-reset => _.IN1
-count[0] <= flip_flop:ff0.Q
-count[1] <= flip_flop:ff1.Q
-count[2] <= flip_flop:ff2.Q
-count[3] <= flip_flop:ff3.Q
-
-
-|vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff0
-D => Sm.IN0
-D => Rm.IN0
-CLK => Ss.IN0
-CLK => Rs.IN1
-CLK => Sm.IN1
-CLK => Rm.IN1
-PRE => WideNand0.IN2
-PRE => WideNand2.IN2
-CLR => WideNand1.IN1
-CLR => WideNand3.IN1
-Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
-nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff1
-D => Sm.IN0
-D => Rm.IN0
-CLK => Ss.IN0
-CLK => Rs.IN1
-CLK => Sm.IN1
-CLK => Rm.IN1
-PRE => WideNand0.IN2
-PRE => WideNand2.IN2
-CLR => WideNand1.IN1
-CLR => WideNand3.IN1
-Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
-nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff2
-D => Sm.IN0
-D => Rm.IN0
-CLK => Ss.IN0
-CLK => Rs.IN1
-CLK => Sm.IN1
-CLK => Rm.IN1
-PRE => WideNand0.IN2
-PRE => WideNand2.IN2
-CLR => WideNand1.IN1
-CLR => WideNand3.IN1
-Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
-nQ <= WideNand3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|contador_4bit:ucnt|flip_flop:ff3
 D => Sm.IN0
 D => Rm.IN0
 CLK => Ss.IN0

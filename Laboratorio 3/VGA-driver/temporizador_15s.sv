@@ -11,28 +11,34 @@ module temporizador_15s #(
     output logic aR,bR,cR,dR,eR,fR,gR
 );
     // 1) Divisor de frecuencia 50MHz -> 1Hz (genera pulso de 1 ciclo cada segundo)
+    //    Se resetea con reset O clear para sincronización perfecta
     logic tick_1Hz;
+    logic reset_or_clear;
+    assign reset_or_clear = reset || clear;
+    
     divisor_1hz_50m #(.TARGET(DIV_TARGET)) udiv (
         .clk_50m (clk_50m),
-        .reset   (reset),
+        .reset   (reset_or_clear),  // ← Resetear divisor con reset O clear
         .tick_1Hz(tick_1Hz)
     );
     assign pulso_1hz = tick_1Hz;
 
-    // 2) Contador 0..15 (igual que diseño original)
-    //    Usa clear como reset continuo: mientras clear=1, el contador se mantiene en 0
+    // 2) Contador 0..15 sincrónico (SIMPLIFICADO PARA DEBUG)
+    //    Ignora clear temporalmente para ver si tick_1Hz funciona
     logic [3:0] count_up;
-    logic reset_or_clear;
     
-    // El contador se resetea con reset global O mientras clear=1
-    // Esto replica el comportamiento original donde mantenías el switch presionado
-    assign reset_or_clear = reset || clear;
-    
-    contador_4bit ucnt (
-        .btn_clk(tick_1Hz),           // Cuenta con cada pulso de 1Hz
-        .reset  (reset_or_clear),     // Reset cuando reset=1 O clear=1
-        .count  (count_up)
-    );
+    always_ff @(posedge clk_50m or posedge reset) begin
+        if (reset) begin
+            count_up <= 4'd0;
+        end else if (tick_1Hz) begin
+            // Incrementar SIEMPRE que haya tick (ignora clear)
+            if (count_up < 4'd15) begin
+                count_up <= count_up + 4'd1;
+            end else begin
+                count_up <= 4'd0;  // Vuelve a 0 cuando llega a 15
+            end
+        end
+    end
 
     // 3) Mostrar 15→0 invertir los 4 bits (igual que diseño original)
     wire A0 = ~count_up[0];
