@@ -4,123 +4,367 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "vgaclk",
+					"name" : "aL",
 					"strict" : false
 				},
 				{
-					"name" : "hsync",
+					"name" : "dL",
 					"strict" : false
 				},
 				{
-					"name" : "vsync",
+					"name" : "eL",
 					"strict" : false
 				},
 				{
-					"name" : "blank_b",
+					"name" : "fL",
 					"strict" : false
 				},
 				{
-					"name" : "r[0]",
+					"name" : "aR",
 					"strict" : false
 				},
 				{
-					"name" : "r[1]",
+					"name" : "bR",
 					"strict" : false
 				},
 				{
-					"name" : "r[2]",
+					"name" : "cR",
 					"strict" : false
 				},
 				{
-					"name" : "r[3]",
+					"name" : "dR",
 					"strict" : false
 				},
 				{
-					"name" : "r[4]",
+					"name" : "eR",
 					"strict" : false
 				},
 				{
-					"name" : "r[5]",
+					"name" : "fR",
 					"strict" : false
 				},
 				{
-					"name" : "r[6]",
+					"name" : "gR",
 					"strict" : false
 				},
 				{
-					"name" : "r[7]",
+					"name" : "aJ1",
 					"strict" : false
 				},
 				{
-					"name" : "g[0]",
+					"name" : "bJ1",
 					"strict" : false
 				},
 				{
-					"name" : "g[1]",
+					"name" : "cJ1",
 					"strict" : false
 				},
 				{
-					"name" : "g[2]",
+					"name" : "dJ1",
 					"strict" : false
 				},
 				{
-					"name" : "g[3]",
+					"name" : "eJ1",
 					"strict" : false
 				},
 				{
-					"name" : "g[4]",
+					"name" : "fJ1",
 					"strict" : false
 				},
 				{
-					"name" : "g[5]",
+					"name" : "gJ1",
 					"strict" : false
 				},
 				{
-					"name" : "g[6]",
+					"name" : "aJ2",
 					"strict" : false
 				},
 				{
-					"name" : "g[7]",
+					"name" : "bJ2",
 					"strict" : false
 				},
 				{
-					"name" : "b[0]",
+					"name" : "cJ2",
 					"strict" : false
 				},
 				{
-					"name" : "b[1]",
+					"name" : "dJ2",
 					"strict" : false
 				},
 				{
-					"name" : "b[2]",
+					"name" : "eJ2",
 					"strict" : false
 				},
 				{
-					"name" : "b[3]",
+					"name" : "fJ2",
 					"strict" : false
 				},
 				{
-					"name" : "b[4]",
+					"name" : "gJ2",
 					"strict" : false
 				},
 				{
-					"name" : "b[5]",
+					"name" : "cursor_fila[0]",
 					"strict" : false
 				},
 				{
-					"name" : "b[6]",
+					"name" : "cursor_fila[1]",
 					"strict" : false
 				},
 				{
-					"name" : "b[7]",
+					"name" : "cursor_columna[0]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "cursor_columna[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cursor_indice[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cursor_indice[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cursor_indice[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cursor_indice[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[4]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[6]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[7]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[8]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[9]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[10]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[11]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[12]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[13]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[14]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_reveladas[15]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[4]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[6]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[7]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[8]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[9]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[10]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[11]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[12]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[13]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[14]",
+					"strict" : false
+				},
+				{
+					"name" : "cartas_bloqueadas[15]",
+					"strict" : false
+				},
+				{
+					"name" : "carta_cursor_id[0]",
+					"strict" : false
+				},
+				{
+					"name" : "carta_cursor_id[1]",
+					"strict" : false
+				},
+				{
+					"name" : "carta_cursor_id[2]",
+					"strict" : false
+				},
+				{
+					"name" : "carta_sel1_id[0]",
+					"strict" : false
+				},
+				{
+					"name" : "carta_sel1_id[1]",
+					"strict" : false
+				},
+				{
+					"name" : "carta_sel1_id[2]",
+					"strict" : false
+				},
+				{
+					"name" : "carta_sel2_id[0]",
+					"strict" : false
+				},
+				{
+					"name" : "carta_sel2_id[1]",
+					"strict" : false
+				},
+				{
+					"name" : "carta_sel2_id[2]",
+					"strict" : false
+				},
+				{
+					"name" : "jugador_actual",
+					"strict" : false
+				},
+				{
+					"name" : "puntaje_j1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "puntaje_j1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "puntaje_j1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "puntaje_j1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "puntaje_j2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "puntaje_j2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "puntaje_j2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "puntaje_j2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "timeout",
+					"strict" : false
+				},
+				{
+					"name" : "carta_random_start",
 					"strict" : false
 				},
 				{
 					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50m",
+					"strict" : false
+				},
+				{
+					"name" : "modo_vertical",
+					"strict" : false
+				},
+				{
+					"name" : "mover_adelante",
+					"strict" : false
+				},
+				{
+					"name" : "mover_atras",
+					"strict" : false
+				},
+				{
+					"name" : "seleccionar",
 					"strict" : false
 				}
 			]

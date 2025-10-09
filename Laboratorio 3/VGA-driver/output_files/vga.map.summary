@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Wed Oct 08 13:48:41 2025
+Analysis & Elaboration Status : Successful - Thu Oct 09 00:45:08 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : vga
-Top-level Entity Name : vga
+Top-level Entity Name : juego_memoria
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

@@ -5,11 +5,11 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga.sv}
+vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/fsm_cartas.sv}
 
-vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/tb_vga_to_ppm.sv}
+vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/tb_fsm_cartas.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_vga_to_ppm
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_fsm_cartas
 
 add wave *
 view structure
