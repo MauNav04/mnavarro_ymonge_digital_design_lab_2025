@@ -4,7 +4,7 @@
 // los módulos de estado/puntaje. Los botones de entrada se asumen ya
 // sincronizados y filtrados a pulsos de un ciclo.
 module juego_memoria #(
-    parameter [25:0] TIMER_DIV_TARGET = 26'd5_000_000  // ← DEBUG: 0.1 segundos (10Hz) en vez de 1 segundo
+    parameter [25:0] TIMER_DIV_TARGET = 26'd49_999_999  // No usado, el temporizador tiene su propio divisor
 ) (
     input  logic clk_50m,
     input  logic reset,             // reset global del sistema

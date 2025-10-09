@@ -22,22 +22,24 @@ module temporizador_15s #(
     );
     assign pulso_1hz = tick_1Hz;
 
-    // 2) Contador 0..15 sincrónico - TEST: cuenta cada 0.5 segundos sin tick_1Hz
+    // 2) Contador 0..15 sincrónico - Cuenta cada 1 segundo
+    //    NO usa el divisor tick_1Hz (tenía problemas de síntesis)
+    //    Implementa su propio divisor de frecuencia
     logic [3:0] count_up;
-    logic [25:0] test_counter;
+    logic [25:0] div_counter;
     
     always_ff @(posedge clk_50m or posedge reset) begin
         if (reset) begin
             count_up <= 4'd0;
-            test_counter <= 26'd0;
+            div_counter <= 26'd0;
         end else if (clear) begin
             count_up <= 4'd0;
-            test_counter <= 26'd0;
+            div_counter <= 26'd0;
         end else begin
-            // Contar cada 25 millones de ciclos (0.5 segundos)
-            test_counter <= test_counter + 26'd1;
-            if (test_counter >= 26'd25_000_000) begin
-                test_counter <= 26'd0;
+            // Contar cada 50 millones de ciclos (1.0 segundo @ 50MHz)
+            div_counter <= div_counter + 26'd1;
+            if (div_counter >= 26'd49_999_999) begin  // 50M - 1
+                div_counter <= 26'd0;
                 if (count_up < 4'd15) begin
                     count_up <= count_up + 4'd1;
                 end

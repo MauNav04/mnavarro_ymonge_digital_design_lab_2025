@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga
-Thu Oct 09 05:36:50 2025
+Thu Oct 09 05:57:36 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -89,7 +89,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 09 05:36:50 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct 09 05:57:36 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; vga                                         ;
 ; Top-level Entity Name           ; vga_integrado                               ;
@@ -259,14 +259,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 589   ;
+; Estimate of Logic utilization (ALMs needed) ; 590   ;
 ;                                             ;       ;
-; Combinational ALUT usage for logic          ; 972   ;
+; Combinational ALUT usage for logic          ; 973   ;
 ;     -- 7 input functions                    ; 8     ;
-;     -- 6 input functions                    ; 195   ;
-;     -- 5 input functions                    ; 154   ;
-;     -- 4 input functions                    ; 203   ;
-;     -- <=3 input functions                  ; 412   ;
+;     -- 6 input functions                    ; 196   ;
+;     -- 5 input functions                    ; 156   ;
+;     -- 4 input functions                    ; 202   ;
+;     -- <=3 input functions                  ; 411   ;
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 232   ;
 ;                                             ;       ;
@@ -276,8 +276,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;       ;
 ; Maximum fan-out node                        ; reset ;
 ; Maximum fan-out                             ; 230   ;
-; Total fan-out                               ; 4851  ;
-; Average fan-out                             ; 3.64  ;
+; Total fan-out                               ; 4862  ;
+; Average fan-out                             ; 3.65  ;
 +---------------------------------------------+-------+
 
 
@@ -286,11 +286,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                 ; Entity Name            ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |vga_integrado                               ; 972 (6)             ; 232 (6)                   ; 0                 ; 1          ; 63   ; 0            ; |vga_integrado                                                                                                                                                      ; vga_integrado          ; work         ;
+; |vga_integrado                               ; 973 (6)             ; 232 (6)                   ; 0                 ; 1          ; 63   ; 0            ; |vga_integrado                                                                                                                                                      ; vga_integrado          ; work         ;
 ;    |debouncer:db_adelante|                   ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|debouncer:db_adelante                                                                                                                                ; debouncer              ; work         ;
 ;    |debouncer:db_atras|                      ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|debouncer:db_atras                                                                                                                                   ; debouncer              ; work         ;
 ;    |debouncer:db_seleccionar|                ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|debouncer:db_seleccionar                                                                                                                             ; debouncer              ; work         ;
-;    |juego_memoria:u_juego|                   ; 311 (9)             ; 128 (6)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego                                                                                                                                ; juego_memoria          ; work         ;
+;    |juego_memoria:u_juego|                   ; 312 (9)             ; 128 (6)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego                                                                                                                                ; juego_memoria          ; work         ;
 ;       |control_cursor:u_cursor|              ; 8 (8)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor                                                                                                        ; control_cursor         ; work         ;
 ;       |estado_cartas:u_estado|               ; 127 (127)           ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|estado_cartas:u_estado                                                                                                         ; estado_cartas          ; work         ;
 ;       |fsm_cartas:u_fsm|                     ; 22 (22)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|fsm_cartas:u_fsm                                                                                                               ; fsm_cartas             ; work         ;
@@ -301,7 +301,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |puntaje_jugadores:u_puntaje|          ; 11 (11)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|puntaje_jugadores:u_puntaje                                                                                                    ; puntaje_jugadores      ; work         ;
 ;       |registro_seleccion:u_latch1|          ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch1                                                                                                    ; registro_seleccion     ; work         ;
 ;       |registro_seleccion:u_latch2|          ; 1 (1)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch2                                                                                                    ; registro_seleccion     ; work         ;
-;       |temporizador_15s:u_timer|             ; 45 (37)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer                                                                                                       ; temporizador_15s       ; work         ;
+;       |temporizador_15s:u_timer|             ; 46 (38)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer                                                                                                       ; temporizador_15s       ; work         ;
 ;          |bcd_contador_L:uL|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_L:uL                                                                                     ; bcd_contador_L         ; work         ;
 ;          |bcd_contador_R:uR|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_R:uR                                                                                     ; bcd_contador_R         ; work         ;
 ;    |juego_vga_renderer:renderer|             ; 537 (197)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer                                                                                                                          ; juego_vga_renderer     ; work         ;
@@ -400,25 +400,25 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch1|indice_out[1] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch2|indice_out[0] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|count_up[2]      ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_seleccionar|counter[7]                             ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_adelante|counter[8]                                ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_atras|counter[11]                                  ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|intentos[0]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|candidato[2] ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|test_counter[16] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vga_integrado|reset_counter[2]                                                ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch2|indice_out[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|count_up[0]      ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_seleccionar|counter[23]                            ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_adelante|counter[3]                                ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_atras|counter[17]                                  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|intentos[2]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|candidato[1] ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|div_counter[4]   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vga_integrado|reset_counter[0]                                                ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vga_integrado|reset_counter[1]                                                ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor|fila_r[0]         ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor|columna_r[0]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|g[0]                                ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor|columna_r[1]      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|g[3]                                ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|card_rel_y[4]                       ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|Mux1                                ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_memoria:u_juego|estado_cartas:u_estado|Mux0               ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|r[6]                                ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|r[5]                                ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|r[0]                                ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_memoria:u_juego|estado_cartas:u_estado|Mux1               ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|g[4]                                ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|g[6]                                ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|r[7]                                ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|current_card_idx[3]                 ;
 ; 9:1                ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; No         ; |vga_integrado|juego_vga_renderer:renderer|card_rel_x[4]                       ;
 ; 15:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|Add11                               ;
@@ -479,7 +479,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+----------------------------+--------------------+
 ; Parameter Name   ; Value                      ; Type               ;
 +------------------+----------------------------+--------------------+
-; TIMER_DIV_TARGET ; 00010011000100101101000000 ; Unsigned Binary    ;
+; TIMER_DIV_TARGET ; 10111110101111000001111111 ; Unsigned Binary    ;
 +------------------+----------------------------+--------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -489,7 +489,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+----------------------------+-----------------------------------------------+
 ; Parameter Name ; Value                      ; Type                                          ;
 +----------------+----------------------------+-----------------------------------------------+
-; DIV_TARGET     ; 00010011000100101101000000 ; Unsigned Binary                               ;
+; DIV_TARGET     ; 10111110101111000001111111 ; Unsigned Binary                               ;
 +----------------+----------------------------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -499,7 +499,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+----------------------------+--------------------------------------------------------------------+
 ; Parameter Name ; Value                      ; Type                                                               ;
 +----------------+----------------------------+--------------------------------------------------------------------+
-; TARGET         ; 00010011000100101101000000 ; Unsigned Binary                                                    ;
+; TARGET         ; 10111110101111000001111111 ; Unsigned Binary                                                    ;
 +----------------+----------------------------+--------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -918,7 +918,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SLD       ; 2                           ;
 ;     SCLR              ; 7                           ;
 ;     plain             ; 8                           ;
-; arriav_lcell_comb     ; 995                         ;
+; arriav_lcell_comb     ; 996                         ;
 ;     arith             ; 333                         ;
 ;         0 data inputs ; 28                          ;
 ;         1 data inputs ; 161                         ;
@@ -928,19 +928,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 5                           ;
 ;     extend            ; 8                           ;
 ;         7 data inputs ; 8                           ;
-;     normal            ; 654                         ;
+;     normal            ; 655                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 31                          ;
-;         2 data inputs ; 88                          ;
-;         3 data inputs ; 75                          ;
-;         4 data inputs ; 114                         ;
-;         5 data inputs ; 149                         ;
-;         6 data inputs ; 195                         ;
+;         2 data inputs ; 86                          ;
+;         3 data inputs ; 76                          ;
+;         4 data inputs ; 113                         ;
+;         5 data inputs ; 151                         ;
+;         6 data inputs ; 196                         ;
 ; arriav_mac            ; 1                           ;
 ; boundary_port         ; 63                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 20.40                       ;
-; Average LUT depth     ; 8.88                        ;
+; Average LUT depth     ; 8.87                        ;
 +-----------------------+-----------------------------+
 
 
@@ -959,7 +959,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 09 05:36:42 2025
+    Info: Processing started: Thu Oct 09 05:57:28 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1023,8 +1023,8 @@ Info (12128): Elaborating entity "fsm_cartas" for hierarchy "juego_memoria:u_jue
 Info (12128): Elaborating entity "temporizador_15s" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 116
 Info (12128): Elaborating entity "divisor_1hz_50m" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 22
 Info (12128): Elaborating entity "flip_flop" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv Line: 117
-Info (12128): Elaborating entity "bcd_contador_L" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_L:uL" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 60
-Info (12128): Elaborating entity "bcd_contador_R" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_R:uR" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 65
+Info (12128): Elaborating entity "bcd_contador_L" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_L:uL" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 62
+Info (12128): Elaborating entity "bcd_contador_R" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_R:uR" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 67
 Info (12128): Elaborating entity "registro_seleccion" for hierarchy "juego_memoria:u_juego|registro_seleccion:u_latch1" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 167
 Info (12128): Elaborating entity "estado_cartas" for hierarchy "juego_memoria:u_juego|estado_cartas:u_estado" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 201
 Info (12128): Elaborating entity "generador_carta_random" for hierarchy "juego_memoria:u_juego|generador_carta_random:u_rng" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 211
@@ -1074,14 +1074,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1057 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1058 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 993 logic cells
+    Info (21061): Implemented 994 logic cells
     Info (21062): Implemented 1 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4915 megabytes
-    Info: Processing ended: Thu Oct 09 05:36:50 2025
+    Info: Peak virtual memory: 4918 megabytes
+    Info: Processing ended: Thu Oct 09 05:57:36 2025
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:17
 
