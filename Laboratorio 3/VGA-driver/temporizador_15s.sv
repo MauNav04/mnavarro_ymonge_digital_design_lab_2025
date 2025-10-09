@@ -22,21 +22,26 @@ module temporizador_15s #(
     );
     assign pulso_1hz = tick_1Hz;
 
-    // 2) Contador 0..15 sincrónico
-    //    clear mantiene el contador en 0 (display muestra 15)
+    // 2) Contador 0..15 sincrónico - TEST: cuenta cada 0.5 segundos sin tick_1Hz
     logic [3:0] count_up;
+    logic [25:0] test_counter;
     
     always_ff @(posedge clk_50m or posedge reset) begin
         if (reset) begin
             count_up <= 4'd0;
+            test_counter <= 26'd0;
         end else if (clear) begin
-            count_up <= 4'd0;  // Mantener en 0 mientras clear=1 (display muestra 15)
-        end else if (tick_1Hz) begin
-            // Incrementar cuando hay tick de 1Hz y clear=0
-            if (count_up < 4'd15) begin
-                count_up <= count_up + 4'd1;
+            count_up <= 4'd0;
+            test_counter <= 26'd0;
+        end else begin
+            // Contar cada 25 millones de ciclos (0.5 segundos)
+            test_counter <= test_counter + 26'd1;
+            if (test_counter >= 26'd25_000_000) begin
+                test_counter <= 26'd0;
+                if (count_up < 4'd15) begin
+                    count_up <= count_up + 4'd1;
+                end
             end
-            // Si llega a 15, se mantiene hasta que clear=1
         end
     end
 

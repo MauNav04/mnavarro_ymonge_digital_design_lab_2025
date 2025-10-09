@@ -1,5 +1,5 @@
 Timing Analyzer report for vga
-Thu Oct 09 05:30:16 2025
+Thu Oct 09 05:38:35 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -102,26 +102,26 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 2.07        ;
+; Average used               ; 2.06        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   8.0%      ;
 ;     Processor 3            ;   7.9%      ;
-;     Processor 4            ;   7.9%      ;
-;     Processor 5            ;   7.0%      ;
-;     Processor 6            ;   7.0%      ;
-;     Processor 7            ;   7.0%      ;
-;     Processor 8            ;   7.0%      ;
-;     Processor 9            ;   7.0%      ;
-;     Processor 10           ;   7.0%      ;
-;     Processor 11           ;   7.0%      ;
-;     Processor 12           ;   6.9%      ;
-;     Processor 13           ;   6.9%      ;
-;     Processor 14           ;   6.9%      ;
-;     Processor 15           ;   6.9%      ;
-;     Processor 16           ;   6.9%      ;
+;     Processor 4            ;   7.8%      ;
+;     Processor 5            ;   6.9%      ;
+;     Processor 6            ;   6.9%      ;
+;     Processor 7            ;   6.9%      ;
+;     Processor 8            ;   6.9%      ;
+;     Processor 9            ;   6.8%      ;
+;     Processor 10           ;   6.8%      ;
+;     Processor 11           ;   6.8%      ;
+;     Processor 12           ;   6.8%      ;
+;     Processor 13           ;   6.8%      ;
+;     Processor 14           ;   6.8%      ;
+;     Processor 15           ;   6.8%      ;
+;     Processor 16           ;   6.8%      ;
 +----------------------------+-------------+
 
 
@@ -140,8 +140,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name  ; Note ;
 +------------+-----------------+-------------+------+
-; 66.17 MHz  ; 66.17 MHz       ; clk         ;      ;
-; 313.09 MHz ; 313.09 MHz      ; vgaclk~reg0 ;      ;
+; 218.58 MHz ; 218.58 MHz      ; clk         ;      ;
+; 269.69 MHz ; 269.69 MHz      ; vgaclk~reg0 ;      ;
 +------------+-----------------+-------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -157,8 +157,8 @@ HTML report is unavailable in plain text report export.
 +-------------+--------+---------------+
 ; Clock       ; Slack  ; End Point TNS ;
 +-------------+--------+---------------+
-; clk         ; -7.784 ; -653.127      ;
-; vgaclk~reg0 ; -2.194 ; -60.592       ;
+; clk         ; -3.749 ; -717.675      ;
+; vgaclk~reg0 ; -2.708 ; -70.377       ;
 +-------------+--------+---------------+
 
 
@@ -167,8 +167,8 @@ HTML report is unavailable in plain text report export.
 +-------------+-------+---------------+
 ; Clock       ; Slack ; End Point TNS ;
 +-------------+-------+---------------+
-; clk         ; 0.361 ; 0.000         ;
-; vgaclk~reg0 ; 0.735 ; 0.000         ;
+; clk         ; 0.367 ; 0.000         ;
+; vgaclk~reg0 ; 0.982 ; 0.000         ;
 +-------------+-------+---------------+
 
 
@@ -177,8 +177,8 @@ HTML report is unavailable in plain text report export.
 +-------------+--------+-----------------+
 ; Clock       ; Slack  ; End Point TNS   ;
 +-------------+--------+-----------------+
-; clk         ; -6.738 ; -466.296        ;
-; vgaclk~reg0 ; -3.800 ; -102.247        ;
+; vgaclk~reg0 ; -3.238 ; -91.456         ;
+; clk         ; -1.934 ; -222.245        ;
 +-------------+--------+-----------------+
 
 
@@ -187,8 +187,8 @@ HTML report is unavailable in plain text report export.
 +-------------+-------+-----------------+
 ; Clock       ; Slack ; End Point TNS   ;
 +-------------+-------+-----------------+
-; clk         ; 0.738 ; 0.000           ;
-; vgaclk~reg0 ; 2.713 ; 0.000           ;
+; clk         ; 0.987 ; 0.000           ;
+; vgaclk~reg0 ; 2.504 ; 0.000           ;
 +-------------+-------+-----------------+
 
 
@@ -197,8 +197,8 @@ HTML report is unavailable in plain text report export.
 +-------------+--------+----------------------------+
 ; Clock       ; Slack  ; End Point TNS              ;
 +-------------+--------+----------------------------+
-; clk         ; -0.394 ; -109.056                   ;
-; vgaclk~reg0 ; -0.394 ; -15.675                    ;
+; clk         ; -0.472 ; -142.481                   ;
+; vgaclk~reg0 ; -0.394 ; -15.276                    ;
 +-------------+--------+----------------------------+
 
 
@@ -213,8 +213,8 @@ No synchronizer chains to report.
 +------------+-----------------+-------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name  ; Note ;
 +------------+-----------------+-------------+------+
-; 68.37 MHz  ; 68.37 MHz       ; clk         ;      ;
-; 313.87 MHz ; 313.87 MHz      ; vgaclk~reg0 ;      ;
+; 218.67 MHz ; 218.67 MHz      ; clk         ;      ;
+; 265.82 MHz ; 265.82 MHz      ; vgaclk~reg0 ;      ;
 +------------+-----------------+-------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -224,8 +224,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+--------+---------------+
 ; Clock       ; Slack  ; End Point TNS ;
 +-------------+--------+---------------+
-; clk         ; -7.620 ; -642.144      ;
-; vgaclk~reg0 ; -2.186 ; -60.252       ;
+; clk         ; -3.573 ; -699.181      ;
+; vgaclk~reg0 ; -2.762 ; -69.813       ;
 +-------------+--------+---------------+
 
 
@@ -234,8 +234,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+-------+---------------+
 ; Clock       ; Slack ; End Point TNS ;
 +-------------+-------+---------------+
-; clk         ; 0.370 ; 0.000         ;
-; vgaclk~reg0 ; 0.721 ; 0.000         ;
+; clk         ; 0.371 ; 0.000         ;
+; vgaclk~reg0 ; 0.967 ; 0.000         ;
 +-------------+-------+---------------+
 
 
@@ -244,8 +244,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+--------+----------------+
 ; Clock       ; Slack  ; End Point TNS  ;
 +-------------+--------+----------------+
-; clk         ; -6.733 ; -446.956       ;
-; vgaclk~reg0 ; -3.884 ; -104.448       ;
+; vgaclk~reg0 ; -3.319 ; -94.032        ;
+; clk         ; -2.056 ; -204.578       ;
 +-------------+--------+----------------+
 
 
@@ -254,8 +254,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+-------+----------------+
 ; Clock       ; Slack ; End Point TNS  ;
 +-------------+-------+----------------+
-; clk         ; 0.708 ; 0.000          ;
-; vgaclk~reg0 ; 2.820 ; 0.000          ;
+; clk         ; 0.921 ; 0.000          ;
+; vgaclk~reg0 ; 2.624 ; 0.000          ;
 +-------------+-------+----------------+
 
 
@@ -264,8 +264,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------+--------+---------------------------+
 ; Clock       ; Slack  ; End Point TNS             ;
 +-------------+--------+---------------------------+
-; clk         ; -0.394 ; -116.274                  ;
-; vgaclk~reg0 ; -0.394 ; -15.625                   ;
+; clk         ; -0.487 ; -152.469                  ;
+; vgaclk~reg0 ; -0.394 ; -14.994                   ;
 +-------------+--------+---------------------------+
 
 
@@ -280,8 +280,8 @@ No synchronizer chains to report.
 +-------------+--------+---------------+
 ; Clock       ; Slack  ; End Point TNS ;
 +-------------+--------+---------------+
-; clk         ; -4.404 ; -314.774      ;
-; vgaclk~reg0 ; -0.903 ; -25.288       ;
+; clk         ; -2.780 ; -328.891      ;
+; vgaclk~reg0 ; -1.281 ; -33.197       ;
 +-------------+--------+---------------+
 
 
@@ -290,8 +290,8 @@ No synchronizer chains to report.
 +-------------+-------+---------------+
 ; Clock       ; Slack ; End Point TNS ;
 +-------------+-------+---------------+
-; clk         ; 0.178 ; 0.000         ;
-; vgaclk~reg0 ; 0.390 ; 0.000         ;
+; clk         ; 0.180 ; 0.000         ;
+; vgaclk~reg0 ; 0.494 ; 0.000         ;
 +-------------+-------+---------------+
 
 
@@ -300,8 +300,8 @@ No synchronizer chains to report.
 +-------------+--------+-----------------+
 ; Clock       ; Slack  ; End Point TNS   ;
 +-------------+--------+-----------------+
-; clk         ; -3.748 ; -242.607        ;
-; vgaclk~reg0 ; -1.903 ; -49.653         ;
+; vgaclk~reg0 ; -1.484 ; -41.758         ;
+; clk         ; -0.981 ; -63.812         ;
 +-------------+--------+-----------------+
 
 
@@ -310,8 +310,8 @@ No synchronizer chains to report.
 +-------------+-------+-----------------+
 ; Clock       ; Slack ; End Point TNS   ;
 +-------------+-------+-----------------+
-; clk         ; 0.409 ; 0.000           ;
-; vgaclk~reg0 ; 1.352 ; 0.000           ;
+; clk         ; 0.536 ; 0.000           ;
+; vgaclk~reg0 ; 1.202 ; 0.000           ;
 +-------------+-------+-----------------+
 
 
@@ -320,8 +320,8 @@ No synchronizer chains to report.
 +-------------+--------+----------------------------+
 ; Clock       ; Slack  ; End Point TNS              ;
 +-------------+--------+----------------------------+
-; clk         ; -0.369 ; -18.947                    ;
-; vgaclk~reg0 ; 0.066  ; 0.000                      ;
+; clk         ; -0.500 ; -24.618                    ;
+; vgaclk~reg0 ; 0.098  ; 0.000                      ;
 +-------------+--------+----------------------------+
 
 
@@ -336,8 +336,8 @@ No synchronizer chains to report.
 +-------------+--------+---------------+
 ; Clock       ; Slack  ; End Point TNS ;
 +-------------+--------+---------------+
-; clk         ; -3.992 ; -274.118      ;
-; vgaclk~reg0 ; -0.804 ; -22.290       ;
+; clk         ; -2.333 ; -280.610      ;
+; vgaclk~reg0 ; -1.151 ; -29.312       ;
 +-------------+--------+---------------+
 
 
@@ -346,8 +346,8 @@ No synchronizer chains to report.
 +-------------+-------+---------------+
 ; Clock       ; Slack ; End Point TNS ;
 +-------------+-------+---------------+
-; clk         ; 0.169 ; 0.000         ;
-; vgaclk~reg0 ; 0.354 ; 0.000         ;
+; clk         ; 0.171 ; 0.000         ;
+; vgaclk~reg0 ; 0.460 ; 0.000         ;
 +-------------+-------+---------------+
 
 
@@ -356,8 +356,8 @@ No synchronizer chains to report.
 +-------------+--------+----------------+
 ; Clock       ; Slack  ; End Point TNS  ;
 +-------------+--------+----------------+
-; clk         ; -3.442 ; -200.998       ;
-; vgaclk~reg0 ; -1.826 ; -48.040        ;
+; vgaclk~reg0 ; -1.452 ; -40.985        ;
+; clk         ; -0.893 ; -36.320        ;
 +-------------+--------+----------------+
 
 
@@ -366,8 +366,8 @@ No synchronizer chains to report.
 +-------------+-------+----------------+
 ; Clock       ; Slack ; End Point TNS  ;
 +-------------+-------+----------------+
-; clk         ; 0.362 ; 0.000          ;
-; vgaclk~reg0 ; 1.329 ; 0.000          ;
+; clk         ; 0.483 ; 0.000          ;
+; vgaclk~reg0 ; 1.197 ; 0.000          ;
 +-------------+-------+----------------+
 
 
@@ -376,8 +376,8 @@ No synchronizer chains to report.
 +-------------+--------+---------------------------+
 ; Clock       ; Slack  ; End Point TNS             ;
 +-------------+--------+---------------------------+
-; clk         ; -0.364 ; -18.386                   ;
-; vgaclk~reg0 ; 0.083  ; 0.000                     ;
+; clk         ; -0.486 ; -24.364                   ;
+; vgaclk~reg0 ; 0.117  ; 0.000                     ;
 +-------------+--------+---------------------------+
 
 
@@ -392,12 +392,12 @@ No synchronizer chains to report.
 +------------------+----------+-------+----------+---------+---------------------+
 ; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -7.784   ; 0.169 ; -6.738   ; 0.362   ; -0.394              ;
-;  clk             ; -7.784   ; 0.169 ; -6.738   ; 0.362   ; -0.394              ;
-;  vgaclk~reg0     ; -2.194   ; 0.354 ; -3.884   ; 1.329   ; -0.394              ;
-; Design-wide TNS  ; -713.719 ; 0.0   ; -568.543 ; 0.0     ; -131.899            ;
-;  clk             ; -653.127 ; 0.000 ; -466.296 ; 0.000   ; -116.274            ;
-;  vgaclk~reg0     ; -60.592  ; 0.000 ; -104.448 ; 0.000   ; -15.675             ;
+; Worst-case Slack ; -3.749   ; 0.171 ; -3.319   ; 0.483   ; -0.500              ;
+;  clk             ; -3.749   ; 0.171 ; -2.056   ; 0.483   ; -0.500              ;
+;  vgaclk~reg0     ; -2.762   ; 0.460 ; -3.319   ; 1.197   ; -0.394              ;
+; Design-wide TNS  ; -788.052 ; 0.0   ; -313.701 ; 0.0     ; -167.463            ;
+;  clk             ; -717.675 ; 0.000 ; -222.245 ; 0.000   ; -152.469            ;
+;  vgaclk~reg0     ; -70.377  ; 0.000 ; -94.032  ; 0.000   ; -15.276             ;
 +------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -745,9 +745,9 @@ No synchronizer chains to report.
 +-------------+-------------+----------+----------+----------+----------+
 ; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------+-------------+----------+----------+----------+----------+
-; clk         ; clk         ; 13008    ; 794      ; 0        ; 0        ;
+; clk         ; clk         ; 16233    ; 0        ; 0        ; 0        ;
 ; vgaclk~reg0 ; clk         ; 1        ; 1        ; 0        ; 0        ;
-; vgaclk~reg0 ; vgaclk~reg0 ; 610      ; 0        ; 0        ; 0        ;
+; vgaclk~reg0 ; vgaclk~reg0 ; 597      ; 0        ; 0        ; 0        ;
 +-------------+-------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -757,9 +757,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------+-------------+----------+----------+----------+----------+
 ; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------+-------------+----------+----------+----------+----------+
-; clk         ; clk         ; 13008    ; 794      ; 0        ; 0        ;
+; clk         ; clk         ; 16233    ; 0        ; 0        ; 0        ;
 ; vgaclk~reg0 ; clk         ; 1        ; 1        ; 0        ; 0        ;
-; vgaclk~reg0 ; vgaclk~reg0 ; 610      ; 0        ; 0        ; 0        ;
+; vgaclk~reg0 ; vgaclk~reg0 ; 597      ; 0        ; 0        ; 0        ;
 +-------------+-------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -769,7 +769,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+-------------+----------+----------+----------+----------+
 ; From Clock ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+-------------+----------+----------+----------+----------+
-; clk        ; clk         ; 883      ; 367      ; 0        ; 0        ;
+; clk        ; clk         ; 254      ; 0        ; 0        ; 0        ;
 ; clk        ; vgaclk~reg0 ; 29       ; 0        ; 0        ; 0        ;
 +------------+-------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -780,7 +780,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+-------------+----------+----------+----------+----------+
 ; From Clock ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+-------------+----------+----------+----------+----------+
-; clk        ; clk         ; 883      ; 367      ; 0        ; 0        ;
+; clk        ; clk         ; 254      ; 0        ; 0        ; 0        ;
 ; clk        ; vgaclk~reg0 ; 29       ; 0        ; 0        ; 0        ;
 +------------+-------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -808,7 +808,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 5     ; 5    ;
 ; Unconstrained Input Port Paths  ; 84    ; 84   ;
 ; Unconstrained Output Ports      ; 53    ; 53   ;
-; Unconstrained Output Port Paths ; 1488  ; 1488 ;
+; Unconstrained Output Port Paths ; 1656  ; 1656 ;
 +---------------------------------+-------+------+
 
 
@@ -976,573 +976,145 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 09 05:30:11 2025
+    Info: Processing started: Thu Oct 09 05:38:30 2025
 Info: Command: quartus_sta vga -c vga
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 1 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'vga.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name vgaclk~reg0 vgaclk~reg0
     Info (332105): create_clock -period 1.000 -name clk clk
-Warning (332125): Found combinational loop of 422 nodes File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv Line: 81
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand2~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~2|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~2|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~3|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~3|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff13|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff13|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff13|WideNand1~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff13|WideNand1~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff13|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff13|WideNand2~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff13|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~1|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand2~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~1|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|c15|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|c15|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0~1|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff18|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff18|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff18|WideNand1~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff18|WideNand1~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff18|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff18|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff18|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~2|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~2|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand2~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~2|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand0~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff9|WideNand0~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff9|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff9|WideNand0~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff9|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff9|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|c10|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|c10|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|c15|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff13|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|c14|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|c14|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff15|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff15|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff15|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff15|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff15|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~1|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|c15|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff15|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff15|WideNand2~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0~1|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff12|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff12|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff12|WideNand1~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff12|WideNand1~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff12|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff12|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff12|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~1|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|c15|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff13|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~2|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~2|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff12|WideNand2~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff12|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|c14|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff11|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff11|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff11|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff11|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff11|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|c15|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff11|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|c14|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff12|WideNand0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~3|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff11|WideNand2~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff13|WideNand0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~3|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff9|WideNand2~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff9|WideNand0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff10|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff10|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff10|WideNand1~1|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff10|WideNand1~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff10|WideNand0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff10|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff10|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|c10|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff10|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff10|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~3|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand0~1|datag"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand0~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand0~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~2|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand0~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|c5|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|c5|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|c10|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand0~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|c10|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~3|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand2~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|c8|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|c8|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff9|WideNand0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff10|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|c8|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff6|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff6|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff6|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff6|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff6|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|c10|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|c8|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff6|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff6|WideNand2~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~3|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~2|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|c5|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand2~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand0~1|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~2|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|c5|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand0~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~2|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0~0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0~1|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~2|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|c5|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand0~1|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~2|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~2|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|c5|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff4|WideNand0~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff9|WideNand0~0|datag"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff3|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand0~1|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff18|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff18|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|c20|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|c20|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~1|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff23|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff23|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff23|WideNand1~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff23|WideNand1~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff23|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff23|WideNand2~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff23|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~1|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~1|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff23|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff23|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~1|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~2|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff21|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff21|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff21|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff21|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff21|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~1|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~1|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand0~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff23|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~1|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff21|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff21|WideNand2~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff22|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff22|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff22|WideNand1~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff22|WideNand1~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff22|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff22|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff22|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~1|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff25|WideNand0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff23|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff22|WideNand2~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff22|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~1|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff22|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0~1|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0~1|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|c20|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand2~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~1|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|c20|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff17|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff17|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff17|WideNand1~1|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff17|WideNand1~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff17|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff17|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff17|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff18|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~2|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|c20|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0~1|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0~1|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff17|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff17|WideNand2~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff16|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff16|WideNand0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff16|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff16|WideNand2~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff16|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff18|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|c20|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff17|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff16|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff16|WideNand2~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~1|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~2|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|c14|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand0~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand0~0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~2|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff13|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~2|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|c14|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0~1|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff13|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|c15|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff12|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff10|WideNand0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff23|WideNand0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff22|WideNand0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff17|WideNand0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff18|WideNand0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff14|WideNand0~0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff1|WideNand0~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff2|WideNand0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|WideNand0~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff24|WideNand0~0|datae"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff8|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|c8|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff7|WideNand2~0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|c10|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff0|Sm~1|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|c20|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff20|WideNand2~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|WideOr0~0|dataf"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff15|WideNand0|dataa"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff6|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff21|WideNand0|datab"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff19|WideNand0~0|datac"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff11|WideNand0|datad"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff16|WideNand0|datac"
-Critical Warning (332081): Design contains combinational loop of 422 nodes. Estimating the delays through the loop.
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/flip_flop.sv Line: 26
-    Warning (332126): Node "u_juego|u_timer|udiv|ff5|WideNand2~0|combout"
-    Warning (332126): Node "u_juego|u_timer|udiv|ff5|WideNand2~0|datab"
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.784
+Info (332146): Worst-case setup slack is -3.749
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.784            -653.127 clk 
-    Info (332119):    -2.194             -60.592 vgaclk~reg0 
-Info (332146): Worst-case hold slack is 0.361
+    Info (332119):    -3.749            -717.675 clk 
+    Info (332119):    -2.708             -70.377 vgaclk~reg0 
+Info (332146): Worst-case hold slack is 0.367
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.361               0.000 clk 
-    Info (332119):     0.735               0.000 vgaclk~reg0 
-Info (332146): Worst-case recovery slack is -6.738
+    Info (332119):     0.367               0.000 clk 
+    Info (332119):     0.982               0.000 vgaclk~reg0 
+Info (332146): Worst-case recovery slack is -3.238
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.738            -466.296 clk 
-    Info (332119):    -3.800            -102.247 vgaclk~reg0 
-Info (332146): Worst-case removal slack is 0.738
+    Info (332119):    -3.238             -91.456 vgaclk~reg0 
+    Info (332119):    -1.934            -222.245 clk 
+Info (332146): Worst-case removal slack is 0.987
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.738               0.000 clk 
-    Info (332119):     2.713               0.000 vgaclk~reg0 
-Info (332146): Worst-case minimum pulse width slack is -0.394
+    Info (332119):     0.987               0.000 clk 
+    Info (332119):     2.504               0.000 vgaclk~reg0 
+Info (332146): Worst-case minimum pulse width slack is -0.472
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394            -109.056 clk 
-    Info (332119):    -0.394             -15.675 vgaclk~reg0 
+    Info (332119):    -0.472            -142.481 clk 
+    Info (332119):    -0.394             -15.276 vgaclk~reg0 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -7.620
+Info (332146): Worst-case setup slack is -3.573
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.620            -642.144 clk 
-    Info (332119):    -2.186             -60.252 vgaclk~reg0 
-Info (332146): Worst-case hold slack is 0.370
+    Info (332119):    -3.573            -699.181 clk 
+    Info (332119):    -2.762             -69.813 vgaclk~reg0 
+Info (332146): Worst-case hold slack is 0.371
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.370               0.000 clk 
-    Info (332119):     0.721               0.000 vgaclk~reg0 
-Info (332146): Worst-case recovery slack is -6.733
+    Info (332119):     0.371               0.000 clk 
+    Info (332119):     0.967               0.000 vgaclk~reg0 
+Info (332146): Worst-case recovery slack is -3.319
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.733            -446.956 clk 
-    Info (332119):    -3.884            -104.448 vgaclk~reg0 
-Info (332146): Worst-case removal slack is 0.708
+    Info (332119):    -3.319             -94.032 vgaclk~reg0 
+    Info (332119):    -2.056            -204.578 clk 
+Info (332146): Worst-case removal slack is 0.921
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.708               0.000 clk 
-    Info (332119):     2.820               0.000 vgaclk~reg0 
-Info (332146): Worst-case minimum pulse width slack is -0.394
+    Info (332119):     0.921               0.000 clk 
+    Info (332119):     2.624               0.000 vgaclk~reg0 
+Info (332146): Worst-case minimum pulse width slack is -0.487
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394            -116.274 clk 
-    Info (332119):    -0.394             -15.625 vgaclk~reg0 
+    Info (332119):    -0.487            -152.469 clk 
+    Info (332119):    -0.394             -14.994 vgaclk~reg0 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.404
+Info (332146): Worst-case setup slack is -2.780
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.404            -314.774 clk 
-    Info (332119):    -0.903             -25.288 vgaclk~reg0 
-Info (332146): Worst-case hold slack is 0.178
+    Info (332119):    -2.780            -328.891 clk 
+    Info (332119):    -1.281             -33.197 vgaclk~reg0 
+Info (332146): Worst-case hold slack is 0.180
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.178               0.000 clk 
-    Info (332119):     0.390               0.000 vgaclk~reg0 
-Info (332146): Worst-case recovery slack is -3.748
+    Info (332119):     0.180               0.000 clk 
+    Info (332119):     0.494               0.000 vgaclk~reg0 
+Info (332146): Worst-case recovery slack is -1.484
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.748            -242.607 clk 
-    Info (332119):    -1.903             -49.653 vgaclk~reg0 
-Info (332146): Worst-case removal slack is 0.409
+    Info (332119):    -1.484             -41.758 vgaclk~reg0 
+    Info (332119):    -0.981             -63.812 clk 
+Info (332146): Worst-case removal slack is 0.536
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.409               0.000 clk 
-    Info (332119):     1.352               0.000 vgaclk~reg0 
-Info (332146): Worst-case minimum pulse width slack is -0.369
+    Info (332119):     0.536               0.000 clk 
+    Info (332119):     1.202               0.000 vgaclk~reg0 
+Info (332146): Worst-case minimum pulse width slack is -0.500
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.369             -18.947 clk 
-    Info (332119):     0.066               0.000 vgaclk~reg0 
+    Info (332119):    -0.500             -24.618 clk 
+    Info (332119):     0.098               0.000 vgaclk~reg0 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.992
+Info (332146): Worst-case setup slack is -2.333
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.992            -274.118 clk 
-    Info (332119):    -0.804             -22.290 vgaclk~reg0 
-Info (332146): Worst-case hold slack is 0.169
+    Info (332119):    -2.333            -280.610 clk 
+    Info (332119):    -1.151             -29.312 vgaclk~reg0 
+Info (332146): Worst-case hold slack is 0.171
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.169               0.000 clk 
-    Info (332119):     0.354               0.000 vgaclk~reg0 
-Info (332146): Worst-case recovery slack is -3.442
+    Info (332119):     0.171               0.000 clk 
+    Info (332119):     0.460               0.000 vgaclk~reg0 
+Info (332146): Worst-case recovery slack is -1.452
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.442            -200.998 clk 
-    Info (332119):    -1.826             -48.040 vgaclk~reg0 
-Info (332146): Worst-case removal slack is 0.362
+    Info (332119):    -1.452             -40.985 vgaclk~reg0 
+    Info (332119):    -0.893             -36.320 clk 
+Info (332146): Worst-case removal slack is 0.483
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.362               0.000 clk 
-    Info (332119):     1.329               0.000 vgaclk~reg0 
-Info (332146): Worst-case minimum pulse width slack is -0.364
+    Info (332119):     0.483               0.000 clk 
+    Info (332119):     1.197               0.000 vgaclk~reg0 
+Info (332146): Worst-case minimum pulse width slack is -0.486
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.364             -18.386 clk 
-    Info (332119):     0.083               0.000 vgaclk~reg0 
+    Info (332119):    -0.486             -24.364 clk 
+    Info (332119):     0.117               0.000 vgaclk~reg0 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 434 warnings
-    Info: Peak virtual memory: 5317 megabytes
-    Info: Processing ended: Thu Oct 09 05:30:16 2025
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 5311 megabytes
+    Info: Processing ended: Thu Oct 09 05:38:35 2025
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:07
 
