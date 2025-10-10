@@ -1,12 +1,12 @@
-// ===========================================================================
+
 // Módulo: ganador_display
 // Descripción: Muestra pantalla de victoria cuando el juego termina (S9_fin_juego)
-//              - "J1" en AZUL si jugador 1 ganó (más puntaje)
-//              - "J2" en ROJO si jugador 2 ganó (más puntaje)
-//              - "EMPATE" en AMARILLO si ambos tienen mismo puntaje
+//  "J1" en AZUL si jugador 1 ganó 
+//  "J2" en ROJO si jugador 2 ganó 
+//  "EMPATE" en AMARILLO si ambos tienen mismo puntaje
 //              
 // Usa bitmaps simples de 5×7 pixeles escalados 8× para verse grandes
-// ===========================================================================
+
 
 module ganador_display (
     input  logic [9:0]  x,              // Coordenada X del pixel actual
@@ -21,16 +21,14 @@ module ganador_display (
     output logic [7:0]  b
 );
 
-    // ========================================================================
+   
     // Detección de estado de fin de juego
-    // ========================================================================
     localparam logic [3:0] S9_FIN_JUEGO = 4'd9;
     logic en_fin_juego;
     assign en_fin_juego = (state_fsm == S9_FIN_JUEGO);
     
-    // ========================================================================
+
     // Determinación del ganador por comparación de puntajes
-    // ========================================================================
     typedef enum logic [1:0] {
         GANADOR_J1     = 2'd0,
         GANADOR_J2     = 2'd1,
@@ -48,9 +46,8 @@ module ganador_display (
             ganador = GANADOR_EMPATE;
     end
     
-    // ========================================================================
+
     // Posicionamiento del texto en pantalla (centrado)
-    // ========================================================================
     // Pantalla: 640×480
     // Cada letra: 5×7 bitmap, escalado 8× = 40×56 pixeles reales
     // "J1" o "J2": 2 caracteres + espacio = 40+8+40 = 88 pixeles de ancho
@@ -62,44 +59,42 @@ module ganador_display (
     localparam int CHAR_HEIGHT = 7;     // Alto del bitmap en pixeles lógicos
     localparam int CHAR_SPACING = 8;    // Espacio entre caracteres (en pixeles reales)
     
-    // ========================================================================
+ 
     // Bitmaps de caracteres (5×7 pixeles)
     // Cada fila es 5 bits, 1=pixel encendido
-    // ========================================================================
     
     // Letra "J" (mayúscula)
     logic [4:0] bitmap_J [0:6];
-    assign bitmap_J[0] = 5'b01111;  //  ████
-    assign bitmap_J[1] = 5'b00010;  //     █
-    assign bitmap_J[2] = 5'b00010;  //     █
-    assign bitmap_J[3] = 5'b00010;  //     █
-    assign bitmap_J[4] = 5'b10010;  // █   █
-    assign bitmap_J[5] = 5'b10010;  // █   █
-    assign bitmap_J[6] = 5'b01100;  //  ██
+    assign bitmap_J[0] = 5'b01111;  
+    assign bitmap_J[1] = 5'b00010;  
+    assign bitmap_J[2] = 5'b00010;  
+    assign bitmap_J[3] = 5'b00010;  
+    assign bitmap_J[4] = 5'b10010; 
+    assign bitmap_J[5] = 5'b10010;  
+    assign bitmap_J[6] = 5'b01100;  
 
     // Número "1"
     logic [4:0] bitmap_1 [0:6];
-    assign bitmap_1[0] = 5'b00100;  //   █
-    assign bitmap_1[1] = 5'b01100;  //  ██
-    assign bitmap_1[2] = 5'b00100;  //   █
-    assign bitmap_1[3] = 5'b00100;  //   █
-    assign bitmap_1[4] = 5'b00100;  //   █
-    assign bitmap_1[5] = 5'b00100;  //   █
-    assign bitmap_1[6] = 5'b01110;  //  ███
+    assign bitmap_1[0] = 5'b00100;    
+    assign bitmap_1[1] = 5'b01100;  
+    assign bitmap_1[2] = 5'b00100;    
+    assign bitmap_1[3] = 5'b00100;    
+    assign bitmap_1[4] = 5'b00100;  
+    assign bitmap_1[5] = 5'b00100;    
+    assign bitmap_1[6] = 5'b01110;   
 
     // Número "2"
     logic [4:0] bitmap_2 [0:6];
-    assign bitmap_2[0] = 5'b01110;  //  ███
-    assign bitmap_2[1] = 5'b10001;  // █   █
-    assign bitmap_2[2] = 5'b00001;  //     █
-    assign bitmap_2[3] = 5'b00110;  //   ██
-    assign bitmap_2[4] = 5'b01000;  //  █
-    assign bitmap_2[5] = 5'b10000;  // █
-    assign bitmap_2[6] = 5'b11111;  // █████
+    assign bitmap_2[0] = 5'b01110;  
+    assign bitmap_2[1] = 5'b10001;   
+    assign bitmap_2[2] = 5'b00001;  
+    assign bitmap_2[3] = 5'b00110;    
+    assign bitmap_2[4] = 5'b01000;    
+    assign bitmap_2[5] = 5'b10000;  
+    assign bitmap_2[6] = 5'b11111;   
 
-    // ========================================================================
+
     // Lógica de detección de pixel en caracteres
-    // ========================================================================
     logic in_text_area;
     logic [9:0] text_rel_x, text_rel_y;
     logic [2:0] bitmap_row;   // Fila del bitmap (0-6)
@@ -118,7 +113,7 @@ module ganador_display (
     assign text_rel_y = y - TEXT_START_Y;
     
     // Dividir por SCALE para obtener coordenadas lógicas del bitmap
-    assign bitmap_row = text_rel_y[9:3];  // / 8
+    assign bitmap_row = text_rel_y[9:3];  //  /8
     assign bitmap_col = text_rel_x[2:0];  // Depende del caracter
     
     // Determinar qué caracter estamos renderizando
@@ -173,9 +168,8 @@ module ganador_display (
         // char_index == 7 (espacio) → pixel_on queda en 0
     end
     
-    // ========================================================================
+
     // Colores según el ganador
-    // ========================================================================
     logic [7:0] text_r, text_g, text_b;
     logic [7:0] bg_r, bg_g, bg_b;
     
@@ -222,9 +216,7 @@ module ganador_display (
         endcase
     end
     
-    // ========================================================================
     // Salida final
-    // ========================================================================
     always_comb begin
         // CAMBIO TEMPORAL PARA DEBUG: Mostrar siempre cuando state_fsm == 9
         // O cuando la suma de puntajes sea 8 (todos los pares encontrados)

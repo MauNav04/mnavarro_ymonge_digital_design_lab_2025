@@ -1,10 +1,10 @@
-// ===========================================================================
-// Módulo: generador_cartas
-// Descripción: Genera los 8 diseños diferentes de cartas para el juego
-//              Cada carta tiene un patrón único identificable
-// Entrada: carta_id (0-7), coordenadas relativas dentro de la carta
-// Salida: is_pattern (1 si el pixel pertenece al patrón de la carta)
-// ===========================================================================
+
+// generador_cartas
+//Genera los 8 diseños diferentes de cartas para el juego
+//Cada carta tiene un patrón único identificable
+// Usa carta_id como parametro y hay coordenadas relativas dentro de la carta
+// Tiene como salida "is_pattern" (1 si el pixel pertenece al patrón de la carta)
+
 
 module generador_cartas (
     input  logic [2:0] carta_id,      // ID de la carta (0-7)

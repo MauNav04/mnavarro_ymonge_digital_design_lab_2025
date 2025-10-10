@@ -8,8 +8,8 @@ module control_cursor (
     input  logic reset,          // Reset global, vuelve a (fila=0, columna=0)
     input  logic mover_adelante, // Pulso de avance (dependiendo del modo)
     input  logic mover_atras,    // Pulso de retroceso
-    input  logic modo_vertical,  // 0 -> mover columnas, 1 -> mover filas
-    input  logic cargar,         // 1 -> cargar índice externo
+    input  logic modo_vertical,  // 0 mover columnas, 1 -> mover filas
+    input  logic cargar,         // 1  cargar índice externo
     input  logic [3:0] indice_cargar,
     output logic [1:0] fila,
     output logic [1:0] columna,

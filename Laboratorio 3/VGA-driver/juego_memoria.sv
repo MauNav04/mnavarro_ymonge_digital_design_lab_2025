@@ -1,10 +1,10 @@
 
 // Top de integración para el juego de memoria.
 // Conecta la FSM principal, el temporizador, el control del cursor y
-// los módulos de estado/puntaje. Los botones de entrada se asumen ya
-// sincronizados y filtrados a pulsos de un ciclo.
+// los módulos de estado/puntaje. Los botones de entrada de la FPGa
+// sincronizados y filtrados a pulsos de un ciclo y de un mismo CLK que viene de la FPGA.
 module juego_memoria #(
-    parameter [25:0] TIMER_DIV_TARGET = 26'd49_999_999  // No usado, el temporizador tiene su propio divisor
+    parameter [25:0] TIMER_DIV_TARGET = 26'd49_999_999  
 ) (
     input  logic clk_50m,
     input  logic reset,             // reset global del sistema
@@ -45,9 +45,8 @@ module juego_memoria #(
     output logic carta_random_start
 );
 
-    // ---------------------------------------------------------------------
+    // ---------------------------------------------------------------------------
     // FSM principal del juego
-    // ---------------------------------------------------------------------
     logic start_15s, clear_15s;
     logic latch1, latch2;
     logic reveal1, reveal2;
@@ -64,9 +63,9 @@ module juego_memoria #(
     logic [3:0] indice_para_latch;
     logic cursor_cargar;
 
-    // ---------------------------------------------------------------------
+    // -----------------------------------------------------------------------------------
     // Cursor de selección (apoya carga directa desde RNG)
-    // ---------------------------------------------------------------------
+
     control_cursor u_cursor (
         .clk           (clk_50m),
         .reset         (reset),
@@ -107,9 +106,8 @@ module juego_memoria #(
     // Exportar estado de la FSM
     assign state_fsm = state_dbg_interno;
 
-    // ---------------------------------------------------------------------
+    // --------------------------------------------------------------------------
     // Temporizador 15 segundos
-    // ---------------------------------------------------------------------
     logic pulso_1hz;
     temporizador_15s #(.DIV_TARGET(TIMER_DIV_TARGET)) u_timer (
         .clk_50m (clk_50m),
@@ -122,13 +120,12 @@ module juego_memoria #(
         .aR(aR), .bR(bR), .cR(cR), .dR(dR), .eR(eR), .fR(fR), .gR(gR)
     );
 
-    // ---------------------------------------------------------------------
+    // ------   ----------------------------------------------------------------------
     // Registros para almacenar las cartas seleccionadas
-    // ---------------------------------------------------------------------
     logic [3:0] indice_sel1, indice_sel2;
     logic limpiar_indices, clear_indices_d;
 
-    // Limpiar los índices un ciclo después del clear_15s para permitir que
+   // se Limpia los índices un ciclo después del clear_15s para permitir que
     // la lógica de estado procese lock/esconder con los valores vigentes.
     always_ff @(posedge clk_50m or posedge reset) begin
         if (reset) clear_indices_d <= 1'b0;
@@ -182,9 +179,8 @@ module juego_memoria #(
         .indice_out(indice_sel2)
     );
 
-    // ---------------------------------------------------------------------
+    // --------------------------------------------------------------------------------
     // Estado de cartas (reveladas/bloqueadas) y señales auxiliares
-    // ---------------------------------------------------------------------
     estado_cartas u_estado (
         .clk             (clk_50m),
         .reset           (reset),
@@ -195,7 +191,7 @@ module juego_memoria #(
         .indice_cursor   (cursor_indice),
         .indice_sel1     (indice_sel1),
         .indice_sel2     (indice_sel2),
-        .indice_reveal2  (indice_para_latch),  // ← ROLLBACK: volver a indice_para_latch
+        .indice_reveal2  (indice_para_latch),  
         .valido          (valido),
         .posicion_igual  (posicion_igual),
         .match           (match),
@@ -217,9 +213,8 @@ module juego_memoria #(
         .indice          (rng_indice)
     );
 
-    // ---------------------------------------------------------------------
+    // ------------------------------------------------------------------------
     // Puntajes y turno actual
-    // ---------------------------------------------------------------------
     puntaje_jugadores u_puntaje (
         .clk             (clk_50m),
         .reset           (reset),
@@ -230,9 +225,9 @@ module juego_memoria #(
         .puntaje_j2      (puntaje_j2)
     );
 
-    // ---------------------------------------------------------------------
+    // --------------------------------------------------------------------------------
     // Displays de puntaje (7 segmentos)
-    // ---------------------------------------------------------------------
+
     puntaje_display u_puntajes_seg (
         .puntaje_j1(puntaje_j1),
         .puntaje_j2(puntaje_j2),

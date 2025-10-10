@@ -1,5 +1,5 @@
 
-// Registro sencillo para almacenar el índice de una carta seleccionada.
+// Registro que almacena la carta que seleccionamos
 // El registro se actualiza cuando captura=1 y puede limpiarse con reset o limpiar.
 module registro_seleccion (
     input  logic clk,

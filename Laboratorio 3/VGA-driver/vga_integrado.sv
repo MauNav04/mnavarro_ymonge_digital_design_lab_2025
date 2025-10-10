@@ -1,7 +1,6 @@
-// ===========================================================================
-// Top-level VGA + Juego de Memoria - Laboratorio 3
+
 // Integración completa: FSM + Control + Display VGA
-// ===========================================================================
+
 
 module vga_integrado (
     // Entradas del sistema
@@ -49,9 +48,8 @@ module vga_integrado (
         end
     end
 
-    // ========================================================================
+    // ----------------------------------------------------------
     // Debounce de botones (elimina rebotes mecánicos)
-    // ========================================================================
     logic mover_adelante_db, mover_atras_db, seleccionar_db;
     
     debouncer #(.DELAY_CYCLES(12_500_000)) db_adelante (  // 250ms
@@ -75,17 +73,15 @@ module vga_integrado (
         .btn_pulse (seleccionar_db)
     );
 
-    // ========================================================================
+    // ---------------------------------------------------------------------------
     // Generación del reloj VGA (25 MHz)
-    // ========================================================================
     always_ff @(posedge clk or posedge reset) begin
         if (reset) vgaclk <= 1'b0;
         else       vgaclk <= ~vgaclk;
     end
 
-    // ========================================================================
+    // ---------------------------------------------------------------------------
     // Controlador VGA (genera señales de sincronización)
-    // ========================================================================
     logic [9:0] x, y;
 
     vgaController vgaCont (
@@ -99,9 +95,8 @@ module vga_integrado (
         .vcnt    (y)
     );
 
-    // ========================================================================
+    // ---------------------------------------------------------------------------
     // Módulo del juego de memoria (FSM + lógica de control)
-    // ========================================================================
     logic [1:0]  cursor_fila, cursor_columna;
     logic [3:0]  cursor_indice;
     logic [15:0] cartas_reveladas, cartas_bloqueadas;
@@ -137,14 +132,13 @@ module vga_integrado (
         .jugador_actual     (jugador_actual),
         .puntaje_j1         (puntaje_j1),
         .puntaje_j2         (puntaje_j2),
-        .state_fsm          (state_fsm),       // ← Nuevo: estado FSM
+        .state_fsm          (state_fsm),      
         .timeout            (timeout),
         .carta_random_start (carta_random_start)
     );
 
-    // ========================================================================
+    // ---------------------------------------------------------------------------
     // Renderizador VGA del juego
-    // ========================================================================
     juego_vga_renderer renderer (
         .x                 (x),
         .y                 (y),
@@ -153,9 +147,9 @@ module vga_integrado (
         .cartas_reveladas  (cartas_reveladas),
         .cartas_bloqueadas (cartas_bloqueadas),
         .carta_cursor_id   (carta_cursor_id),
-        .state_fsm         (state_fsm),        // ← Nuevo: para pantalla de ganador
-        .puntaje_j1        (puntaje_j1),       // ← Nuevo: para determinar ganador
-        .puntaje_j2        (puntaje_j2),       // ← Nuevo: para determinar ganador
+        .state_fsm         (state_fsm),       
+        .puntaje_j1        (puntaje_j1),       
+        .puntaje_j2        (puntaje_j2),       
         .r                 (r),
         .g                 (g),
         .b                 (b)
@@ -164,9 +158,8 @@ module vga_integrado (
 endmodule
 
 
-// ===========================================================================
-// Controlador VGA 640×480@60Hz
-// ===========================================================================
+    // ---------------------------------------------------------------------------
+// Controlador VGA 640×480
 module vgaController #(
     parameter int unsigned HBP     = 10'd48,   // back porch
     parameter int unsigned HACTIVE = 10'd640,  // visible

@@ -1,8 +1,7 @@
-// ===========================================================================
-// Módulo: carta_oculta
-// Descripción: Genera el diseño del reverso de las cartas (cuando están ocultas)
-//              Patrón: Fondo azul oscuro con un patrón de rombos/diamantes
-// ===========================================================================
+
+// Módulo para carta_oculta
+// Genera el diseño del reverso de las cartas cuando estan ocultas
+
 
 module carta_oculta (
     input  logic [9:0] rel_x,         // Coordenada X relativa dentro de la carta
@@ -44,7 +43,7 @@ module carta_oculta (
             back_b = 8'h90;
         end
         
-        is_pattern = 1'b1; // Siempre dibujamos algo en el reverso
+        is_pattern = 1'b1; 
     end
 
 endmodule

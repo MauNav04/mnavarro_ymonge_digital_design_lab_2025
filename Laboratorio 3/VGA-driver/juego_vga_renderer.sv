@@ -1,11 +1,10 @@
-// ===========================================================================
+
 // Módulo: juego_vga_renderer
-// Descripción: Renderiza el juego de memoria completo en VGA 640×480
-//              - Grid 4×4 de cartas (16 cartas total)
-//              - Muestra cartas ocultas/reveladas/bloqueadas según estado de la FSM
-//              - Borde dorado en la carta bajo el cursor
-//              - Integración completa con juego_memoria.sv
-// ===========================================================================
+//  Renderiza el juego de memoria completo en VGA 640×480
+// Muestra la barja
+// Muestra cartas ocultas/reveladas/bloqueadas según estado de la FSM
+//  Integración completa con juego_memoria.sv
+
 
 module juego_vga_renderer (
     input  logic [9:0]  x,                  // Coordenada X del pixel actual
@@ -27,20 +26,17 @@ module juego_vga_renderer (
     output logic [7:0]  b
 );
 
-    // ========================================================================
+    // ---------------------------------------------------------------------------
     // Parámetros del grid de cartas
-    // ========================================================================
     localparam int CARD_WIDTH   = 140;  // Ancho de cada carta
     localparam int CARD_HEIGHT  = 100;  // Alto de cada carta
     localparam int SPACING_H    = 20;   // Espaciado horizontal entre cartas
     localparam int SPACING_V    = 20;   // Espaciado vertical entre cartas
     localparam int START_X      = 20;   // Margen izquierdo
     localparam int START_Y      = 40;   // Margen superior
-    
-    // ========================================================================
+    // ---------------------------------------------------------------------------
     // Mapeo de índices: cada carta tiene un ID (0-7) que aparece 2 veces
     // Índices 0-1 = ID 0, índices 2-3 = ID 1, etc.
-    // ========================================================================
     function automatic logic [2:0] indice_a_carta_id(input logic [3:0] idx);
         case (idx)
             4'd0,  4'd1:  indice_a_carta_id = 3'd0;
@@ -55,9 +51,8 @@ module juego_vga_renderer (
         endcase
     endfunction
     
-    // ========================================================================
+    // ---------------------------------------------------------------------------
     // Detección de carta actual y cálculo de coordenadas relativas
-    // ========================================================================
     logic [15:0] in_card;           // Bit vector: cuál carta contiene este pixel
     logic [3:0]  current_card_idx;  // Índice de la carta actual (0-15)
     logic [2:0]  current_card_id;   // ID de diseño de la carta actual (0-7)
@@ -187,9 +182,8 @@ module juego_vga_renderer (
     
     assign current_card_id = indice_a_carta_id(current_card_idx);
     
-    // ========================================================================
+    // ---------------------------------------------------------------------------
     // Estado de la carta actual
-    // ========================================================================
     logic is_revelada;
     logic is_bloqueada;
     logic is_oculta;
@@ -203,10 +197,8 @@ module juego_vga_renderer (
     assign is_cursor_here = (current_card_idx[3:2] == cursor_fila) && 
                             (current_card_idx[1:0] == cursor_columna);
     
-    // ========================================================================
-    // Generación de patrones
-    // ========================================================================
-    
+    // ---------------------------------------------------------------------------
+    // Generación de patrones 
     // Carta revelada (diseño frontal)
     logic       pattern_active;
     logic [7:0] pattern_r, pattern_g, pattern_b;
@@ -272,9 +264,8 @@ module juego_vga_renderer (
         endcase
     end
     
-    // ========================================================================
+    // ---------------------------------------------------------------------------
     // Pantalla de ganador (mostrar en S9_fin_juego)
-    // ========================================================================
     logic mostrar_ganador;
     logic [7:0] ganador_r, ganador_g, ganador_b;
     
@@ -290,9 +281,8 @@ module juego_vga_renderer (
         .b         (ganador_b)
     );
     
-    // ========================================================================
+    // ---------------------------------------------------------------------------
     // Lógica de renderizado final
-    // ========================================================================
     always_comb begin
         // PRIORIDAD MÁXIMA: Pantalla de ganador (sobrescribe todo)
         if (mostrar_ganador) begin

@@ -1,8 +1,8 @@
-// ===========================================================================
-// Módulo: cursor_overlay
-// Descripción: Genera un borde dorado brillante alrededor de la carta seleccionada
-//              Indica visualmente dónde está el cursor del jugador
-// ===========================================================================
+
+//cursor_overlay
+// Genera un borde amarillo alrededor de la carta seleccionada
+// Indica visualmente dónde está el cursor del jugador
+
 
 module cursor_overlay (
     input  logic [9:0] rel_x,         // Coordenada X relativa dentro de la carta

@@ -1,11 +1,11 @@
-// ===========================================================================
+
 // Módulo: debouncer
-// Descripción: Elimina rebotes de botones mecánicos y genera un pulso único
-//              Requiere que el botón se mantenga presionado ~250ms para registrar
-// ===========================================================================
+//Elimina rebotes de botones mecánicos y genera un pulso único
+//Requiere que el botón se mantenga presionado 0.25s para registrar
+
 
 module debouncer #(
-    parameter DELAY_CYCLES = 12_500_000  // ~250ms a 50MHz
+    parameter DELAY_CYCLES = 12_500_000  // 250ms a 50MHz
 ) (
     input  logic clk,
     input  logic reset,
