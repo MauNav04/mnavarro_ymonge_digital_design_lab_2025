@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga
-Fri Oct 10 00:31:45 2025
+Fri Oct 10 00:52:32 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -88,7 +88,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Oct 10 00:31:45 2025       ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct 10 00:52:32 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; vga                                         ;
 ; Top-level Entity Name           ; vga_integrado                               ;
@@ -214,7 +214,8 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
-;     Processors 8-16        ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -258,14 +259,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 616   ;
+; Estimate of Logic utilization (ALMs needed) ; 619   ;
 ;                                             ;       ;
-; Combinational ALUT usage for logic          ; 1023  ;
+; Combinational ALUT usage for logic          ; 1028  ;
 ;     -- 7 input functions                    ; 8     ;
-;     -- 6 input functions                    ; 198   ;
+;     -- 6 input functions                    ; 199   ;
 ;     -- 5 input functions                    ; 166   ;
-;     -- 4 input functions                    ; 215   ;
-;     -- <=3 input functions                  ; 436   ;
+;     -- 4 input functions                    ; 212   ;
+;     -- <=3 input functions                  ; 443   ;
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 232   ;
 ;                                             ;       ;
@@ -275,7 +276,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;       ;
 ; Maximum fan-out node                        ; reset ;
 ; Maximum fan-out                             ; 230   ;
-; Total fan-out                               ; 5035  ;
+; Total fan-out                               ; 5048  ;
 ; Average fan-out                             ; 3.64  ;
 +---------------------------------------------+-------+
 
@@ -285,7 +286,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                 ; Entity Name            ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |vga_integrado                               ; 1023 (6)            ; 232 (6)                   ; 0                 ; 1          ; 63   ; 0            ; |vga_integrado                                                                                                                                                      ; vga_integrado          ; work         ;
+; |vga_integrado                               ; 1028 (6)            ; 232 (6)                   ; 0                 ; 1          ; 63   ; 0            ; |vga_integrado                                                                                                                                                      ; vga_integrado          ; work         ;
 ;    |debouncer:db_adelante|                   ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|debouncer:db_adelante                                                                                                                                ; debouncer              ; work         ;
 ;    |debouncer:db_atras|                      ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|debouncer:db_atras                                                                                                                                   ; debouncer              ; work         ;
 ;    |debouncer:db_seleccionar|                ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|debouncer:db_seleccionar                                                                                                                             ; debouncer              ; work         ;
@@ -303,7 +304,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |temporizador_15s:u_timer|             ; 46 (38)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer                                                                                                       ; temporizador_15s       ; work         ;
 ;          |bcd_contador_L:uL|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_L:uL                                                                                     ; bcd_contador_L         ; work         ;
 ;          |bcd_contador_R:uR|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_R:uR                                                                                     ; bcd_contador_R         ; work         ;
-;    |juego_vga_renderer:renderer|             ; 595 (221)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer                                                                                                                          ; juego_vga_renderer     ; work         ;
+;    |juego_vga_renderer:renderer|             ; 600 (222)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer                                                                                                                          ; juego_vga_renderer     ; work         ;
 ;       |carta_oculta:gen_reverso|             ; 181 (26)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso                                                                                                 ; carta_oculta           ; work         ;
 ;          |lpm_divide:Mod0|                   ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod0                                                                                 ; lpm_divide             ; work         ;
 ;             |lpm_divide_i3m:auto_generated|  ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod0|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m         ; work         ;
@@ -314,7 +315,7 @@ https://fpgasoftware.intel.com/eula.
 ;                |sign_div_unsign_llh:divider| ; 79 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod1|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh    ; work         ;
 ;                   |alt_u_div_gve:divider|    ; 79 (79)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod1|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve          ; work         ;
 ;       |cursor_overlay:gen_cursor|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|cursor_overlay:gen_cursor                                                                                                ; cursor_overlay         ; work         ;
-;       |ganador_display:u_ganador|            ; 34 (34)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|ganador_display:u_ganador                                                                                                ; ganador_display        ; work         ;
+;       |ganador_display:u_ganador|            ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|ganador_display:u_ganador                                                                                                ; ganador_display        ; work         ;
 ;       |generador_cartas:gen_carta|           ; 152 (152)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|generador_cartas:gen_carta                                                                                               ; generador_cartas       ; work         ;
 ;    |vgaController:vgaCont|                   ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|vgaController:vgaCont                                                                                                                                ; vgaController          ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
@@ -908,29 +909,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SLD       ; 2                           ;
 ;     SCLR              ; 7                           ;
 ;     plain             ; 8                           ;
-; arriav_lcell_comb     ; 1046                        ;
-;     arith             ; 341                         ;
+; arriav_lcell_comb     ; 1051                        ;
+;     arith             ; 345                         ;
 ;         0 data inputs ; 28                          ;
 ;         1 data inputs ; 169                         ;
-;         2 data inputs ; 20                          ;
+;         2 data inputs ; 24                          ;
 ;         3 data inputs ; 30                          ;
 ;         4 data inputs ; 89                          ;
 ;         5 data inputs ; 5                           ;
 ;     extend            ; 8                           ;
 ;         7 data inputs ; 8                           ;
-;     normal            ; 697                         ;
+;     normal            ; 698                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 31                          ;
-;         2 data inputs ; 93                          ;
-;         3 data inputs ; 86                          ;
-;         4 data inputs ; 126                         ;
+;         2 data inputs ; 94                          ;
+;         3 data inputs ; 88                          ;
+;         4 data inputs ; 123                         ;
 ;         5 data inputs ; 161                         ;
-;         6 data inputs ; 198                         ;
+;         6 data inputs ; 199                         ;
 ; arriav_mac            ; 1                           ;
 ; boundary_port         ; 63                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 20.90                       ;
-; Average LUT depth     ; 9.20                        ;
+; Average LUT depth     ; 9.19                        ;
 +-----------------------+-----------------------------+
 
 
@@ -949,7 +950,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Oct 10 00:31:36 2025
+    Info: Processing started: Fri Oct 10 00:52:23 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1039,6 +1040,7 @@ Warning (10230): Verilog HDL assignment warning at carta_oculta.sv(29): truncate
 Warning (10230): Verilog HDL assignment warning at carta_oculta.sv(30): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 30
 Info (12128): Elaborating entity "cursor_overlay" for hierarchy "juego_vga_renderer:renderer|cursor_overlay:gen_cursor" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 250
 Info (12128): Elaborating entity "ganador_display" for hierarchy "juego_vga_renderer:renderer|ganador_display:u_ganador" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 291
+Warning (10036): Verilog HDL or VHDL warning at ganador_display.sv(28): object "en_fin_juego" assigned a value but never read File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/ganador_display.sv Line: 28
 Warning (10036): Verilog HDL or VHDL warning at ganador_display.sv(106): object "bitmap_col" assigned a value but never read File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/ganador_display.sv Line: 106
 Warning (10230): Verilog HDL assignment warning at ganador_display.sv(117): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/ganador_display.sv Line: 117
 Warning (10230): Verilog HDL assignment warning at ganador_display.sv(118): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/ganador_display.sv Line: 118
@@ -1069,14 +1071,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1108 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1113 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 1044 logic cells
+    Info (21061): Implemented 1049 logic cells
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4916 megabytes
-    Info: Processing ended: Fri Oct 10 00:31:45 2025
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 4919 megabytes
+    Info: Processing ended: Fri Oct 10 00:52:32 2025
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:17
 

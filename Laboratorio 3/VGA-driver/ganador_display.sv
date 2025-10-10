@@ -226,7 +226,13 @@ module ganador_display (
     // Salida final
     // ========================================================================
     always_comb begin
-        if (en_fin_juego) begin
+        // CAMBIO TEMPORAL PARA DEBUG: Mostrar siempre cuando state_fsm == 9
+        // O cuando la suma de puntajes sea 8 (todos los pares encontrados)
+        logic fin_por_estado, fin_por_puntaje;
+        fin_por_estado = (state_fsm == 4'd9);
+        fin_por_puntaje = (puntaje_j1 + puntaje_j2) >= 4'd8;
+        
+        if (fin_por_estado || fin_por_puntaje) begin
             mostrar = 1'b1;
             
             if (in_text_area && pixel_on) begin
