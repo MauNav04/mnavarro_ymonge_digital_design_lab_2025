@@ -1,0 +1,376 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver
+vbcd_contador_L
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1759972773
+!i10b 1
+!s100 RiZz?hgQSVl_PbEHGRaeQ0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IkK6Z0eUGXU_0XTI:z5Y>V0
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1759970093
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_L.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_L.sv
+!i122 12
+L0 4 18
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1759972773.000000
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_L.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_L.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver}
+Z9 tCvgOpt 0
+nbcd_contador_@l
+vbcd_contador_R
+R1
+R2
+!i10b 1
+!s100 Oc;hj3eN>jfG]NPD5DCdG2
+R3
+IUMB2>IZmCfO3::f[1>XG83
+R4
+S1
+R0
+Z10 w1759308353
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_R.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_R.sv
+!i122 11
+L0 3 110
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_R.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_R.sv|
+!i113 1
+R7
+R8
+R9
+nbcd_contador_@r
+vcontador_4bit
+R1
+R2
+!i10b 1
+!s100 Z>?zJbkOa7FnO1`703Fim2
+R3
+II9I]IZ0RhhfjN[P5mPDP=1
+R4
+S1
+R0
+R10
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/contador_4bit.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/contador_4bit.sv
+!i122 10
+L0 1 68
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/contador_4bit.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/contador_4bit.sv|
+!i113 1
+R7
+R8
+R9
+vcontrol_cursor
+R1
+Z11 !s110 1759972772
+!i10b 1
+!s100 =bm>:VgFVXQJiXDlS1XCG3
+R3
+IlL8gFoKcPUo@bzBo@FG1_0
+R4
+S1
+R0
+w1759970119
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/control_cursor.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/control_cursor.sv
+!i122 5
+L0 7 42
+R5
+r1
+!s85 0
+31
+Z12 !s108 1759972772.000000
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/control_cursor.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/control_cursor.sv|
+!i113 1
+R7
+R8
+R9
+vdivisor_1hz_50m
+R1
+R2
+!i10b 1
+!s100 MFLe[[O3eYWkGJJ`=O>1N2
+R3
+IoIIbP>WlOz0InnLzP3DoY0
+R4
+S1
+R0
+w1759967864
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv
+!i122 9
+L0 3 141
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv|
+!i113 1
+R7
+R8
+R9
+vestado_cartas
+R1
+R11
+!i10b 1
+!s100 lP78CJY[33=]H8Rn3W_9T3
+R3
+IX^AAR<X0ji_o0_]ad;JG_3
+R4
+S1
+R0
+w1759970940
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/estado_cartas.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/estado_cartas.sv
+!i122 4
+L0 4 122
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/estado_cartas.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/estado_cartas.sv|
+!i113 1
+R7
+R8
+R9
+vflip_flop
+R1
+R2
+!i10b 1
+!s100 nl0TX;;R1b0l;e5A2lJbF2
+R3
+Ic0J:M8TJVBKP@JMfT6FB63
+R4
+S1
+R0
+R10
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/flip_flop.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/flip_flop.sv
+!i122 8
+L0 1 29
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/flip_flop.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/flip_flop.sv|
+!i113 1
+R7
+R8
+R9
+vfsm_cartas
+R1
+R11
+!i10b 1
+!s100 6E6O_]AX;39ViNc`BEoFZ1
+R3
+I2=mzRVN2@aLNhOOb8:zVc0
+R4
+S1
+R0
+w1759293216
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/fsm_cartas.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/fsm_cartas.sv
+!i122 7
+L0 2 164
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/fsm_cartas.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/fsm_cartas.sv|
+!i113 1
+R7
+R8
+R9
+vjuego_memoria
+R1
+R11
+!i10b 1
+!s100 jiz1:DRi6g0H8lPnAPR8P2
+R3
+Il7o:^=MIc5:ZENgcUIFYE1
+R4
+S1
+R0
+w1759972467
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv
+!i122 3
+L0 7 184
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv|
+!i113 1
+R7
+R8
+R9
+vpuntaje_display
+R1
+R11
+!i10b 1
+!s100 bm50VD`Y8h1ehz;zm6gcG1
+R3
+IkbE803@OMid2cHKJS<jjR0
+R4
+S1
+R0
+w1759969896
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_display.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_display.sv
+!i122 2
+L0 5 28
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_display.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_display.sv|
+!i113 1
+R7
+R8
+R9
+vpuntaje_jugadores
+R1
+R11
+!i10b 1
+!s100 4;8T653K6_1NabBXG0N2[1
+R3
+IHJ<?Wc^H`PEo]BSnW78h53
+R4
+S1
+R0
+w1759971480
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_jugadores.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_jugadores.sv
+!i122 1
+L0 4 36
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_jugadores.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_jugadores.sv|
+!i113 1
+R7
+R8
+R9
+vregistro_seleccion
+R1
+R11
+!i10b 1
+!s100 AShQOgzh_5>SH_]nSHH4:0
+R3
+Ia>i0EZLAPfcW6V_E`]7S`1
+R4
+S1
+R0
+w1759969488
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/registro_seleccion.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/registro_seleccion.sv
+!i122 0
+L0 4 16
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/registro_seleccion.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/registro_seleccion.sv|
+!i113 1
+R7
+R8
+R9
+vtb_juego_memoria
+R1
+!s110 1759991824
+!i10b 1
+!s100 BM2kEk3m0DiP13`z8h8:R2
+R3
+Ie1[6I@dAX2hled_iG^3NA0
+R4
+S1
+R0
+w1759991451
+8tb_juego_memoria_clean.sv
+Ftb_juego_memoria_clean.sv
+!i122 14
+L0 9 252
+R5
+r1
+!s85 0
+31
+!s108 1759991823.000000
+!s107 tb_juego_memoria_clean.sv|
+!s90 -reportprogress|300|-sv|-work|rtl_work|tb_juego_memoria_clean.sv|
+!i113 1
+o-sv -work rtl_work
+R9
+vtemporizador_15s
+R1
+R11
+!i10b 1
+!s100 aG_bA8kY?G4=W7H7lhY<?2
+R3
+I<3[UU>`;Z`=Lh1MaN?o[i2
+R4
+S1
+R0
+w1759970120
+8C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv
+FC:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv
+!i122 6
+L0 3 51
+R5
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv|
+!s90 -sv|-work|work|+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver|C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv|
+!i113 1
+R7
+R8
+R9

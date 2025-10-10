@@ -128,15 +128,22 @@ module fsm_cartas (
 
             S1_espera:   start_15s = 1'b1;
 
-            S2_guardar1: latch1    = 1'b1;
+            S2_guardar1: begin
+                latch1    = 1'b1;
+                start_15s = 1'b1;  // ← Mantener temporizador activo
+            end
 
-            S3_revela1:  reveal1   = 1'b1;
+            S3_revela1: begin
+                reveal1   = 1'b1;
+                start_15s = 1'b1;  // ← Mantener temporizador activo
+            end
 
-            S4_guardar2: /* sin salidas */ ;
+            S4_guardar2: start_15s = 1'b1;  // ← Mantener temporizador activo
 
             S5_revela2: begin
-                reveal2 = 1'b1;
-                latch2  = 1'b1;
+                reveal2   = 1'b1;
+                latch2    = 1'b1;
+                start_15s = 1'b1;  // ← Mantener temporizador activo
             end
 
             S6_check: begin

@@ -20,4 +20,3 @@ module bcd_contador_L (
 
 endmodule
 
-`default_nettype wire

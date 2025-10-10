@@ -116,11 +116,127 @@
 					"strict" : false
 				},
 				{
+					"name" : "aL",
+					"strict" : false
+				},
+				{
+					"name" : "dL",
+					"strict" : false
+				},
+				{
+					"name" : "eL",
+					"strict" : false
+				},
+				{
+					"name" : "fL",
+					"strict" : false
+				},
+				{
+					"name" : "aR",
+					"strict" : false
+				},
+				{
+					"name" : "bR",
+					"strict" : false
+				},
+				{
+					"name" : "cR",
+					"strict" : false
+				},
+				{
+					"name" : "dR",
+					"strict" : false
+				},
+				{
+					"name" : "eR",
+					"strict" : false
+				},
+				{
+					"name" : "fR",
+					"strict" : false
+				},
+				{
+					"name" : "gR",
+					"strict" : false
+				},
+				{
+					"name" : "aJ1",
+					"strict" : false
+				},
+				{
+					"name" : "bJ1",
+					"strict" : false
+				},
+				{
+					"name" : "cJ1",
+					"strict" : false
+				},
+				{
+					"name" : "dJ1",
+					"strict" : false
+				},
+				{
+					"name" : "eJ1",
+					"strict" : false
+				},
+				{
+					"name" : "fJ1",
+					"strict" : false
+				},
+				{
+					"name" : "gJ1",
+					"strict" : false
+				},
+				{
+					"name" : "aJ2",
+					"strict" : false
+				},
+				{
+					"name" : "bJ2",
+					"strict" : false
+				},
+				{
+					"name" : "cJ2",
+					"strict" : false
+				},
+				{
+					"name" : "dJ2",
+					"strict" : false
+				},
+				{
+					"name" : "eJ2",
+					"strict" : false
+				},
+				{
+					"name" : "fJ2",
+					"strict" : false
+				},
+				{
+					"name" : "gJ2",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "modo_vertical",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "mover_adelante",
+					"strict" : false
+				},
+				{
+					"name" : "mover_atras",
+					"strict" : false
+				},
+				{
+					"name" : "seleccionar",
 					"strict" : false
 				}
 			]

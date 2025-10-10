@@ -1,0 +1,180 @@
+# do simulation/modelsim/vga_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# ** Error: 捁散潳搠湥来摡⹯਍
+#        Unable to replace existing ini file (modelsim.ini).  File can not be renamed.
+# 
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/registro_seleccion.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:32 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/registro_seleccion.sv 
+# -- Compiling module registro_seleccion
+# 
+# Top level modules:
+# 	registro_seleccion
+# End time: 19:19:32 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_jugadores.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:32 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_jugadores.sv 
+# -- Compiling module puntaje_jugadores
+# 
+# Top level modules:
+# 	puntaje_jugadores
+# End time: 19:19:32 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_display.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:32 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/puntaje_display.sv 
+# -- Compiling module puntaje_display
+# 
+# Top level modules:
+# 	puntaje_display
+# End time: 19:19:32 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:32 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv 
+# -- Compiling module juego_memoria
+# 
+# Top level modules:
+# 	juego_memoria
+# End time: 19:19:32 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/estado_cartas.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:32 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/estado_cartas.sv 
+# -- Compiling module estado_cartas
+# 
+# Top level modules:
+# 	estado_cartas
+# End time: 19:19:32 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/control_cursor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:32 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/control_cursor.sv 
+# -- Compiling module control_cursor
+# 
+# Top level modules:
+# 	control_cursor
+# End time: 19:19:32 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:32 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv 
+# -- Compiling module temporizador_15s
+# 
+# Top level modules:
+# 	temporizador_15s
+# End time: 19:19:32 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/fsm_cartas.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:32 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/fsm_cartas.sv 
+# -- Compiling module fsm_cartas
+# 
+# Top level modules:
+# 	fsm_cartas
+# End time: 19:19:32 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/flip_flop.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:33 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/flip_flop.sv 
+# -- Compiling module flip_flop
+# 
+# Top level modules:
+# 	flip_flop
+# End time: 19:19:33 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:33 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv 
+# -- Compiling module divisor_1hz_50m
+# 
+# Top level modules:
+# 	divisor_1hz_50m
+# End time: 19:19:33 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/contador_4bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:33 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/contador_4bit.sv 
+# -- Compiling module contador_4bit
+# 
+# Top level modules:
+# 	contador_4bit
+# End time: 19:19:33 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_R.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:33 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_R.sv 
+# -- Compiling module bcd_contador_R
+# 
+# Top level modules:
+# 	bcd_contador_R
+# End time: 19:19:33 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_L.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:33 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_L.sv 
+# -- Compiling module bcd_contador_L
+# 
+# Top level modules:
+# 	bcd_contador_L
+# End time: 19:19:33 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Yonathan\ Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio\ 3/VGA-driver {C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/tb_juego_memoria.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:19:33 on Oct 08,2025
+# vlog -sv -work work "+incdir+C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver" C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/tb_juego_memoria.sv 
+# -- Compiling module tb_juego_memoria
+# 
+# Top level modules:
+# 	tb_juego_memoria
+# End time: 19:19:33 on Oct 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_juego_memoria
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_juego_memoria 
+# Start time: 19:19:33 on Oct 08,2025
+# Loading sv_std.std
+# Loading work.tb_juego_memoria
+# Loading work.juego_memoria
+# Loading work.control_cursor
+# Loading work.fsm_cartas
+# Loading work.temporizador_15s
+# Loading work.divisor_1hz_50m
+# Loading work.flip_flop
+# Loading work.contador_4bit
+# Loading work.bcd_contador_L
+# Loading work.bcd_contador_R
+# Loading work.registro_seleccion
+# Loading work.estado_cartas
+# Loading work.puntaje_jugadores
+# Loading work.puntaje_display
+# 
+# add wave *
+# view structure
+# view signals
+# run -all
+# [130000] FSM lista tras reset | estado=1 cursor=0 rev=0000 bloq=0000 J1=0 J2=0 turno=0
+# [3090000] Timeout detectado | estado=1 cursor=0 rev=0000 bloq=0000 J1=0 J2=0 turno=0
+# [3190000] Salida de S7 con carta aleatoria | estado=3 cursor=0 rev=0000 bloq=0000 J1=0 J2=0 turno=0

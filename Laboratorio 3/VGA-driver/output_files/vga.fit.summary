@@ -1,13 +1,13 @@
-Fitter Status : Successful - Tue Sep 30 00:36:14 2025
-Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Fitter Status : Successful - Fri Oct 10 01:43:45 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : vga
-Top-level Entity Name : vga
+Top-level Entity Name : vga_integrado
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 185 / 41,910 ( < 1 % )
-Total registers : 30
-Total pins : 31 / 499 ( 6 % )
+Logic utilization (in ALMs) : 608 / 41,910 ( 1 % )
+Total registers : 295
+Total pins : 63 / 499 ( 13 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 5,662,720 ( 0 % )
 Total RAM Blocks : 0 / 553 ( 0 % )
