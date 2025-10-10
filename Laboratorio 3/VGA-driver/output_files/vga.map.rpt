@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga
-Thu Oct 09 05:57:36 2025
+Fri Oct 10 00:31:45 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -58,11 +58,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  50. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff1"
  51. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0"
  52. Port Connectivity Checks: "juego_memoria:u_juego|temporizador_15s:u_timer"
- 53. Port Connectivity Checks: "juego_memoria:u_juego|fsm_cartas:u_fsm"
- 54. Port Connectivity Checks: "juego_memoria:u_juego"
- 55. Post-Synthesis Netlist Statistics for Top Partition
- 56. Elapsed Time Per Partition
- 57. Analysis & Synthesis Messages
+ 53. Port Connectivity Checks: "juego_memoria:u_juego"
+ 54. Post-Synthesis Netlist Statistics for Top Partition
+ 55. Elapsed Time Per Partition
+ 56. Analysis & Synthesis Messages
 
 
 
@@ -89,7 +88,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 09 05:57:36 2025       ;
+; Analysis & Synthesis Status     ; Successful - Fri Oct 10 00:31:45 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; vga                                         ;
 ; Top-level Entity Name           ; vga_integrado                               ;
@@ -215,8 +214,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-16        ;   0.0%      ;
+;     Processors 8-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -225,6 +223,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                     ; Library ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------------------+---------+
+; ganador_display.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/ganador_display.sv         ;         ;
 ; debouncer.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/debouncer.sv               ;         ;
 ; vga_integrado.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv           ;         ;
 ; juego_vga_renderer.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv      ;         ;
@@ -259,14 +258,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 590   ;
+; Estimate of Logic utilization (ALMs needed) ; 616   ;
 ;                                             ;       ;
-; Combinational ALUT usage for logic          ; 973   ;
+; Combinational ALUT usage for logic          ; 1023  ;
 ;     -- 7 input functions                    ; 8     ;
-;     -- 6 input functions                    ; 196   ;
-;     -- 5 input functions                    ; 156   ;
-;     -- 4 input functions                    ; 202   ;
-;     -- <=3 input functions                  ; 411   ;
+;     -- 6 input functions                    ; 198   ;
+;     -- 5 input functions                    ; 166   ;
+;     -- 4 input functions                    ; 215   ;
+;     -- <=3 input functions                  ; 436   ;
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 232   ;
 ;                                             ;       ;
@@ -276,8 +275,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;       ;
 ; Maximum fan-out node                        ; reset ;
 ; Maximum fan-out                             ; 230   ;
-; Total fan-out                               ; 4862  ;
-; Average fan-out                             ; 3.65  ;
+; Total fan-out                               ; 5035  ;
+; Average fan-out                             ; 3.64  ;
 +---------------------------------------------+-------+
 
 
@@ -286,15 +285,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                 ; Entity Name            ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |vga_integrado                               ; 973 (6)             ; 232 (6)                   ; 0                 ; 1          ; 63   ; 0            ; |vga_integrado                                                                                                                                                      ; vga_integrado          ; work         ;
+; |vga_integrado                               ; 1023 (6)            ; 232 (6)                   ; 0                 ; 1          ; 63   ; 0            ; |vga_integrado                                                                                                                                                      ; vga_integrado          ; work         ;
 ;    |debouncer:db_adelante|                   ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|debouncer:db_adelante                                                                                                                                ; debouncer              ; work         ;
 ;    |debouncer:db_atras|                      ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|debouncer:db_atras                                                                                                                                   ; debouncer              ; work         ;
 ;    |debouncer:db_seleccionar|                ; 30 (30)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|debouncer:db_seleccionar                                                                                                                             ; debouncer              ; work         ;
-;    |juego_memoria:u_juego|                   ; 312 (9)             ; 128 (6)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego                                                                                                                                ; juego_memoria          ; work         ;
+;    |juego_memoria:u_juego|                   ; 302 (6)             ; 128 (6)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego                                                                                                                                ; juego_memoria          ; work         ;
 ;       |control_cursor:u_cursor|              ; 8 (8)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor                                                                                                        ; control_cursor         ; work         ;
-;       |estado_cartas:u_estado|               ; 127 (127)           ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|estado_cartas:u_estado                                                                                                         ; estado_cartas          ; work         ;
+;       |estado_cartas:u_estado|               ; 122 (122)           ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|estado_cartas:u_estado                                                                                                         ; estado_cartas          ; work         ;
 ;       |fsm_cartas:u_fsm|                     ; 22 (22)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|fsm_cartas:u_fsm                                                                                                               ; fsm_cartas             ; work         ;
-;       |generador_carta_random:u_rng|         ; 68 (68)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng                                                                                                   ; generador_carta_random ; work         ;
+;       |generador_carta_random:u_rng|         ; 66 (66)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng                                                                                                   ; generador_carta_random ; work         ;
 ;       |puntaje_display:u_puntajes_seg|       ; 14 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|puntaje_display:u_puntajes_seg                                                                                                 ; puntaje_display        ; work         ;
 ;          |bcd_contador_R:disp_j1|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|puntaje_display:u_puntajes_seg|bcd_contador_R:disp_j1                                                                          ; bcd_contador_R         ; work         ;
 ;          |bcd_contador_R:disp_j2|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|puntaje_display:u_puntajes_seg|bcd_contador_R:disp_j2                                                                          ; bcd_contador_R         ; work         ;
@@ -304,7 +303,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |temporizador_15s:u_timer|             ; 46 (38)             ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer                                                                                                       ; temporizador_15s       ; work         ;
 ;          |bcd_contador_L:uL|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_L:uL                                                                                     ; bcd_contador_L         ; work         ;
 ;          |bcd_contador_R:uR|                 ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_R:uR                                                                                     ; bcd_contador_R         ; work         ;
-;    |juego_vga_renderer:renderer|             ; 537 (197)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer                                                                                                                          ; juego_vga_renderer     ; work         ;
+;    |juego_vga_renderer:renderer|             ; 595 (221)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer                                                                                                                          ; juego_vga_renderer     ; work         ;
 ;       |carta_oculta:gen_reverso|             ; 181 (26)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso                                                                                                 ; carta_oculta           ; work         ;
 ;          |lpm_divide:Mod0|                   ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod0                                                                                 ; lpm_divide             ; work         ;
 ;             |lpm_divide_i3m:auto_generated|  ; 76 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod0|lpm_divide_i3m:auto_generated                                                   ; lpm_divide_i3m         ; work         ;
@@ -315,8 +314,9 @@ https://fpgasoftware.intel.com/eula.
 ;                |sign_div_unsign_llh:divider| ; 79 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod1|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider                       ; sign_div_unsign_llh    ; work         ;
 ;                   |alt_u_div_gve:divider|    ; 79 (79)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|carta_oculta:gen_reverso|lpm_divide:Mod1|lpm_divide_i3m:auto_generated|sign_div_unsign_llh:divider|alt_u_div_gve:divider ; alt_u_div_gve          ; work         ;
 ;       |cursor_overlay:gen_cursor|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|cursor_overlay:gen_cursor                                                                                                ; cursor_overlay         ; work         ;
+;       |ganador_display:u_ganador|            ; 34 (34)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|ganador_display:u_ganador                                                                                                ; ganador_display        ; work         ;
 ;       |generador_cartas:gen_carta|           ; 152 (152)           ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |vga_integrado|juego_vga_renderer:renderer|generador_cartas:gen_carta                                                                                               ; generador_cartas       ; work         ;
-;    |vgaController:vgaCont|                   ; 28 (28)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|vgaController:vgaCont                                                                                                                                ; vgaController          ; work         ;
+;    |vgaController:vgaCont|                   ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga_integrado|vgaController:vgaCont                                                                                                                                ; vgaController          ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -394,35 +394,36 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch1|indice_out[1] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch2|indice_out[2] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|count_up[0]      ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_seleccionar|counter[23]                            ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_adelante|counter[3]                                ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_atras|counter[17]                                  ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|intentos[2]  ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|candidato[1] ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|div_counter[4]   ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vga_integrado|reset_counter[0]                                                ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vga_integrado|reset_counter[1]                                                ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor|fila_r[0]         ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor|columna_r[1]      ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|g[3]                                ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|card_rel_y[4]                       ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|Mux1                                ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_memoria:u_juego|estado_cartas:u_estado|Mux1               ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|g[4]                                ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|g[6]                                ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|r[7]                                ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|current_card_idx[3]                 ;
-; 9:1                ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; No         ; |vga_integrado|juego_vga_renderer:renderer|card_rel_x[4]                       ;
-; 15:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|Add11                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch1|indice_out[1]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|registro_seleccion:u_latch2|indice_out[2]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|count_up[0]           ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_seleccionar|counter[16]                                 ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_adelante|counter[22]                                    ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |vga_integrado|debouncer:db_atras|counter[1]                                        ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|intentos[0]       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|generador_carta_random:u_rng|candidato[0]      ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |vga_integrado|juego_memoria:u_juego|temporizador_15s:u_timer|div_counter[20]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vga_integrado|reset_counter[0]                                                     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |vga_integrado|reset_counter[1]                                                     ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor|fila_r[0]              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |vga_integrado|juego_memoria:u_juego|control_cursor:u_cursor|columna_r[1]           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|ganador_display:u_ganador|char_index.001 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|ganador_display:u_ganador|local_col[2]   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|g[0]                                     ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|card_rel_y[6]                            ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|Mux0                                     ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_memoria:u_juego|estado_cartas:u_estado|Mux1                    ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|r[5]                                     ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|is_in_any_card                           ;
+; 9:1                ; 7 bits    ; 42 LEs        ; 7 LEs                ; 35 LEs                 ; No         ; |vga_integrado|juego_vga_renderer:renderer|card_rel_x[5]                            ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|r[0]                                     ;
+; 15:1               ; 2 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |vga_integrado|juego_vga_renderer:renderer|Add11                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------+
@@ -880,15 +881,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------+
-; Port Connectivity Checks: "juego_memoria:u_juego|fsm_cartas:u_fsm" ;
-+-----------+--------+----------+------------------------------------+
-; Port      ; Type   ; Severity ; Details                            ;
-+-----------+--------+----------+------------------------------------+
-; state_dbg ; Output ; Info     ; Explicitly unconnected             ;
-+-----------+--------+----------+------------------------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "juego_memoria:u_juego"                                                                            ;
 +--------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -898,8 +890,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; carta_sel1_id      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; carta_sel2_id      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; jugador_actual     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; puntaje_j1         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; puntaje_j2         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; timeout            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; carta_random_start ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +--------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -918,29 +908,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR SLD       ; 2                           ;
 ;     SCLR              ; 7                           ;
 ;     plain             ; 8                           ;
-; arriav_lcell_comb     ; 996                         ;
-;     arith             ; 333                         ;
+; arriav_lcell_comb     ; 1046                        ;
+;     arith             ; 341                         ;
 ;         0 data inputs ; 28                          ;
-;         1 data inputs ; 161                         ;
+;         1 data inputs ; 169                         ;
 ;         2 data inputs ; 20                          ;
 ;         3 data inputs ; 30                          ;
 ;         4 data inputs ; 89                          ;
 ;         5 data inputs ; 5                           ;
 ;     extend            ; 8                           ;
 ;         7 data inputs ; 8                           ;
-;     normal            ; 655                         ;
+;     normal            ; 697                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 31                          ;
-;         2 data inputs ; 86                          ;
-;         3 data inputs ; 76                          ;
-;         4 data inputs ; 113                         ;
-;         5 data inputs ; 151                         ;
-;         6 data inputs ; 196                         ;
+;         2 data inputs ; 93                          ;
+;         3 data inputs ; 86                          ;
+;         4 data inputs ; 126                         ;
+;         5 data inputs ; 161                         ;
+;         6 data inputs ; 198                         ;
 ; arriav_mac            ; 1                           ;
 ; boundary_port         ; 63                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 20.40                       ;
-; Average LUT depth     ; 8.87                        ;
+; Max LUT depth         ; 20.90                       ;
+; Average LUT depth     ; 9.20                        ;
 +-----------------------+-----------------------------+
 
 
@@ -949,7 +939,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -959,17 +949,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 09 05:57:28 2025
+    Info: Processing started: Fri Oct 10 00:31:36 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file tb_juego_vga_visual.sv
-    Info (12023): Found entity 1: tb_juego_vga_visual File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/tb_juego_vga_visual.sv Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file ganador_display.sv
+    Info (12023): Found entity 1: ganador_display File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/ganador_display.sv Line: 11
+Warning (12019): Can't analyze file -- file tb_juego_vga_visual.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file debouncer.sv
     Info (12023): Found entity 1: debouncer File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/debouncer.sv Line: 7
 Info (12021): Found 2 design units, including 2 entities, in source file vga_integrado.sv
     Info (12023): Found entity 1: vga_integrado File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 6
-    Info (12023): Found entity 2: vgaController File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 165
+    Info (12023): Found entity 2: vgaController File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 170
 Info (12021): Found 1 design units, including 1 entities, in source file juego_vga_renderer.sv
     Info (12023): Found entity 1: juego_vga_renderer File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file generador_cartas.sv
@@ -978,8 +969,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file cursor_
     Info (12023): Found entity 1: cursor_overlay File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/cursor_overlay.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file carta_oculta.sv
     Info (12023): Found entity 1: carta_oculta File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 7
-Info (12021): Found 1 design units, including 1 entities, in source file tb_juego_memoria.sv
-    Info (12023): Found entity 1: tb_juego_memoria File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/tb_juego_memoria.sv Line: 9
+Warning (12019): Can't analyze file -- file tb_juego_memoria.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file generador_carta_random.sv
     Info (12023): Found entity 1: generador_carta_random File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/generador_carta_random.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file registro_seleccion.sv
@@ -1010,45 +1000,50 @@ Info (12021): Found 1 design units, including 1 entities, in source file bcd_con
     Info (12023): Found entity 1: bcd_contador_R File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_R.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file bcd_contador_l.sv
     Info (12023): Found entity 1: bcd_contador_L File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/bcd_contador_L.sv Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file tb_vga_to_ppm.sv
-    Info (12023): Found entity 1: tb_vga_to_ppm File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/tb_vga_to_ppm.sv Line: 4
+Warning (12019): Can't analyze file -- file tb_vga_to_ppm.sv is missing
 Info (12127): Elaborating entity "vga_integrado" for the top level hierarchy
 Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:db_adelante" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 62
 Info (12128): Elaborating entity "vgaController" for hierarchy "vgaController:vgaCont" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 100
-Info (12128): Elaborating entity "juego_memoria" for hierarchy "juego_memoria:u_juego" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 141
-Info (12128): Elaborating entity "control_cursor" for hierarchy "juego_memoria:u_juego|control_cursor:u_cursor" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 77
+Info (12128): Elaborating entity "juego_memoria" for hierarchy "juego_memoria:u_juego" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 143
+Info (12128): Elaborating entity "control_cursor" for hierarchy "juego_memoria:u_juego|control_cursor:u_cursor" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 81
 Info (10264): Verilog HDL Case Statement information at control_cursor.sv(26): all case item expressions in this case statement are onehot File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/control_cursor.sv Line: 26
 Info (10264): Verilog HDL Case Statement information at control_cursor.sv(39): all case item expressions in this case statement are onehot File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/control_cursor.sv Line: 39
-Info (12128): Elaborating entity "fsm_cartas" for hierarchy "juego_memoria:u_juego|fsm_cartas:u_fsm" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 101
-Info (12128): Elaborating entity "temporizador_15s" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 116
+Info (12128): Elaborating entity "fsm_cartas" for hierarchy "juego_memoria:u_juego|fsm_cartas:u_fsm" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 105
+Info (12128): Elaborating entity "temporizador_15s" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 123
 Info (12128): Elaborating entity "divisor_1hz_50m" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 22
 Info (12128): Elaborating entity "flip_flop" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|divisor_1hz_50m:udiv|flip_flop:ff0" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/divisor_1hz_50m.sv Line: 117
 Info (12128): Elaborating entity "bcd_contador_L" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_L:uL" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 62
 Info (12128): Elaborating entity "bcd_contador_R" for hierarchy "juego_memoria:u_juego|temporizador_15s:u_timer|bcd_contador_R:uR" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/temporizador_15s.sv Line: 67
-Info (12128): Elaborating entity "registro_seleccion" for hierarchy "juego_memoria:u_juego|registro_seleccion:u_latch1" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 167
-Info (12128): Elaborating entity "estado_cartas" for hierarchy "juego_memoria:u_juego|estado_cartas:u_estado" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 201
-Info (12128): Elaborating entity "generador_carta_random" for hierarchy "juego_memoria:u_juego|generador_carta_random:u_rng" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 211
-Info (12128): Elaborating entity "puntaje_jugadores" for hierarchy "juego_memoria:u_juego|puntaje_jugadores:u_puntaje" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 224
-Info (12128): Elaborating entity "puntaje_display" for hierarchy "juego_memoria:u_juego|puntaje_display:u_puntajes_seg" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 234
-Info (12128): Elaborating entity "juego_vga_renderer" for hierarchy "juego_vga_renderer:renderer" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 157
-Warning (10036): Verilog HDL or VHDL warning at juego_vga_renderer.sv(192): object "is_oculta" assigned a value but never read File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 192
-Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(69): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 69
-Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(70): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 70
-Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(71): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 71
+Info (12128): Elaborating entity "registro_seleccion" for hierarchy "juego_memoria:u_juego|registro_seleccion:u_latch1" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 174
+Info (12128): Elaborating entity "estado_cartas" for hierarchy "juego_memoria:u_juego|estado_cartas:u_estado" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 208
+Info (12128): Elaborating entity "generador_carta_random" for hierarchy "juego_memoria:u_juego|generador_carta_random:u_rng" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 218
+Info (12128): Elaborating entity "puntaje_jugadores" for hierarchy "juego_memoria:u_juego|puntaje_jugadores:u_puntaje" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 231
+Info (12128): Elaborating entity "puntaje_display" for hierarchy "juego_memoria:u_juego|puntaje_display:u_puntajes_seg" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_memoria.sv Line: 241
+Info (12128): Elaborating entity "juego_vga_renderer" for hierarchy "juego_vga_renderer:renderer" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/vga_integrado.sv Line: 162
+Warning (10036): Verilog HDL or VHDL warning at juego_vga_renderer.sv(195): object "is_oculta" assigned a value but never read File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 195
 Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(72): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 72
+Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(73): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 73
 Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(74): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 74
 Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(75): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 75
-Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(76): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 76
 Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(77): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 77
-Info (12128): Elaborating entity "generador_cartas" for hierarchy "juego_vga_renderer:renderer|generador_cartas:gen_carta" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 221
+Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(78): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 78
+Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(79): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 79
+Warning (10230): Verilog HDL assignment warning at juego_vga_renderer.sv(80): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 80
+Info (12128): Elaborating entity "generador_cartas" for hierarchy "juego_vga_renderer:renderer|generador_cartas:gen_carta" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 224
 Warning (10230): Verilog HDL assignment warning at generador_cartas.sv(76): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/generador_cartas.sv Line: 76
 Warning (10230): Verilog HDL assignment warning at generador_cartas.sv(77): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/generador_cartas.sv Line: 77
-Info (12128): Elaborating entity "carta_oculta" for hierarchy "juego_vga_renderer:renderer|carta_oculta:gen_reverso" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 236
+Info (12128): Elaborating entity "carta_oculta" for hierarchy "juego_vga_renderer:renderer|carta_oculta:gen_reverso" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 239
 Warning (10230): Verilog HDL assignment warning at carta_oculta.sv(25): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 25
 Warning (10230): Verilog HDL assignment warning at carta_oculta.sv(26): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 26
 Warning (10230): Verilog HDL assignment warning at carta_oculta.sv(29): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 29
 Warning (10230): Verilog HDL assignment warning at carta_oculta.sv(30): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 30
-Info (12128): Elaborating entity "cursor_overlay" for hierarchy "juego_vga_renderer:renderer|cursor_overlay:gen_cursor" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 247
+Info (12128): Elaborating entity "cursor_overlay" for hierarchy "juego_vga_renderer:renderer|cursor_overlay:gen_cursor" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 250
+Info (12128): Elaborating entity "ganador_display" for hierarchy "juego_vga_renderer:renderer|ganador_display:u_ganador" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/juego_vga_renderer.sv Line: 291
+Warning (10036): Verilog HDL or VHDL warning at ganador_display.sv(106): object "bitmap_col" assigned a value but never read File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/ganador_display.sv Line: 106
+Warning (10230): Verilog HDL assignment warning at ganador_display.sv(117): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/ganador_display.sv Line: 117
+Warning (10230): Verilog HDL assignment warning at ganador_display.sv(118): truncated value with size 32 to match size of target (10) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/ganador_display.sv Line: 118
+Warning (10230): Verilog HDL assignment warning at ganador_display.sv(121): truncated value with size 7 to match size of target (3) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/ganador_display.sv Line: 121
+Warning (10230): Verilog HDL assignment warning at ganador_display.sv(152): truncated value with size 32 to match size of target (3) File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/ganador_display.sv Line: 152
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "juego_vga_renderer:renderer|carta_oculta:gen_reverso|Mod1" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 26
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "juego_vga_renderer:renderer|carta_oculta:gen_reverso|Mod0" File: C:/Users/Yonathan Monge/Desktop/proyectos_quartus/Laboratorio1-Taller-Dise-o/Laboratorio 3/VGA-driver/carta_oculta.sv Line: 25
@@ -1074,15 +1069,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1058 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1108 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 994 logic cells
+    Info (21061): Implemented 1044 logic cells
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4918 megabytes
-    Info: Processing ended: Thu Oct 09 05:57:36 2025
-    Info: Elapsed time: 00:00:08
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 4916 megabytes
+    Info: Processing ended: Fri Oct 10 00:31:45 2025
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:17
 
 

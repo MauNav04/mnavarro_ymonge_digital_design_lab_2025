@@ -37,6 +37,9 @@ module juego_memoria #(
     output logic [3:0] puntaje_j1,
     output logic [3:0] puntaje_j2,
 
+    // Estado de la FSM para detección de fin de juego
+    output logic [3:0] state_fsm,
+
     // Señales útiles para otros módulos
     output logic timeout,
     output logic carta_random_start
@@ -53,6 +56,7 @@ module juego_memoria #(
     logic valido, posicion_igual, match, pares_agotados;
     logic rng_listo;
     logic [3:0] rng_indice;
+    logic [3:0] state_dbg_interno;
     logic usar_random_reg;
     logic usar_random_comb;
     logic [3:0] indice_random_reg;
@@ -97,8 +101,11 @@ module juego_memoria #(
         .incrementar_punto (incrementar_punto),
         .cambiar_turno     (cambiar_turno),
         .carta_random_start(carta_random_start),
-        .state_dbg         ()
+        .state_dbg         (state_dbg_interno)
     );
+
+    // Exportar estado de la FSM
+    assign state_fsm = state_dbg_interno;
 
     // ---------------------------------------------------------------------
     // Temporizador 15 segundos

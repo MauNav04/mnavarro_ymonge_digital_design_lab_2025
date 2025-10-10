@@ -17,6 +17,9 @@ module juego_vga_renderer (
     input  logic [15:0] cartas_reveladas,   // Bits de cartas reveladas
     input  logic [15:0] cartas_bloqueadas,  // Bits de cartas bloqueadas (pares encontrados)
     input  logic [3:0]  carta_cursor_id,    // ID de la carta bajo el cursor (0-7)
+    input  logic [3:0]  state_fsm,          // Estado de la FSM para detectar fin de juego
+    input  logic [3:0]  puntaje_j1,         // Puntaje jugador 1
+    input  logic [3:0]  puntaje_j2,         // Puntaje jugador 2
     
     // Salidas RGB
     output logic [7:0]  r,
@@ -270,10 +273,34 @@ module juego_vga_renderer (
     end
     
     // ========================================================================
+    // Pantalla de ganador (mostrar en S9_fin_juego)
+    // ========================================================================
+    logic mostrar_ganador;
+    logic [7:0] ganador_r, ganador_g, ganador_b;
+    
+    ganador_display u_ganador (
+        .x         (x),
+        .y         (y),
+        .state_fsm (state_fsm),
+        .puntaje_j1(puntaje_j1),
+        .puntaje_j2(puntaje_j2),
+        .mostrar   (mostrar_ganador),
+        .r         (ganador_r),
+        .g         (ganador_g),
+        .b         (ganador_b)
+    );
+    
+    // ========================================================================
     // Lógica de renderizado final
     // ========================================================================
     always_comb begin
-        if (is_in_any_card) begin
+        // PRIORIDAD MÁXIMA: Pantalla de ganador (sobrescribe todo)
+        if (mostrar_ganador) begin
+            r = ganador_r;
+            g = ganador_g;
+            b = ganador_b;
+        end
+        else if (is_in_any_card) begin
             // Prioridad 1: Borde dorado del cursor (si está aquí)
             if (is_cursor_here && is_cursor_border) begin
                 r = 8'hFF;  // Dorado brillante

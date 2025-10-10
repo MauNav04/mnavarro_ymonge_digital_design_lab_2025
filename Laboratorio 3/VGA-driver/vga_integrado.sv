@@ -108,6 +108,7 @@ module vga_integrado (
     logic [3:0]  carta_cursor_id, carta_sel1_id, carta_sel2_id;
     logic        jugador_actual;
     logic [3:0]  puntaje_j1, puntaje_j2;
+    logic [3:0]  state_fsm;  // Estado de la FSM para pantalla de ganador
     logic        timeout, carta_random_start;
     
     juego_memoria u_juego (
@@ -136,6 +137,7 @@ module vga_integrado (
         .jugador_actual     (jugador_actual),
         .puntaje_j1         (puntaje_j1),
         .puntaje_j2         (puntaje_j2),
+        .state_fsm          (state_fsm),       // ← Nuevo: estado FSM
         .timeout            (timeout),
         .carta_random_start (carta_random_start)
     );
@@ -151,6 +153,9 @@ module vga_integrado (
         .cartas_reveladas  (cartas_reveladas),
         .cartas_bloqueadas (cartas_bloqueadas),
         .carta_cursor_id   (carta_cursor_id),
+        .state_fsm         (state_fsm),        // ← Nuevo: para pantalla de ganador
+        .puntaje_j1        (puntaje_j1),       // ← Nuevo: para determinar ganador
+        .puntaje_j2        (puntaje_j2),       // ← Nuevo: para determinar ganador
         .r                 (r),
         .g                 (g),
         .b                 (b)
